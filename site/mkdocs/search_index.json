@@ -1,0 +1,94 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "OVERVIEW\n\n\nWelcome to the documentation for Batchly - automated AWS cost reduction platform. This website aims to document every feature of Batchly from top-to-bottom, covering as much detail as possible. If you are just getting started with Batchly, it is highly recommended that you start with the \nGetting Started\n guide first and then return to this page.\n\n\nThe navigation will take you through each component of Batchly. Click on a navigation item to get started, or read more about why developers, executives and operators choose Batchly for their needs.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#overview", 
+            "text": "Welcome to the documentation for Batchly - automated AWS cost reduction platform. This website aims to document every feature of Batchly from top-to-bottom, covering as much detail as possible. If you are just getting started with Batchly, it is highly recommended that you start with the  Getting Started  guide first and then return to this page.  The navigation will take you through each component of Batchly. Click on a navigation item to get started, or read more about why developers, executives and operators choose Batchly for their needs.", 
+            "title": "OVERVIEW"
+        }, 
+        {
+            "location": "/about/whybatchly/", 
+            "text": "Why Batchly?\n\n\nBatch.ly is a solution that fully automates AWS cost management (using spot instances and instance rightsizing using autoscaling) in a way that makes the ROI impossible to ignore.\n\n\nAWS has 11 regions with 2 to 3 AZ\u2019s in each region and 50 instance types and many instance categories (like Spot, Reserved, On-demand). Identifying the right infrastructure for your application/s from these options is a non trivial activity. It is complex, costly and most times suboptimal.\n\n\n\n\nBatchly takes out all the complexities associated with Cloud management by automating all the activities resulting in up to 90% reduction in AWS costs. \n\n\n\n\nWhy Batchly Benefits You\n\n\nBatchly enables both internet and traditional enterprises to automatically benefit from AWS cost and usage savings by optimizing workloads with spot instances and EC2 smart sizing. No matter what you use AWS for, Batchly helps you to reduce your cost (by up to 90%) in a frictionless manner.\n\n\nFeatures that customers love:\n\n\n\n\nAWS Spot Bid Optimization Seamlessly deploy, move, and manage workloads over high cost savings spot instances across any AWS region.\n\n\nEC2 Instance Smart Sizing Realize ultimate EC2 efficiencies with the automatic instance sizing for the right application / workload.\n\n\nSeamless Integration Easily work with pre-built apps for most common enterprise applications (JMeter, Spark, Hive, PIG, Jenkins, Elastic BeanStalk and more) and REST API support provides a seamless experience.\n\n\nFully Managed Benefit from cost and utilization optimizations from within your own AWS account while we do the heavy lifting.\n\n\nSecure We solved security with organic and strong AWS security controls.", 
+            "title": "Why Batchly"
+        }, 
+        {
+            "location": "/about/whybatchly/#why-batchly", 
+            "text": "Batch.ly is a solution that fully automates AWS cost management (using spot instances and instance rightsizing using autoscaling) in a way that makes the ROI impossible to ignore.  AWS has 11 regions with 2 to 3 AZ\u2019s in each region and 50 instance types and many instance categories (like Spot, Reserved, On-demand). Identifying the right infrastructure for your application/s from these options is a non trivial activity. It is complex, costly and most times suboptimal.   Batchly takes out all the complexities associated with Cloud management by automating all the activities resulting in up to 90% reduction in AWS costs.", 
+            "title": "Why Batchly?"
+        }, 
+        {
+            "location": "/about/whybatchly/#why-batchly-benefits-you", 
+            "text": "Batchly enables both internet and traditional enterprises to automatically benefit from AWS cost and usage savings by optimizing workloads with spot instances and EC2 smart sizing. No matter what you use AWS for, Batchly helps you to reduce your cost (by up to 90%) in a frictionless manner.  Features that customers love:   AWS Spot Bid Optimization Seamlessly deploy, move, and manage workloads over high cost savings spot instances across any AWS region.  EC2 Instance Smart Sizing Realize ultimate EC2 efficiencies with the automatic instance sizing for the right application / workload.  Seamless Integration Easily work with pre-built apps for most common enterprise applications (JMeter, Spark, Hive, PIG, Jenkins, Elastic BeanStalk and more) and REST API support provides a seamless experience.  Fully Managed Benefit from cost and utilization optimizations from within your own AWS account while we do the heavy lifting.  Secure We solved security with organic and strong AWS security controls.", 
+            "title": "Why Batchly Benefits You"
+        }, 
+        {
+            "location": "/user-guide/getting-started/", 
+            "text": "Getting Started\n\n\nTo get started with Batchly, go to the \nRegistration page\n and \nCreate new Batchly Account\n button.\n\n\nTo Register for Batchly, enter the following details :\n\n\n\n\n\n\nEnter your \nFull Name\n\n\n\n\n\n\nEnter your \nOrganization Name\n\n\n\n\n\n\nEnter your organization name or any desired name to set \ndomain name\n\n\n\n\n\n\nEnter your valid \nEmail Address\n\n\n\n\n\n\nEnter your valid \nPhone Number\n\n\n\n\n\n\nEnter your \nPassword\n\n\n\n\n\n\nClick \nCreate Account\n button.You may be asked to select the Captcha to let us know that you are human.\n\n\n\n\n\n\n\n\nFirst step after signing up - Check your Email\n\n\nAfter signing up, you will receive an email on your registered email address for verification. After verification completion, you can successfully sign in to Batchly.\n\n\nSign in Process - Wizard\n\n\nWhen you signup for the very first time from your customized domain \n(For Example : http:// yxz.batchly.net)\n, you will go through the wizard page. Here you will be asked to follow few steps in order to set up everything which you will be required to use an app later.\n\n\n\n\n\n\nStep 1:\n Create an account.\n\n\n\n\n\n\nStep 2:\n Create a project.\n\n\n\n\n\n\nStep 3:\n Select any app.\n\n\n\n\n\n\n\n\nAdd AWS Account\n\n\nClick the \nAdd AWS Account\n and you will be redirected to another page where following details needs to be given to add an account.\n\n\n\n\n\n\nEnter Account Name.\n\n\n\n\n\n\nSelect the Region.\n\n\n\n\n\n\nEnter your Access Key.\n\n\n\n\n\n\nEnter your secret Key.\n\n\n\n\n\n\nNote:\n Before adding an account customer need to have their own AWS account.\n\n\n\n\nAdd Project\n\n\nImportant:\n \n\n\n\n\n\n\nBefore adding a project customer need to have an account their own AWS account.\n\n\n\n\n\n\nWhen you create an account, a default project will be created without VPC. So, creating project is not mandatory. This can be done later.\n\n\n\n\n\n\nThe projects section lets you add a project under an AWS account. In the following steps will show how to add a new project:\n\n\n\n\n\n\nEnter Project Name.\n\n\n\n\n\n\nSelect the Account under which you want to add the project.\n\n\n\n\n\n\nSelect the Cloud region.\n\n\n\n\n\n\nSelect the \nVirtual Private Cloud\n. This is optional. \n\nNote:\n If you wish to work on \nJMeter\n app then this VPC will be mandatory.\n\n\n\n\n\n\nSelect the VPC information. (This needs to be done only if have selected VPC)\n\n\n\n\n\n\nSelect the subnet information. (This needs to be done only if have selected VPC)\n\n\n\n\n\n\n\n\nSelect App\n\n\nOnce you're done with adding account and project, you can select any app you want to work on.", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/user-guide/getting-started/#getting-started", 
+            "text": "To get started with Batchly, go to the  Registration page  and  Create new Batchly Account  button.  To Register for Batchly, enter the following details :    Enter your  Full Name    Enter your  Organization Name    Enter your organization name or any desired name to set  domain name    Enter your valid  Email Address    Enter your valid  Phone Number    Enter your  Password    Click  Create Account  button.You may be asked to select the Captcha to let us know that you are human.", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/user-guide/getting-started/#first-step-after-signing-up-check-your-email", 
+            "text": "After signing up, you will receive an email on your registered email address for verification. After verification completion, you can successfully sign in to Batchly.", 
+            "title": "First step after signing up - Check your Email"
+        }, 
+        {
+            "location": "/user-guide/getting-started/#sign-in-process-wizard", 
+            "text": "When you signup for the very first time from your customized domain  (For Example : http:// yxz.batchly.net) , you will go through the wizard page. Here you will be asked to follow few steps in order to set up everything which you will be required to use an app later.    Step 1:  Create an account.    Step 2:  Create a project.    Step 3:  Select any app.", 
+            "title": "Sign in Process - Wizard"
+        }, 
+        {
+            "location": "/user-guide/getting-started/#add-aws-account", 
+            "text": "Click the  Add AWS Account  and you will be redirected to another page where following details needs to be given to add an account.    Enter Account Name.    Select the Region.    Enter your Access Key.    Enter your secret Key.    Note:  Before adding an account customer need to have their own AWS account.", 
+            "title": "Add AWS Account"
+        }, 
+        {
+            "location": "/user-guide/getting-started/#add-project", 
+            "text": "Important:      Before adding a project customer need to have an account their own AWS account.    When you create an account, a default project will be created without VPC. So, creating project is not mandatory. This can be done later.    The projects section lets you add a project under an AWS account. In the following steps will show how to add a new project:    Enter Project Name.    Select the Account under which you want to add the project.    Select the Cloud region.    Select the  Virtual Private Cloud . This is optional.  Note:  If you wish to work on  JMeter  app then this VPC will be mandatory.    Select the VPC information. (This needs to be done only if have selected VPC)    Select the subnet information. (This needs to be done only if have selected VPC)", 
+            "title": "Add Project"
+        }, 
+        {
+            "location": "/user-guide/getting-started/#select-app", 
+            "text": "Once you're done with adding account and project, you can select any app you want to work on.", 
+            "title": "Select App"
+        }, 
+        {
+            "location": "/user-guide/user-management/", 
+            "text": "Change Password\n\n\nYou can change your Batchly password at anytime.\n\n\n\n\n\n\nSign in to your Bacthly account.\n\n\n\n\n\n\nClick on the name given on the top-right corner.\n\n\n\n\n\n\nSelect \nChange Password\n.\n\n\n\n\n\n\n\n\nEdit Profile Settings\n\n\nYou can change your profile settings ( \nEmail\n, \nName\n, \nRole\n ) at any time.\n\n\n\n\n\n\nYou can click on the name given on the top-right corner from the header.\n\n\n\n\n\n\nSelect the \nEdit Password\n.\n\n\n\n\n\n\n\n\nSettings\n\n\nFrom the settings, you can generate \nAPI Keys\n. Also, you can \nrevoke\n those keys when not required.\n\n\n\n\n\n\nYou can click on the name given on the top-right corner from the header.\n\n\n\n\n\n\nSelect the \nSettings\n.", 
+            "title": "User Management"
+        }, 
+        {
+            "location": "/user-guide/user-management/#change-password", 
+            "text": "You can change your Batchly password at anytime.    Sign in to your Bacthly account.    Click on the name given on the top-right corner.    Select  Change Password .", 
+            "title": "Change Password"
+        }, 
+        {
+            "location": "/user-guide/user-management/#edit-profile-settings", 
+            "text": "You can change your profile settings (  Email ,  Name ,  Role  ) at any time.    You can click on the name given on the top-right corner from the header.    Select the  Edit Password .", 
+            "title": "Edit Profile Settings"
+        }, 
+        {
+            "location": "/user-guide/user-management/#settings", 
+            "text": "From the settings, you can generate  API Keys . Also, you can  revoke  those keys when not required.    You can click on the name given on the top-right corner from the header.    Select the  Settings .", 
+            "title": "Settings"
+        }, 
+        {
+            "location": "/iam-access/iam-access/", 
+            "text": "Steps to create IAM Access\n\n\nBatchly provides a easy way to add your AWS account. All it needs is for you to provide your AWS Master Key and Access Key and Batchly automatically creates a separate IAM access with privileges to launch EC2 instances (Spot and On-demand) and monitor these instances.\n\n\nHowever, if for some reason, you don\u2019t want to provide your AWS keys, you can create an IAM user for Batchly by following the steps given below:\n\n\n\n\n\n\nGo to AWS IAM dashboard\n\n\n\n\n\n\nIn the left hand pane, click on user and create user.\n\n\n\n\n\n\nGive the user a name, select Generate an access key for each user for the user and click create.\n\n\n\n\n\n\n\n\nDownload the credentials. At the bottom right corner, there\u2019s a download credentials button.\n\n\n\n\nIn the Users listing, click on the user and in the next screen at the bottom. Click on inline policies.\n\n\n\n\n\n\nSelect Custom Policy, it opens up a policy editor. Give the policy a name \u2013 Batchly-Policy and add the policy below.\n\n\n\n\n\n\n{\n    \nVersion\n: \n2012-10-17\n,\n    \nStatement\n: [\n        {\n            \nSid\n: \nStmt1455011811000\n,\n            \nEffect\n: \nAllow\n,\n            \nAction\n: [\n                \niam:GetUser\n,\n                \niam:AddRoleToInstanceProfile\n,\n                \niam:CreateInstanceProfile\n,\n                \niam:CreateRole\n,\n                \niam:GetRole\n,\n                \niam:ListInstanceProfiles\n,\n                \niam:ListRoles\n,\n                \niam:PutRolePolicy\n,\n                \niam:RemoveRoleFromInstanceProfile\n,\n                \niam:UpdateAssumeRolePolicy\n,\n                \niam:PassRole\n,\n                \niam:GetInstanceProfile\n\n            ],\n            \nResource\n: [\n        \narn:aws:iam::XXXXXXXXXXXXX:role/batchly/\n\n                \narn:aws:iam::XXXXXXXXXXXXX:role/batchly/batchly-trusted-role\n,\n        \narn:aws:iam::XXXXXXXXXXXXX:instance-profile/*\n\n        \narn:aws:iam::XXXXXXXXXXXXX:policy/batchly-access-policy\n,\n        \narn:aws:iam::XXXXXXXXXXXXX:user/USERNAME\n\n            ]\n        }\n    ]\n}\n\n\n\n\nNote:\n In the JSON, Replace the \nXXXXXXXXXXXXX\n with the account number of the Account in which you are creating the user.\nReplace the USERNAME with the username in the above policy statement.\n\n\nNext. Apply the policy and use the credentials to add the AWS account in Batchly.\n\n\nPlease execute the above steps and share the credential information with us. This would enable us to add the role. The permission list clearly specifies the permission expected for adding the new role.\n\n\nOnce the account is added in Batch.ly, you can safely remove the user. In addition, once the account is added, you can also validate the newly added role and its permission list.", 
+            "title": "Create IAM Access"
+        }, 
+        {
+            "location": "/iam-access/iam-access/#steps-to-create-iam-access", 
+            "text": "Batchly provides a easy way to add your AWS account. All it needs is for you to provide your AWS Master Key and Access Key and Batchly automatically creates a separate IAM access with privileges to launch EC2 instances (Spot and On-demand) and monitor these instances.  However, if for some reason, you don\u2019t want to provide your AWS keys, you can create an IAM user for Batchly by following the steps given below:    Go to AWS IAM dashboard    In the left hand pane, click on user and create user.    Give the user a name, select Generate an access key for each user for the user and click create.     Download the credentials. At the bottom right corner, there\u2019s a download credentials button.   In the Users listing, click on the user and in the next screen at the bottom. Click on inline policies.    Select Custom Policy, it opens up a policy editor. Give the policy a name \u2013 Batchly-Policy and add the policy below.    {\n     Version :  2012-10-17 ,\n     Statement : [\n        {\n             Sid :  Stmt1455011811000 ,\n             Effect :  Allow ,\n             Action : [\n                 iam:GetUser ,\n                 iam:AddRoleToInstanceProfile ,\n                 iam:CreateInstanceProfile ,\n                 iam:CreateRole ,\n                 iam:GetRole ,\n                 iam:ListInstanceProfiles ,\n                 iam:ListRoles ,\n                 iam:PutRolePolicy ,\n                 iam:RemoveRoleFromInstanceProfile ,\n                 iam:UpdateAssumeRolePolicy ,\n                 iam:PassRole ,\n                 iam:GetInstanceProfile \n            ],\n             Resource : [\n         arn:aws:iam::XXXXXXXXXXXXX:role/batchly/ \n                 arn:aws:iam::XXXXXXXXXXXXX:role/batchly/batchly-trusted-role ,\n         arn:aws:iam::XXXXXXXXXXXXX:instance-profile/* \n         arn:aws:iam::XXXXXXXXXXXXX:policy/batchly-access-policy ,\n         arn:aws:iam::XXXXXXXXXXXXX:user/USERNAME \n            ]\n        }\n    ]\n}  Note:  In the JSON, Replace the  XXXXXXXXXXXXX  with the account number of the Account in which you are creating the user.\nReplace the USERNAME with the username in the above policy statement.  Next. Apply the policy and use the credentials to add the AWS account in Batchly.  Please execute the above steps and share the credential information with us. This would enable us to add the role. The permission list clearly specifies the permission expected for adding the new role.  Once the account is added in Batch.ly, you can safely remove the user. In addition, once the account is added, you can also validate the newly added role and its permission list.", 
+            "title": "Steps to create IAM Access"
+        }
+    ]
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Create IAM Access - Batchly Support</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Create IAM Access";
+    var mkdocs_page_input_path = "iam-access\iam-access.md";
+    var mkdocs_page_url = "/iam-access/iam-access/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Batchly Support</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../about/whybatchly/">Why Batchly</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Guide</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../user-guide/getting-started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../user-guide/user-management/">User Management</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>IAM Access</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Create IAM Access</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#steps-to-create-iam-access">Steps to create IAM Access</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Batchly Support</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>IAM Access &raquo;</li>
+        
+      
+    
+    <li>Create IAM Access</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="steps-to-create-iam-access">Steps to create IAM Access</h3>
+<p>Batchly provides a easy way to add your AWS account. All it needs is for you to provide your AWS Master Key and Access Key and Batchly automatically creates a separate IAM access with privileges to launch EC2 instances (Spot and On-demand) and monitor these instances.</p>
+<p>However, if for some reason, you don’t want to provide your AWS keys, you can create an IAM user for Batchly by following the steps given below:</p>
+<ol>
+<li>
+<p>Go to AWS IAM dashboard</p>
+</li>
+<li>
+<p>In the left hand pane, click on user and create user.</p>
+</li>
+<li>
+<p>Give the user a name, select Generate an access key for each user for the user and click create.</p>
+</li>
+</ol>
+<p><img alt="IAM" src="../../img/iam-01.png" /></p>
+<p>Download the credentials. At the bottom right corner, there’s a download credentials button.</p>
+<p><img alt="IAM" src="../../img/iam-02.png" /></p>
+<p>In the Users listing, click on the user and in the next screen at the bottom. Click on inline policies.</p>
+<p><img alt="IAM" src="../../img/iam-03.png" /></p>
+<p><img alt="IAM" src="../../img/iam-04.png" /></p>
+<p>Select Custom Policy, it opens up a policy editor. Give the policy a name – Batchly-Policy and add the policy below.</p>
+<p><img alt="IAM" src="../../img/iam-05.png" /></p>
+<p><img alt="IAM" src="../../img/iam-06.png" /></p>
+<pre><code>{
+    &quot;Version&quot;: &quot;2012-10-17&quot;,
+    &quot;Statement&quot;: [
+        {
+            &quot;Sid&quot;: &quot;Stmt1455011811000&quot;,
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: [
+                &quot;iam:GetUser&quot;,
+                &quot;iam:AddRoleToInstanceProfile&quot;,
+                &quot;iam:CreateInstanceProfile&quot;,
+                &quot;iam:CreateRole&quot;,
+                &quot;iam:GetRole&quot;,
+                &quot;iam:ListInstanceProfiles&quot;,
+                &quot;iam:ListRoles&quot;,
+                &quot;iam:PutRolePolicy&quot;,
+                &quot;iam:RemoveRoleFromInstanceProfile&quot;,
+                &quot;iam:UpdateAssumeRolePolicy&quot;,
+                &quot;iam:PassRole&quot;,
+                &quot;iam:GetInstanceProfile&quot;
+            ],
+            &quot;Resource&quot;: [
+        &quot;arn:aws:iam::XXXXXXXXXXXXX:role/batchly/&quot;
+                &quot;arn:aws:iam::XXXXXXXXXXXXX:role/batchly/batchly-trusted-role&quot;,
+        &quot;arn:aws:iam::XXXXXXXXXXXXX:instance-profile/*&quot;
+        &quot;arn:aws:iam::XXXXXXXXXXXXX:policy/batchly-access-policy&quot;,
+        &quot;arn:aws:iam::XXXXXXXXXXXXX:user/USERNAME&quot;
+            ]
+        }
+    ]
+}
+</code></pre>
+
+<p><strong>Note:</strong> In the JSON, Replace the <strong>XXXXXXXXXXXXX</strong> with the account number of the Account in which you are creating the user.
+Replace the USERNAME with the username in the above policy statement.</p>
+<p>Next. Apply the policy and use the credentials to add the AWS account in Batchly.</p>
+<p>Please execute the above steps and share the credential information with us. This would enable us to add the role. The permission list clearly specifies the permission expected for adding the new role.</p>
+<p>Once the account is added in Batch.ly, you can safely remove the user. In addition, once the account is added, you can also validate the newly added role and its permission list.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../user-guide/user-management/" class="btn btn-neutral" title="User Management"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../user-guide/user-management/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>
