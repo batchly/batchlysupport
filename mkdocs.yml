@@ -15,4 +15,8 @@ pages:
 #- Use Cases: 
 #    - 'OCR Processing': 'usecases/ocr-processing.md'
 #    - 'Video Transcoding': 'usecases/video-transcoding.md'
+- Apps:
+    - 'JMeter': 'jmeter/jmeter.md'
+    - 'FFmpeg': 'ffmpeg/ffmpeg.md'
+    - 'ImageMagick': 'imagemagick/imagemagick.md'
 theme: readthedocs
