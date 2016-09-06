@@ -8,7 +8,7 @@
   
   
   
-  <title>Why Batchly - Batchly Support</title>
+  <title>Big Data Apps - Batchly Support</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Why Batchly";
-    var mkdocs_page_input_path = "about\whybatchly.md";
-    var mkdocs_page_url = "/about/whybatchly/";
+    var mkdocs_page_name = "Big Data Apps";
+    var mkdocs_page_input_path = "bigdata\spark.md";
+    var mkdocs_page_url = "/bigdata/spark/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -67,18 +67,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Why Batchly</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#why-batchly">Why Batchly?</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#why-batchly-benefits-you">Why Batchly Benefits You</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../../about/whybatchly/">Why Batchly</a>
         
     </li>
 
@@ -150,8 +140,15 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../bigdata/spark/">Big Data Apps</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Big Data Apps</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#lets-get-started-with-big-data-apps">Let's get started with Big Data Apps</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -181,11 +178,11 @@
     
       
         
-          <li>About &raquo;</li>
+          <li>Apps &raquo;</li>
         
       
     
-    <li>Why Batchly</li>
+    <li>Big Data Apps</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -195,33 +192,31 @@
           <div role="main">
             <div class="section">
               
-                <h4 id="why-batchly">Why Batchly?</h4>
-<p>Batchly is a solution that fully automates AWS cost management (using spot instances and instance rightsizing using autoscaling) in a way that makes the ROI impossible to ignore.</p>
-<p>AWS has 11 regions with 2 to 3 AZs in each region, 50 instance types, and many instance categories (like Spot, Reserved, and On-demand). Identifying the right infrastructure for your application(s) from these options is not a trivial activity. It is complex, costly, and most times suboptimal.</p>
-<p>Batchly takes out all the complexities associated with Cloud management by automating all the activities, resulting in up to 90% reduction in AWS costs.</p>
-<p><img alt="Complex Way" src="../../img/cmp-complexway.jpg" /></p>
-<p>Batchly takes out all the complexities associated with Cloud management by automating all the activities resulting in up to 90% reduction in AWS costs. </p>
-<p><img alt="Batchly Way" src="../../img/cmp-batchlyway.jpg" /></p>
-<h4 id="why-batchly-benefits-you">Why Batchly Benefits You</h4>
-<p>Batchly enables both internet and traditional enterprises to automatically benefit from AWS cost and usage savings by optimizing workloads with spot instances and EC2 smart sizing. No matter what you use AWS for, Batchly helps you to reduce your cost (by up to 90%) in a frictionless manner.</p>
-<p>Features that customers love:</p>
-<ul>
-<li>
-<p>AWS spot bid optimization seamlessly deploys, moves, and manages workloads over high cost savings spot instances across any AWS region.</p>
-</li>
-<li>
-<p>EC2 instance smart sizing realizes ultimate EC2 efficiencies with the automatic instance sizing for the right application / workload.</p>
-</li>
-<li>
-<p>Seamless integration easily works with pre-built apps for the most common enterprise applications (JMeter, Spark, Hive, PIG, Jenkins, Elastic BeanStalk, and more) and REST API support provides a smooth experience.</p>
-</li>
-<li>
-<p>Fully managed benefit from cost and utilization optimizations from within your own AWS account while we do the heavy lifting.</p>
-</li>
-<li>
-<p>Secured with organic and strong AWS security controls.</p>
-</li>
-</ul>
+                <h3 id="lets-get-started-with-big-data-apps">Let's get started with Big Data Apps</h3>
+<p>Big Data has following apps which are almost similar to each other in term of using it (or information required to run these apps): 
+<em>Hive</em>, <em>Pig</em>, <em>Spark</em>, <em>Hadoop</em></p>
+<p>This demonstration will show on how to use Spark app.You may select any other Big data app instead of Spark.(since , all these apps are similar)</p>
+<p><strong>Step 1:</strong>  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.</p>
+<p><strong>Step 2:</strong> You will be redirected to Batchly Dashboard. Next, click on the <strong>App Store</strong> located in the header.</p>
+<p><img alt="bigdata" src="../../img/jmeter1.png" /></p>
+<p><strong>Step 3:</strong> You will be redirected to the App store which has the apps supported on Batchly. To run Spark, click the <strong>Get Started</strong> button in the Spark App.</p>
+<p><img alt="bigdata" src="../../img/sparkapp.png" /></p>
+<p><strong>Step 4:</strong> Now, to run Spark job, fill all the required given text fields. There are following text fields to be filled: </p>
+<p><strong>Job Name:</strong> You can give any desired name to your job. </p>
+<p><strong>Project:</strong> Select the associated project to run the job.</p>
+<p><strong>Cluster Name:</strong> Select the cluster name. </p>
+<p><strong>Deploy Mode:</strong> Select the deploy mode.</p>
+<p><strong>Spark-submit Options:</strong> Enter Spark-submit if you have any.</p>
+<p><strong>Application Location:</strong> Enter Application Location.</p>
+<p><strong>Arguments:</strong> Enter Arguments if you have any.</p>
+<p><strong>Action on Failure:</strong> Select the Action on Failure.</p>
+<p><strong>Instance Type:</strong> Select the Instance Type</p>
+<p><img alt="bigdata" src="../../img/spark.png" /></p>
+<p><strong>Step 5:</strong> Click on the <strong>Add Job</strong> button once you are done with filling all the details. This action will save your job and is available to see later on the <strong>Jobs</strong> page.</p>
+<p><strong>Step 6:</strong> On successful job addition, you would get a popup where you can either start your job immediately (by clicking <strong>Execute the Job</strong>) or schedule your job to run later (by clicking on the button <strong>Schedule the Job</strong>).</p>
+<p><img alt="bigdata" src="../../img/ffmpeg3.png" /></p>
+<p><strong>Step 7:</strong> You can monitor the job progress using the <strong>Job Run Details</strong> page.</p>
+<p><img alt="bigdata" src="../../img/sparkdetail.png" /></p>
               
             </div>
           </div>
@@ -229,10 +224,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../user-guide/getting-started/" class="btn btn-neutral float-right" title="Getting Started">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../imagemagick/imagemagick/" class="btn btn-neutral" title="ImageMagick"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -258,10 +251,8 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../imagemagick/imagemagick/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../../user-guide/getting-started/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
