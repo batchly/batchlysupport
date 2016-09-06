@@ -19,4 +19,5 @@ pages:
     - 'JMeter': 'jmeter/jmeter.md'
     - 'FFmpeg': 'ffmpeg/ffmpeg.md'
     - 'ImageMagick': 'imagemagick/imagemagick.md'
+    - 'Big Data Apps': 'bigdata/spark.md'
 theme: readthedocs
