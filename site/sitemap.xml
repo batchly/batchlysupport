@@ -4,7 +4,11 @@
     
     <url>
      <loc>None/</loc>
+<<<<<<< HEAD
      <lastmod>2016-09-05</lastmod>
+=======
+     <lastmod>2016-09-01</lastmod>
+>>>>>>> e94e5bc976bea1d5eb6efbd6a1833eef923b7226
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +17,11 @@
         
     <url>
      <loc>None/about/whybatchly/</loc>
+<<<<<<< HEAD
      <lastmod>2016-09-05</lastmod>
+=======
+     <lastmod>2016-09-01</lastmod>
+>>>>>>> e94e5bc976bea1d5eb6efbd6a1833eef923b7226
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,11 +31,16 @@
         
     <url>
      <loc>None/user-guide/getting-started/</loc>
+<<<<<<< HEAD
      <lastmod>2016-09-05</lastmod>
+=======
+     <lastmod>2016-09-01</lastmod>
+>>>>>>> e94e5bc976bea1d5eb6efbd6a1833eef923b7226
      <changefreq>daily</changefreq>
     </url>
         
     <url>
+<<<<<<< HEAD
      <loc>None/user-guide/creating-jobs/</loc>
      <lastmod>2016-09-05</lastmod>
      <changefreq>daily</changefreq>
@@ -52,6 +65,10 @@
     <url>
      <loc>None/api/createnewjob/</loc>
      <lastmod>2016-09-05</lastmod>
+=======
+     <loc>None/user-guide/user-management/</loc>
+     <lastmod>2016-09-01</lastmod>
+>>>>>>> e94e5bc976bea1d5eb6efbd6a1833eef923b7226
      <changefreq>daily</changefreq>
     </url>
         
@@ -60,6 +77,7 @@
     
         
     <url>
+<<<<<<< HEAD
      <loc>None/usecases/ocr-processing/</loc>
      <lastmod>2016-09-05</lastmod>
      <changefreq>daily</changefreq>
@@ -68,6 +86,10 @@
     <url>
      <loc>None/usecases/video-transcoding/</loc>
      <lastmod>2016-09-05</lastmod>
+=======
+     <loc>None/iam-access/iam-access/</loc>
+     <lastmod>2016-09-01</lastmod>
+>>>>>>> e94e5bc976bea1d5eb6efbd6a1833eef923b7226
      <changefreq>daily</changefreq>
     </url>
         
