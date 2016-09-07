@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <title>Getting Started - Batchly Support</title>
+    <title>API Overview - Batchly Support</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -85,19 +85,19 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Getting Started</a>
+<li >
+    <a href="../../user-guide/getting-started/">Getting Started</a>
 </li>
 
                         
                             
 <li >
-    <a href="../user-management/">User Management</a>
+    <a href="../../user-guide/user-management/">User Management</a>
 </li>
 
                         
@@ -154,25 +154,25 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li >
-    <a href="../../api/overview/">API Overview</a>
+<li class="active">
+    <a href="./">API Overview</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../api/definition/">Definition</a>
+    <a href="../definition/">Definition</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../api/app-api/">App Specific APIs</a>
+    <a href="../app-api/">App Specific APIs</a>
 </li>
 
                         
@@ -191,12 +191,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../../about/whybatchly/">
+                        <a rel="next" href="../../bigdata/spark/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../user-management/">
+                        <a rel="prev" href="../definition/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -212,117 +212,38 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#getting-started">Getting Started</a></li>
+        <li class="first-level active"><a href="#batchly-rest-api">Batchly REST API</a></li>
         
-    
-        <li class="first-level "><a href="#first-step-after-signing-up-check-your-email">First step after signing up - Check your Email</a></li>
-        
-    
-        <li class="first-level "><a href="#sign-in-process-wizard">Sign in Process - Wizard</a></li>
-        
-            <li class="second-level"><a href="#add-aws-account">Add AWS Account</a></li>
+            <li class="second-level"><a href="#end-point">End Point</a></li>
             
         
-            <li class="second-level"><a href="#add-project">Add Project</a></li>
+            <li class="second-level"><a href="#authentication">Authentication</a></li>
             
         
-    
-        <li class="first-level "><a href="#select-app">Select App</a></li>
+            <li class="second-level"><a href="#support">Support</a></li>
+            
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="getting-started">Getting Started</h3>
-<p>To get started with Batchly, go to the <a href="http://join.batchly.net">Registration page</a> and <strong>create a new Batchly Account</strong>.</p>
-<p>To Register for Batchly, enter the following details :</p>
-<ol>
-<li>
-<p>Enter your <strong>Full Name</strong></p>
-</li>
-<li>
-<p>Enter your <strong>Organization Name</strong></p>
-</li>
-<li>
-<p>Enter your Organization Name or any desired name to set <strong>domain name</strong></p>
-</li>
-<li>
-<p>Enter your valid <strong>Email Address</strong></p>
-</li>
-<li>
-<p>Enter your valid <strong>Phone Number</strong></p>
-</li>
-<li>
-<p>Enter your <strong>Password</strong></p>
-</li>
-<li>
-<p>Click <strong>Create Account</strong> button.You may be asked to select the Captcha to let us know that you are human.</p>
-</li>
-</ol>
-<p><img alt="Register" src="../../img/register.png" /></p>
-<h3 id="first-step-after-signing-up-check-your-email">First step after signing up - Check your Email</h3>
-<p>After signing up, you will receive an email on your registered email address for verification. After verification completion, you can successfully sign in to Batchly.</p>
-<h3 id="sign-in-process-wizard">Sign in Process - Wizard</h3>
-<p>When you sign up for the very first time from your customized domain (for example : http:// yxz.batchly.net), you will go through the Wizard page. Here you will be asked to follow a few steps in order to set up everything, which you will be required to use on an app later.</p>
-<p><strong>Step 1:</strong> Create an account.</p>
-<p><strong>Step 2:</strong> Create a project.</p>
-<p><strong>Step 3:</strong> Select any app.</p>
-<p><img alt="Wizard" src="../../img/wizard.png" /></p>
-<h4 id="add-aws-account">Add AWS Account</h4>
-<p>Click the <strong>Add AWS Account</strong> and you will be redirected to another page where following details needs to be given to add an account.</p>
-<ol>
-<li>
-<p>Enter Account Name.</p>
-</li>
-<li>
-<p>Select the Region.</p>
-</li>
-<li>
-<p>Enter your Access Key.</p>
-</li>
-<li>
-<p>Enter your Secret Key.</p>
-</li>
-</ol>
-<p><strong>Note:</strong> Before adding an account, the customer needs to have their own AWS account.</p>
-<p><img alt="Account" src="../../img/createaccounts.png" /></p>
-<h4 id="add-project">Add Project</h4>
-<p><strong>Important:</strong> </p>
-<ol>
-<li>
-<p>Before adding a project, the customer needs to have their own AWS account.</p>
-</li>
-<li>
-<p>When you create an account, a default project will be created without VPC. So, creating a project is not mandatory. This can be done later.</p>
-</li>
-</ol>
-<p>The projects section lets you add a project under an AWS account. The following steps will show how to add a new project:</p>
-<ol>
-<li>
-<p>Enter Project Name.</p>
-</li>
-<li>
-<p>Select the Account under which you want to add the project.</p>
-</li>
-<li>
-<p>Select the Cloud region.</p>
-</li>
-<li>
-<p>Select the <strong>Virtual Private Cloud</strong>. (This is optional.)
-<strong>Note:</strong> If you wish to work on <strong>JMeter</strong> app then this VPC will be mandatory.</p>
-</li>
-<li>
-<p>Select the VPC information. (This needs to be done only if you have selected VPC)</p>
-</li>
-<li>
-<p>Select the subnet information. (This needs to be done only if you have selected VPC)</p>
-</li>
-</ol>
-<p><img alt="Project" src="../../img/createproject.png" /></p>
-<h3 id="select-app">Select App</h3>
-<p>Once you're done with adding account and project, you can select any app you want to work on.</p>
-<p><img alt="Apps" src="../../img/appstore.png" /></p></div>
+<h3 id="batchly-rest-api">Batchly REST API</h3>
+<p>Each customer of batchly gets their own customized URL for access. Using the web console, you can generate new set of API access keys.  You need to safe keep the keys.  Batchly API SDK doesn’t send the secret key in any request. Batchly supports two types of API authentication mechanisms -  HMAC which validates calls using request signature and ApiKey based.</p>
+<p>Before making calls to the API, setup the base URI, access key and secret key in the configuration.</p>
+<h4 id="end-point">End Point</h4>
+<p>To call API requests to Batchly.net, please send HTTP(S) post requests to:</p>
+<pre><code>https://&lt;customerdomain&gt;.batchly.net/api/
+</code></pre>
+
+<h4 id="authentication">Authentication</h4>
+<p><strong> ApiKey </strong></p>
+<p>A user's unique authentication key string. This authentication key will be shared with your team when the system is configured for your usage. This key is mandatory and needs to be sent as part of every API call. The Key should be sent along in the Request Header as below.</p>
+<pre><code>Authorization: ApiKey AccessKey:SecretKey
+</code></pre>
+
+<h4 id="support">Support</h4>
+<p>Please reach out to <a href="mailto:support@batchly.net">support@batchy.net</a> to get your API Keys if you do not have the keys and/or receiving authentication errors.</p></div>
         
     </div>
 

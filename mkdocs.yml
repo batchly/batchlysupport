@@ -5,19 +5,16 @@ pages:
     - 'Why Batchly' : 'about/whybatchly.md'
 - User Guide:
     - 'Getting Started': 'user-guide/getting-started.md'
-#    - 'Creating Joule Jobs': 'user-guide/creating-jobs.md'
     - 'User Management': 'user-guide/user-management.md'
 - IAM Access:
     - 'Create IAM Access': 'iam-access/iam-access.md'
-#- API:    
-#    - 'Overview': 'api/overview.md'
-#    - 'Create New Job': 'api/createnewjob.md'   
-#- Use Cases: 
-#    - 'OCR Processing': 'usecases/ocr-processing.md'
-#    - 'Video Transcoding': 'usecases/video-transcoding.md'
 - Apps:
     - 'JMeter': 'jmeter/jmeter.md'
     - 'FFmpeg': 'ffmpeg/ffmpeg.md'
     - 'ImageMagick': 'imagemagick/imagemagick.md'
     - 'Big Data Apps': 'bigdata/spark.md'
-theme: readthedocs
+- API:
+    - 'API Overview': 'api/overview.md'
+    - 'Definition': 'api/definition.md'
+    - 'App Specific APIs': 'api/app-api.md'
+theme: cinder

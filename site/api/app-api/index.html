@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>App Specific APIs - Batchly Support</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Batchly Support</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../about/whybatchly/">Why Batchly</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../user-guide/getting-started/">Getting Started</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../user-guide/user-management/">User Management</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">IAM Access <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../iam-access/iam-access/">Create IAM Access</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apps <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../jmeter/jmeter/">JMeter</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../ffmpeg/ffmpeg/">FFmpeg</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../imagemagick/imagemagick/">ImageMagick</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../bigdata/spark/">Big Data Apps</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../overview/">API Overview</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../definition/">Definition</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">App Specific APIs</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../definition/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#app-specific-apis">App Specific APIs</a></li>
+        
+            <li class="second-level"><a href="#app-specific-request-headers">App Specific Request headers</a></li>
+            
+        
+            <li class="second-level"><a href="#ffmpeg-video-transcoding-app">FFMpeg - Video Transcoding App</a></li>
+            
+        
+            <li class="second-level"><a href="#imagemagick-image-processing-app">ImageMagick - Image processing App</a></li>
+            
+        
+            <li class="second-level"><a href="#tesseract-optical-character-recognition-app">Tesseract - Optical Character Recognition App</a></li>
+            
+        
+            <li class="second-level"><a href="#jmeter-load-testing-app">JMeter - Load Testing App</a></li>
+            
+        
+            <li class="second-level"><a href="#hive-app">Hive App</a></li>
+            
+        
+            <li class="second-level"><a href="#pig-app">Pig App</a></li>
+            
+        
+            <li class="second-level"><a href="#spark-app">Spark App</a></li>
+            
+        
+            <li class="second-level"><a href="#hadoopstreaming-app">HadoopStreaming App</a></li>
+            
+        
+            <li class="second-level"><a href="#hadoopcustom-app">HadoopCustom App</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h3 id="app-specific-apis">App Specific APIs</h3>
+<p>Batchly works through Apps. There are marketplace apps such as FFMpeg for video transcoding, and JMeter for load testing. You may also upload your own private app to run in your Batchly account.</p>
+<p>Nevertheless, each app has its own set of APIs to perform the basic operations. The request headers, however, differ based on the app you want to create.</p>
+<p><strong>Common Actions Supported By All Apps</strong></p>
+<table>
+<thead>
+<tr>
+<th>HTTP Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>api/apps/APP_NAME/{id}/Execute</td>
+<td>Execute the job</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>api/apps/APP_NAME</td>
+<td>Create a new job</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>api/apps/APP_NAME/{id}</td>
+<td>Edit a job with updated information.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>api/apps/APP_NAME/{id}</td>
+<td>Get details for a job</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>api/apps/APP_NAME/{id}</td>
+<td>Delete a job</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>api/apps/APP_NAME/jobs</td>
+<td>Lists all jobs</td>
+</tr>
+</tbody>
+</table>
+<h4 id="app-specific-request-headers">App Specific Request headers</h4>
+<hr />
+<h4 id="ffmpeg-video-transcoding-app">FFMpeg - Video Transcoding App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: &quot;string&quot;,
+  &quot;ProjectId&quot;: &quot;string&quot;,
+  &quot;Region&quot;: &quot;string&quot;,
+  &quot;TimeLimit&quot;: 0,
+  &quot;ProfileId&quot;: &quot;string&quot;,
+  &quot;FileNameSuffix&quot;: &quot;string&quot;,
+  &quot;SourceLocation&quot;: &quot;string&quot;,
+  &quot;DestinationLocation&quot;: &quot;string&quot;
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>String</td>
+<td>AWS region where your job will run</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TimeLimit</td>
+<td>Integer</td>
+<td>Time limit when your job needs to complete</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProfileId</td>
+<td>String</td>
+<td>Common video profiles for MP4 and HLS</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>FileNameSuffix</td>
+<td>String</td>
+<td>Suffix to identify the transcoded output file</td>
+<td>No</td>
+</tr>
+<tr>
+<td>SourceLocation</td>
+<td>String</td>
+<td>Location where all the input files reside</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DestinationLocation</td>
+<td>String</td>
+<td>Location where you want the output files to go to</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example result</strong></p>
+<pre><code>{
+  &quot;RequestId&quot;: &quot;string&quot;,
+  &quot;Data&quot;: {
+    &quot;Runs&quot;: 0,
+    &quot;IsScheduled&quot;: true,
+    &quot;IsExecuting&quot;: true,
+    &quot;Engine&quot;: &quot;All&quot;,
+    &quot;AppName&quot;: &quot;string&quot;,
+    &quot;IsPrivateApp&quot;: true,
+    &quot;Id&quot;: &quot;string&quot;,
+    &quot;Name&quot;: &quot;string&quot;
+  },
+  &quot;Errors&quot;: {},
+  &quot;ContinuationToken&quot;: &quot;string&quot;
+}
+</code></pre>
+
+<hr />
+<h4 id="imagemagick-image-processing-app">ImageMagick - Image processing App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: &quot;string&quot;,
+  &quot;ProjectId&quot;: &quot;string&quot;,
+  &quot;SourceLocation&quot;: &quot;string&quot;,
+  &quot;DestinationLocation&quot;: &quot;string&quot;,
+  &quot;Region&quot;: &quot;string&quot;,
+  &quot;TimeLimit&quot;: 0,
+  &quot;Resize&quot;: &quot;string&quot;
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>String</td>
+<td>AWS region where your job will run</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TimeLimit</td>
+<td>Integer</td>
+<td>Time limit when your job needs to complete</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Resize</td>
+<td>String</td>
+<td>Image height and width to which the image needs to be converted to e.g. 100x100</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>SourceLocation</td>
+<td>String</td>
+<td>Location where all the input files reside</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DestinationLocation</td>
+<td>String</td>
+<td>Location where you want the output files to go to</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+  &quot;RequestId&quot;: &quot;string&quot;,
+  &quot;Data&quot;: {
+    &quot;Runs&quot;: 0,
+    &quot;IsScheduled&quot;: true,
+    &quot;IsExecuting&quot;: true,
+    &quot;Engine&quot;: &quot;All&quot;,
+    &quot;AppName&quot;: &quot;string&quot;,
+    &quot;IsPrivateApp&quot;: true,
+    &quot;Id&quot;: &quot;string&quot;,
+    &quot;Name&quot;: &quot;string&quot;
+  },
+  &quot;Errors&quot;: {},
+  &quot;ContinuationToken&quot;: &quot;string&quot;
+}
+</code></pre>
+
+<hr />
+<h4 id="tesseract-optical-character-recognition-app">Tesseract - Optical Character Recognition App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: &quot;string&quot;,
+  &quot;ProjectId&quot;: &quot;string&quot;,
+  &quot;SourceLocation&quot;: &quot;string&quot;,
+  &quot;DestinationLocation&quot;: &quot;string&quot;,
+  &quot;Region&quot;: &quot;string&quot;,
+  &quot;TimeLimit&quot;: 0
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>String</td>
+<td>AWS region where your job will run</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TimeLimit</td>
+<td>Integer</td>
+<td>Time limit when your job needs to complete</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>SourceLocation</td>
+<td>String</td>
+<td>Location where all the input files reside</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DestinationLocation</td>
+<td>String</td>
+<td>Location where you want the output files to go to</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+  &quot;Runs&quot;: 0,
+  &quot;IsScheduled&quot;: true,
+  &quot;IsExecuting&quot;: true,
+  &quot;Engine&quot;: &quot;All&quot;,
+  &quot;AppName&quot;: &quot;string&quot;,
+  &quot;IsPrivateApp&quot;: true,
+  &quot;Id&quot;: &quot;string&quot;,
+  &quot;Name&quot;: &quot;string&quot;
+}
+</code></pre>
+
+<hr />
+<h4 id="jmeter-load-testing-app">JMeter - Load Testing App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: &quot;string&quot;,
+  &quot;ProjectId&quot;: &quot;string&quot;,
+  &quot;DestinationLocation&quot;: &quot;string&quot;,
+  &quot;TestPlan&quot;: &quot;string&quot;,
+  &quot;InstanceType&quot;: &quot;string&quot;,
+  &quot;InstanceCount&quot;: 0
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TestPlan</td>
+<td>Integer</td>
+<td>JMX test plan you want to execture</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DestinationLocation</td>
+<td>String</td>
+<td>Location where you want the output files to go to</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceType</td>
+<td>String</td>
+<td>Instance type you want Batchly to launch</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceCount</td>
+<td>Integer</td>
+<td>Number of instances of the InstanceType you want Batchly to launch and manage</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+  &quot;RequestId&quot;: &quot;string&quot;,
+  &quot;Data&quot;: {
+    &quot;Runs&quot;: 0,
+    &quot;IsScheduled&quot;: true,
+    &quot;IsExecuting&quot;: true,
+    &quot;Engine&quot;: &quot;All&quot;,
+    &quot;AppName&quot;: &quot;string&quot;,
+    &quot;IsPrivateApp&quot;: true,
+    &quot;Id&quot;: &quot;string&quot;,
+    &quot;Name&quot;: &quot;string&quot;
+  },
+  &quot;Errors&quot;: {},
+  &quot;ContinuationToken&quot;: &quot;string&quot;
+}
+</code></pre>
+
+<hr />
+<h4 id="hive-app">Hive App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: “Hive Job”,
+  &quot;ProjectId&quot;: “P-XXXXX”,
+  &quot;ClusterId&quot;: “j-XXXXX”,
+  &quot;ScriptLocation&quot;: “s3://BUCKET_NAME/PATH_TO_SCRIPT”,
+  &quot;InputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_DATASET”,
+  &quot;OutputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
+  &quot;Arguments&quot;: “arg1 arg2 arg3”
+  &quot;ActionOnFailure&quot;: “CONTINUE”
+  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
+}    
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClusterId</td>
+<td>String</td>
+<td>Cluster Id where the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ScriptLocation</td>
+<td>String</td>
+<td>S3 location where the script resides</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InputLocation</td>
+<td>String</td>
+<td>S3 location where the dataset resides</td>
+<td>No</td>
+</tr>
+<tr>
+<td>OutputLocation</td>
+<td>String</td>
+<td>S3 location where results are written</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Arguments</td>
+<td>String</td>
+<td>Any arguments that the script requires</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ActionOnFailure</td>
+<td>String</td>
+<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceTypes</td>
+<td>String[]</td>
+<td>The instance types to be launched</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+   Id: &quot;W-XXXXX&quot;,
+   Name: &quot;Hive Job&quot;,
+   Runs: 1,
+   IsScheduled: &quot;False&quot;,
+   IsExecuting: &quot;True | False&quot;,
+   Engine: &quot;MapReduce&quot;
+}   
+</code></pre>
+
+<hr />
+<h4 id="pig-app">Pig App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: “Pig Job”,
+  &quot;ProjectId&quot;: “P-XXXXX”,
+  &quot;ClusterId&quot;: “j-XXXXX”,
+  &quot;ScriptLocation&quot;: “s3://BUCKET_NAME/PATH_TO_SCRIPT”,
+  &quot;InputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_DATASET”,
+  &quot;OutputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
+  &quot;Arguments&quot;: “arg1 arg2 arg3”
+  &quot;ActionOnFailure&quot;: “CONTINUE”
+  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
+} 
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClusterId</td>
+<td>String</td>
+<td>Cluster Id where the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ScriptLocation</td>
+<td>String</td>
+<td>S3 location where the script resides</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InputLocation</td>
+<td>String</td>
+<td>S3 location where the dataset resides</td>
+<td>No</td>
+</tr>
+<tr>
+<td>OutputLocation</td>
+<td>String</td>
+<td>S3 location where results are written</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Arguments</td>
+<td>String</td>
+<td>Any arguments that the script requires</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ActionOnFailure</td>
+<td>String</td>
+<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceTypes</td>
+<td>String[]</td>
+<td>The instance types to be launched</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+   Id: &quot;W-XXXXX&quot;,
+   Name: &quot;Pig Job&quot;,
+   Runs: 1,
+   IsScheduled: &quot;False&quot;,
+   IsExecuting: &quot;True | False&quot;,
+   Engine: &quot;MapReduce&quot;
+}   
+</code></pre>
+
+<hr />
+<h4 id="spark-app">Spark App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: “Spark Job”,
+  &quot;ProjectId&quot;: “P-XXXXX”,
+  &quot;ClusterId&quot;: “j-XXXXX”,
+  &quot;DeployMode&quot;: “Cluster”,
+  &quot;SparkSubmitOptions&quot;: “opt1 opt2 opt3”,
+  &quot;ApplicationLocation&quot;: “s3://BUCKET_NAME/PATH_TO_SPARK_JAR”,
+  &quot;Arguments&quot;: “arg1 arg2 arg3”
+  &quot;ActionOnFailure&quot;: “CONTINUE”
+  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClusterId</td>
+<td>String</td>
+<td>Cluster Id where the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DeployMode</td>
+<td>Integer</td>
+<td>1 (for Cluster mode), 2 (for Client mode)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>SparkSubmitOptions</td>
+<td>String</td>
+<td>Specify other options for spark-submit</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ApplicationLocation</td>
+<td>String</td>
+<td>S3 location where the Spark jar resides</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Arguments</td>
+<td>String</td>
+<td>Any arguments that the script requires</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ActionOnFailure</td>
+<td>String</td>
+<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceTypes</td>
+<td>String[]</td>
+<td>The instance types to be launched</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+   Id: &quot;W-XXXXX&quot;,
+   Name: &quot;Spark Job&quot;,
+   Runs: 1,
+   IsScheduled: &quot;False&quot;,
+   IsExecuting: &quot;True | False&quot;,
+   Engine: &quot;MapReduce&quot;
+}   
+</code></pre>
+
+<hr />
+<h4 id="hadoopstreaming-app">HadoopStreaming App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: “HadoopStreaming Job”,
+  &quot;ProjectId&quot;: “P-XXXXX”,
+  &quot;ClusterId&quot;: “j-XXXXX”,
+  &quot;MapperLocation&quot;: “s3://BUCKET_NAME/PATH_TO_MAP_FUNCTION”,
+  &quot;ReducerLocation&quot;: “s3://BUCKET_NAME/PATH_TO_REDUCE_FUNCTION”,
+  &quot;InputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_DATASET”,
+  &quot;OutputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
+  &quot;Arguments&quot;: “arg1 arg2 arg3”
+  &quot;ActionOnFailure&quot;: “CONTINUE”
+  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClusterId</td>
+<td>String</td>
+<td>Cluster Id where the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>MapperLocation</td>
+<td>String</td>
+<td>S3 location of the map function or the name of the Hadoop streaming command to run</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ReducerLocation</td>
+<td>String</td>
+<td>S3 location of the reduce function or the name of the Hadoop streaming command to run</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InputLocation</td>
+<td>String</td>
+<td>S3 location where the dataset resides</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>OutputLocation</td>
+<td>String</td>
+<td>S3 location where the results are written</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Arguments</td>
+<td>String</td>
+<td>Any arguments that the script requires</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ActionOnFailure</td>
+<td>String</td>
+<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceTypes</td>
+<td>String[]</td>
+<td>The instance types to be launched</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+   Id: &quot;W-XXXXX&quot;,
+   Name: &quot;HadoopStreaming Job&quot;,
+   Runs: 1,
+   IsScheduled: &quot;False&quot;,
+   IsExecuting: &quot;True | False&quot;,
+   Engine: &quot;MapReduce&quot;
+}   
+</code></pre>
+
+<hr />
+<h4 id="hadoopcustom-app">HadoopCustom App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: “Hadoop Job”,
+  &quot;ProjectId&quot;: “P-XXXXX”,
+  &quot;ClusterId&quot;: “j-XXXXX”,
+  &quot;JarLocation&quot;: “s3://BUCKET_NAME/PATH_TO_JAR”,
+  &quot;Arguments&quot;: “arg1 arg2 arg3”
+  &quot;ActionOnFailure&quot;: “CONTINUE”
+  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClusterId</td>
+<td>String</td>
+<td>Cluster Id where the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>JarLocation</td>
+<td>String</td>
+<td>A path into S3 or a fully qualified java class in the classpath</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Arguments</td>
+<td>String</td>
+<td>Any arguments that the script requires</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ActionOnFailure</td>
+<td>String</td>
+<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceTypes</td>
+<td>String</td>
+<td>The instance types to be launched</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+   Id: &quot;W-XXXXX&quot;,
+   Name: &quot;Hadoop Job&quot;,
+   Runs: 1,
+   IsScheduled: &quot;False&quot;,
+   IsExecuting: &quot;True | False&quot;,
+   Engine: &quot;MapReduce&quot;
+}   
+</code></pre>
+
+<hr /></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

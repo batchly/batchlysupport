@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <title>Getting Started - Batchly Support</title>
+    <title>Definition - Batchly Support</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -85,19 +85,19 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Getting Started</a>
+<li >
+    <a href="../../user-guide/getting-started/">Getting Started</a>
 </li>
 
                         
                             
 <li >
-    <a href="../user-management/">User Management</a>
+    <a href="../../user-guide/user-management/">User Management</a>
 </li>
 
                         
@@ -154,25 +154,25 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../api/overview/">API Overview</a>
+    <a href="../overview/">API Overview</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Definition</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../api/definition/">Definition</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../api/app-api/">App Specific APIs</a>
+    <a href="../app-api/">App Specific APIs</a>
 </li>
 
                         
@@ -191,12 +191,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../../about/whybatchly/">
+                        <a rel="next" href="../overview/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../user-management/">
+                        <a rel="prev" href="../app-api/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -212,117 +212,157 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#getting-started">Getting Started</a></li>
+        <li class="first-level active"><a href="#jobs-api">Jobs API</a></li>
         
     
-        <li class="first-level "><a href="#first-step-after-signing-up-check-your-email">First step after signing up - Check your Email</a></li>
+        <li class="first-level "><a href="#runs-api">Runs API</a></li>
         
     
-        <li class="first-level "><a href="#sign-in-process-wizard">Sign in Process - Wizard</a></li>
-        
-            <li class="second-level"><a href="#add-aws-account">Add AWS Account</a></li>
-            
-        
-            <li class="second-level"><a href="#add-project">Add Project</a></li>
-            
+        <li class="first-level "><a href="#projects-api">Projects API</a></li>
         
     
-        <li class="first-level "><a href="#select-app">Select App</a></li>
+        <li class="first-level "><a href="#accounts-api">Accounts API</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="getting-started">Getting Started</h3>
-<p>To get started with Batchly, go to the <a href="http://join.batchly.net">Registration page</a> and <strong>create a new Batchly Account</strong>.</p>
-<p>To Register for Batchly, enter the following details :</p>
-<ol>
-<li>
-<p>Enter your <strong>Full Name</strong></p>
-</li>
-<li>
-<p>Enter your <strong>Organization Name</strong></p>
-</li>
-<li>
-<p>Enter your Organization Name or any desired name to set <strong>domain name</strong></p>
-</li>
-<li>
-<p>Enter your valid <strong>Email Address</strong></p>
-</li>
-<li>
-<p>Enter your valid <strong>Phone Number</strong></p>
-</li>
-<li>
-<p>Enter your <strong>Password</strong></p>
-</li>
-<li>
-<p>Click <strong>Create Account</strong> button.You may be asked to select the Captcha to let us know that you are human.</p>
-</li>
-</ol>
-<p><img alt="Register" src="../../img/register.png" /></p>
-<h3 id="first-step-after-signing-up-check-your-email">First step after signing up - Check your Email</h3>
-<p>After signing up, you will receive an email on your registered email address for verification. After verification completion, you can successfully sign in to Batchly.</p>
-<h3 id="sign-in-process-wizard">Sign in Process - Wizard</h3>
-<p>When you sign up for the very first time from your customized domain (for example : http:// yxz.batchly.net), you will go through the Wizard page. Here you will be asked to follow a few steps in order to set up everything, which you will be required to use on an app later.</p>
-<p><strong>Step 1:</strong> Create an account.</p>
-<p><strong>Step 2:</strong> Create a project.</p>
-<p><strong>Step 3:</strong> Select any app.</p>
-<p><img alt="Wizard" src="../../img/wizard.png" /></p>
-<h4 id="add-aws-account">Add AWS Account</h4>
-<p>Click the <strong>Add AWS Account</strong> and you will be redirected to another page where following details needs to be given to add an account.</p>
-<ol>
-<li>
-<p>Enter Account Name.</p>
-</li>
-<li>
-<p>Select the Region.</p>
-</li>
-<li>
-<p>Enter your Access Key.</p>
-</li>
-<li>
-<p>Enter your Secret Key.</p>
-</li>
-</ol>
-<p><strong>Note:</strong> Before adding an account, the customer needs to have their own AWS account.</p>
-<p><img alt="Account" src="../../img/createaccounts.png" /></p>
-<h4 id="add-project">Add Project</h4>
-<p><strong>Important:</strong> </p>
-<ol>
-<li>
-<p>Before adding a project, the customer needs to have their own AWS account.</p>
-</li>
-<li>
-<p>When you create an account, a default project will be created without VPC. So, creating a project is not mandatory. This can be done later.</p>
-</li>
-</ol>
-<p>The projects section lets you add a project under an AWS account. The following steps will show how to add a new project:</p>
-<ol>
-<li>
-<p>Enter Project Name.</p>
-</li>
-<li>
-<p>Select the Account under which you want to add the project.</p>
-</li>
-<li>
-<p>Select the Cloud region.</p>
-</li>
-<li>
-<p>Select the <strong>Virtual Private Cloud</strong>. (This is optional.)
-<strong>Note:</strong> If you wish to work on <strong>JMeter</strong> app then this VPC will be mandatory.</p>
-</li>
-<li>
-<p>Select the VPC information. (This needs to be done only if you have selected VPC)</p>
-</li>
-<li>
-<p>Select the subnet information. (This needs to be done only if you have selected VPC)</p>
-</li>
-</ol>
-<p><img alt="Project" src="../../img/createproject.png" /></p>
-<h3 id="select-app">Select App</h3>
-<p>Once you're done with adding account and project, you can select any app you want to work on.</p>
-<p><img alt="Apps" src="../../img/appstore.png" /></p></div>
+<p>Batchly API supports the following entities:</p>
+<ul>
+<li>Jobs</li>
+<li>Runs</li>
+<li>Projects</li>
+<li>Accounts</li>
+</ul>
+<h4 id="jobs-api">Jobs API</h4>
+<p>Jobs are calls to perform various operations on the actual dataset. This call varies from one app to another. Though it is app-specific, each job requires jobname, Project, SLA, input location and output location to be mentioned.</p>
+<p>Batchly responds immediately with a job ID so your application can track the progress of the job.</p>
+<p><strong>Actions Supported</strong></p>
+<table>
+<thead>
+<tr>
+<th>HTTP Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>api/Jobs</td>
+<td>Returns all the jobs associated with your Batchly account</td>
+</tr>
+</tbody>
+</table>
+<p>To run individual jobs, call the API associated with the respective app. <a href="../app-api/">App API Documentation</a></p>
+<h4 id="runs-api">Runs API</h4>
+<p>Runs are individual instances of the job in Batchly. Runs API allows you to list and delete the runs in your Batchly account.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/api/Runs</td>
+<td>Get all the runs associated with your batchly account</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/Runs/{id}</td>
+<td>Get the details of the run for the given id</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/api/Runs/{id}</td>
+<td>Delete the run details from your account</td>
+</tr>
+</tbody>
+</table>
+<h4 id="projects-api">Projects API</h4>
+<p>Projects define the boundary for your jobs to run in. Projects creates a sandbox environment associated with an AWS account, a cloud region within that AWS account and (optionally) associate a virtual private cloud with it.</p>
+<p>Projects’ calls allow you to create, edit or view projects associated with your Batchly account.</p>
+<p><strong>Actions Supported</strong></p>
+<table>
+<thead>
+<tr>
+<th>HTTP Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DELETE</td>
+<td>/api/Projects/{id}</td>
+<td>Delete the project with the given id</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/Projects/{id}</td>
+<td>Get the details of the project for the given id</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/api/Projects/{id}</td>
+<td>Update the project details for the given id</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/api/Projects/Add</td>
+<td>Create a new project</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/Projects</td>
+<td>Get all the projects associated with your batchly account</td>
+</tr>
+</tbody>
+</table>
+<h4 id="accounts-api">Accounts API</h4>
+<p>Attach your AWS account to batchly using the accounts API. Accounts calls allow you to create, edit or view AWS accounts associated with your Batchly account.</p>
+<p><strong>Actions Supported</strong></p>
+<table>
+<thead>
+<tr>
+<th>HTTP Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/api/Accounts/AWS</td>
+<td>Add new AWS account to your batchly account</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/api/Accounts/{id}</td>
+<td>Delete the AWS account associated with this id</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/Accounts/{id}</td>
+<td>Get the AWS account details related to this id</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/api/Accounts/{id}</td>
+<td>Update the details for this id</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/Accounts</td>
+<td>Get all the AWS accounts associated with your batchly account</td>
+</tr>
+</tbody>
+</table></div>
         
     </div>
 

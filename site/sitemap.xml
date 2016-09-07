@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-09-06</lastmod>
+     <lastmod>2016-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>None/about/whybatchly/</loc>
-     <lastmod>2016-09-06</lastmod>
+     <lastmod>2016-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,13 +23,13 @@
         
     <url>
      <loc>None/user-guide/getting-started/</loc>
-     <lastmod>2016-09-06</lastmod>
+     <lastmod>2016-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/user-guide/user-management/</loc>
-     <lastmod>2016-09-06</lastmod>
+     <lastmod>2016-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -39,7 +39,7 @@
         
     <url>
      <loc>None/iam-access/iam-access/</loc>
-     <lastmod>2016-09-06</lastmod>
+     <lastmod>2016-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -49,25 +49,47 @@
         
     <url>
      <loc>None/jmeter/jmeter/</loc>
-     <lastmod>2016-09-06</lastmod>
+     <lastmod>2016-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/ffmpeg/ffmpeg/</loc>
-     <lastmod>2016-09-06</lastmod>
+     <lastmod>2016-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/imagemagick/imagemagick/</loc>
-     <lastmod>2016-09-06</lastmod>
+     <lastmod>2016-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/bigdata/spark/</loc>
-     <lastmod>2016-09-06</lastmod>
+     <lastmod>2016-09-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/api/overview/</loc>
+     <lastmod>2016-09-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/api/definition/</loc>
+     <lastmod>2016-09-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/api/app-api/</loc>
+     <lastmod>2016-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
