@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,8 +12,8 @@
     
         
     <url>
-     <loc>None/about/whybatchly/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <loc>None/whybatchly/</loc>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,13 +23,19 @@
         
     <url>
      <loc>None/user-guide/getting-started/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/user-guide/user-management/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <lastmod>2016-09-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/user-guide/iam-access/</loc>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -38,36 +44,26 @@
     
         
     <url>
-     <loc>None/iam-access/iam-access/</loc>
-     <lastmod>2016-09-07</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>None/jmeter/jmeter/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <loc>None/app-pages/spark/</loc>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/ffmpeg/ffmpeg/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <loc>None/app-pages/jmeter/</loc>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/imagemagick/imagemagick/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <loc>None/app-pages/ffmpeg/</loc>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/bigdata/spark/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <loc>None/app-pages/imagemagick/</loc>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -77,19 +73,19 @@
         
     <url>
      <loc>None/api/overview/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/api/definition/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/api/app-api/</loc>
-     <lastmod>2016-09-07</lastmod>
+     <lastmod>2016-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

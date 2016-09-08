@@ -19,6 +19,281 @@ GET | api/apps/APP_NAME/jobs | Lists all jobs
 
 ---
 
+#### Spark App
+
+**Request Header**
+
+```
+{
+  "Name": “Spark Job”,
+  "ProjectId": “P-XXXXX”,
+  "ClusterId": “j-XXXXX”,
+  "DeployMode": “Cluster”,
+  "SparkSubmitOptions": “opt1 opt2 opt3”,
+  "ApplicationLocation": “s3://BUCKET_NAME/PATH_TO_SPARK_JAR”,
+  "Arguments": “arg1 arg2 arg3”,
+  "ActionOnFailure": “CONTINUE”,
+  "InstanceTypes": ["c4.large", "m3.large"]
+}
+```
+
+
+Field Name | Data Type | Description | Mandatory
+--|--|--|--
+Name | String | Name for the job | Yes
+ProjectId | String | Identifier of the Project under which the job should execute | Yes
+ClusterId | String | Cluster Id where the job should execute | Yes
+DeployMode | Integer | 1 (for Cluster mode), 2 (for Client mode) | Yes 
+SparkSubmitOptions | String | Specify other options for spark-submit | No
+ApplicationLocation | String | S3 location where the Spark jar resides | Yes
+Arguments | String | Any arguments that the script requires | No
+ActionOnFailure | String | CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER | Yes
+InstanceTypes | String[] | The instance types to be launched | Yes
+
+
+**Success Response**
+
+```
+{
+   Id: "W-XXXXX",
+   Name: "Spark Job",
+   Runs: 1,
+   IsScheduled: "False",
+   IsExecuting: "True | False",
+   Engine: "MapReduce"
+}   
+```
+
+---
+
+#### HadoopStreaming App
+
+**Request Header**
+
+```
+{
+  "Name": “HadoopStreaming Job”,
+  "ProjectId": “P-XXXXX”,
+  "ClusterId": “j-XXXXX”,
+  "MapperLocation": “s3://BUCKET_NAME/PATH_TO_MAP_FUNCTION”,
+  "ReducerLocation": “s3://BUCKET_NAME/PATH_TO_REDUCE_FUNCTION”,
+  "InputLocation": “s3://BUCKET_NAME/PATH_TO_DATASET”,
+  "OutputLocation": “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
+  "Arguments": “arg1 arg2 arg3”,
+  "ActionOnFailure": “CONTINUE”,
+  "InstanceTypes": ["c4.large", "m3.large"]
+}
+```
+
+
+Field Name | Data Type | Description | Mandatory
+--|--|--|--
+Name | String | Name for the job | Yes
+ProjectId | String | Identifier of the Project under which the job should execute | Yes
+ClusterId | String | Cluster Id where the job should execute | Yes
+MapperLocation | String | S3 location of the map function or the name of the Hadoop streaming command to run | Yes
+ReducerLocation | String | S3 location of the reduce function or the name of the Hadoop streaming command to run | Yes
+InputLocation | String | S3 location where the dataset resides | Yes
+OutputLocation | String | S3 location where the results are written | Yes
+Arguments | String | Any arguments that the script requires | No
+ActionOnFailure | String | CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER | Yes
+InstanceTypes | String[] | The instance types to be launched | Yes
+
+
+**Success Response**
+
+```
+{
+   Id: "W-XXXXX",
+   Name: "HadoopStreaming Job",
+   Runs: 1,
+   IsScheduled: "False",
+   IsExecuting: "True | False",
+   Engine: "MapReduce"
+}   
+```
+---
+
+#### HadoopCustom App
+
+**Request Header**
+
+```
+{
+  "Name": “Hadoop Job”,
+  "ProjectId": “P-XXXXX”,
+  "ClusterId": “j-XXXXX”,
+  "JarLocation": “s3://BUCKET_NAME/PATH_TO_JAR”,
+  "Arguments": “arg1 arg2 arg3”,
+  "ActionOnFailure": “CONTINUE”,
+  "InstanceTypes": ["c4.large", "m3.large"]
+}
+```
+
+
+Field Name | Data Type | Description | Mandatory
+--|--|--|--
+Name | String | Name for the job | Yes
+ProjectId | String | Identifier of the Project under which the job should execute | Yes
+ClusterId | String | Cluster Id where the job should execute | Yes
+JarLocation | String | A path into S3 or a fully qualified java class in the classpath | Yes
+Arguments | String | Any arguments that the script requires | No
+ActionOnFailure | String | CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER | Yes
+InstanceTypes | String | The instance types to be launched | Yes
+
+
+**Success Response**
+
+```
+{
+   Id: "W-XXXXX",
+   Name: "Hadoop Job",
+   Runs: 1,
+   IsScheduled: "False",
+   IsExecuting: "True | False",
+   Engine: "MapReduce"
+}   
+```
+
+---
+
+#### Hive App
+
+**Request Header**
+
+```
+{
+  "Name": “Hive Job”,
+  "ProjectId": “P-XXXXX”,
+  "ClusterId": “j-XXXXX”,
+  "ScriptLocation": “s3://BUCKET_NAME/PATH_TO_SCRIPT”,
+  "InputLocation": “s3://BUCKET_NAME/PATH_TO_DATASET”,
+  "OutputLocation": “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
+  "Arguments": “arg1 arg2 arg3”,
+  "ActionOnFailure": “CONTINUE”,
+  "InstanceTypes": ["c4.large", "m3.large"]
+}    
+```
+
+Field Name | Data Type | Description | Mandatory
+--|--|--|--
+Name | String | Name for the job | Yes
+ProjectId | String | Identifier of the Project under which the job should execute | Yes
+ClusterId | String | Cluster Id where the job should execute | Yes
+ScriptLocation | String | S3 location where the script resides | Yes
+InputLocation | String | S3 location where the dataset resides | No
+OutputLocation | String | S3 location where results are written | No
+Arguments | String | Any arguments that the script requires | No
+ActionOnFailure | String | CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER | Yes
+InstanceTypes | String[] | The instance types to be launched | Yes
+
+
+**Success Response**
+
+```
+{
+   Id: "W-XXXXX",
+   Name: "Hive Job",
+   Runs: 1,
+   IsScheduled: "False",
+   IsExecuting: "True | False",
+   Engine: "MapReduce"
+}   
+```
+
+---
+
+#### Pig App
+
+**Request Header**
+
+```
+{
+  "Name": “Pig Job”,
+  "ProjectId": “P-XXXXX”,
+  "ClusterId": “j-XXXXX”,
+  "ScriptLocation": “s3://BUCKET_NAME/PATH_TO_SCRIPT”,
+  "InputLocation": “s3://BUCKET_NAME/PATH_TO_DATASET”,
+  "OutputLocation": “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
+  "Arguments": “arg1 arg2 arg3”,
+  "ActionOnFailure": “CONTINUE”,
+  "InstanceTypes": ["c4.large", "m3.large"]
+} 
+```
+
+Field Name | Data Type | Description | Mandatory
+--|--|--|--
+Name | String | Name for the job | Yes
+ProjectId | String | Identifier of the Project under which the job should execute | Yes
+ClusterId | String | Cluster Id where the job should execute | Yes
+ScriptLocation | String | S3 location where the script resides | Yes
+InputLocation | String | S3 location where the dataset resides | No
+OutputLocation | String | S3 location where results are written | No
+Arguments | String | Any arguments that the script requires | No
+ActionOnFailure | String | CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER | Yes
+InstanceTypes | String[] | The instance types to be launched | Yes
+
+
+**Success Response**
+
+```
+{
+   Id: "W-XXXXX",
+   Name: "Pig Job",
+   Runs: 1,
+   IsScheduled: "False",
+   IsExecuting: "True | False",
+   Engine: "MapReduce"
+}   
+```
+
+---
+
+#### JMeter - Load Testing App
+
+**Request Header**
+
+```
+{
+  "Name": "string",
+  "ProjectId": "string",
+  "DestinationLocation": "string",
+  "TestPlan": "string",
+  "InstanceType": "string",
+  "InstanceCount": 0
+}
+```
+
+Field Name | Data Type | Description | Mandatory
+--|--|--|--
+Name | String | Name for the job | Yes
+ProjectId | String | Identifier of the Project under which the job should execute | Yes
+TestPlan | Integer | JMX test plan you want to execture | Yes
+DestinationLocation | String | Location where you want the output files to go to | Yes
+InstanceType | String | Instance type you want Batchly to launch | Yes
+InstanceCount | Integer | Number of instances of the InstanceType you want Batchly to launch and manage | Yes
+
+**Success Response**
+
+```
+{
+  "RequestId": "string",
+  "Data": {
+    "Runs": 0,
+    "IsScheduled": true,
+    "IsExecuting": true,
+    "Engine": "All",
+    "AppName": "string",
+    "IsPrivateApp": true,
+    "Id": "string",
+    "Name": "string"
+  },
+  "Errors": {},
+  "ContinuationToken": "string"
+}
+```
+---
+
 #### FFMpeg - Video Transcoding App
 
 **Request Header**
@@ -153,279 +428,5 @@ DestinationLocation | String | Location where you want the output files to go to
   "Id": "string",
   "Name": "string"
 }
-```
----
-
-#### JMeter - Load Testing App
-
-**Request Header**
-
-```
-{
-  "Name": "string",
-  "ProjectId": "string",
-  "DestinationLocation": "string",
-  "TestPlan": "string",
-  "InstanceType": "string",
-  "InstanceCount": 0
-}
-```
-
-Field Name | Data Type | Description | Mandatory
---|--|--|--
-Name | String | Name for the job | Yes
-ProjectId | String | Identifier of the Project under which the job should execute | Yes
-TestPlan | Integer | JMX test plan you want to execture | Yes
-DestinationLocation | String | Location where you want the output files to go to | Yes
-InstanceType | String | Instance type you want Batchly to launch | Yes
-InstanceCount | Integer | Number of instances of the InstanceType you want Batchly to launch and manage | Yes
-
-**Success Response**
-
-```
-{
-  "RequestId": "string",
-  "Data": {
-    "Runs": 0,
-    "IsScheduled": true,
-    "IsExecuting": true,
-    "Engine": "All",
-    "AppName": "string",
-    "IsPrivateApp": true,
-    "Id": "string",
-    "Name": "string"
-  },
-  "Errors": {},
-  "ContinuationToken": "string"
-}
-```
----
-
-#### Hive App
-
-**Request Header**
-
-```
-{
-  "Name": “Hive Job”,
-  "ProjectId": “P-XXXXX”,
-  "ClusterId": “j-XXXXX”,
-  "ScriptLocation": “s3://BUCKET_NAME/PATH_TO_SCRIPT”,
-  "InputLocation": “s3://BUCKET_NAME/PATH_TO_DATASET”,
-  "OutputLocation": “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
-  "Arguments": “arg1 arg2 arg3”
-  "ActionOnFailure": “CONTINUE”
-  "InstanceTypes": ["c4.large", "m3.large"]
-}    
-```
-
-Field Name | Data Type | Description | Mandatory
---|--|--|--
-Name | String | Name for the job | Yes
-ProjectId | String | Identifier of the Project under which the job should execute | Yes
-ClusterId | String | Cluster Id where the job should execute | Yes
-ScriptLocation | String | S3 location where the script resides | Yes
-InputLocation | String | S3 location where the dataset resides | No
-OutputLocation | String | S3 location where results are written | No
-Arguments | String | Any arguments that the script requires | No
-ActionOnFailure | String | CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER | Yes
-InstanceTypes | String[] | The instance types to be launched | Yes
-
-
-**Success Response**
-
-```
-{
-   Id: "W-XXXXX",
-   Name: "Hive Job",
-   Runs: 1,
-   IsScheduled: "False",
-   IsExecuting: "True | False",
-   Engine: "MapReduce"
-}   
-```
-
----
-
-#### Pig App
-
-**Request Header**
-
-```
-{
-  "Name": “Pig Job”,
-  "ProjectId": “P-XXXXX”,
-  "ClusterId": “j-XXXXX”,
-  "ScriptLocation": “s3://BUCKET_NAME/PATH_TO_SCRIPT”,
-  "InputLocation": “s3://BUCKET_NAME/PATH_TO_DATASET”,
-  "OutputLocation": “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
-  "Arguments": “arg1 arg2 arg3”
-  "ActionOnFailure": “CONTINUE”
-  "InstanceTypes": ["c4.large", "m3.large"]
-} 
-```
-
-Field Name | Data Type | Description | Mandatory
---|--|--|--
-Name | String | Name for the job | Yes
-ProjectId | String | Identifier of the Project under which the job should execute | Yes
-ClusterId | String | Cluster Id where the job should execute | Yes
-ScriptLocation | String | S3 location where the script resides | Yes
-InputLocation | String | S3 location where the dataset resides | No
-OutputLocation | String | S3 location where results are written | No
-Arguments | String | Any arguments that the script requires | No
-ActionOnFailure | String | CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER | Yes
-InstanceTypes | String[] | The instance types to be launched | Yes
-
-
-**Success Response**
-
-```
-{
-   Id: "W-XXXXX",
-   Name: "Pig Job",
-   Runs: 1,
-   IsScheduled: "False",
-   IsExecuting: "True | False",
-   Engine: "MapReduce"
-}   
-```
-
----
-
-#### Spark App
-
-**Request Header**
-
-```
-{
-  "Name": “Spark Job”,
-  "ProjectId": “P-XXXXX”,
-  "ClusterId": “j-XXXXX”,
-  "DeployMode": “Cluster”,
-  "SparkSubmitOptions": “opt1 opt2 opt3”,
-  "ApplicationLocation": “s3://BUCKET_NAME/PATH_TO_SPARK_JAR”,
-  "Arguments": “arg1 arg2 arg3”
-  "ActionOnFailure": “CONTINUE”
-  "InstanceTypes": ["c4.large", "m3.large"]
-}
-```
-
-
-Field Name | Data Type | Description | Mandatory
---|--|--|--
-Name | String | Name for the job | Yes
-ProjectId | String | Identifier of the Project under which the job should execute | Yes
-ClusterId | String | Cluster Id where the job should execute | Yes
-DeployMode | Integer | 1 (for Cluster mode), 2 (for Client mode) | Yes 
-SparkSubmitOptions | String | Specify other options for spark-submit | No
-ApplicationLocation | String | S3 location where the Spark jar resides | Yes
-Arguments | String | Any arguments that the script requires | No
-ActionOnFailure | String | CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER | Yes
-InstanceTypes | String[] | The instance types to be launched | Yes
-
-
-**Success Response**
-
-```
-{
-   Id: "W-XXXXX",
-   Name: "Spark Job",
-   Runs: 1,
-   IsScheduled: "False",
-   IsExecuting: "True | False",
-   Engine: "MapReduce"
-}   
-```
-
----
-
-#### HadoopStreaming App
-
-**Request Header**
-
-```
-{
-  "Name": “HadoopStreaming Job”,
-  "ProjectId": “P-XXXXX”,
-  "ClusterId": “j-XXXXX”,
-  "MapperLocation": “s3://BUCKET_NAME/PATH_TO_MAP_FUNCTION”,
-  "ReducerLocation": “s3://BUCKET_NAME/PATH_TO_REDUCE_FUNCTION”,
-  "InputLocation": “s3://BUCKET_NAME/PATH_TO_DATASET”,
-  "OutputLocation": “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
-  "Arguments": “arg1 arg2 arg3”
-  "ActionOnFailure": “CONTINUE”
-  "InstanceTypes": ["c4.large", "m3.large"]
-}
-```
-
-
-Field Name | Data Type | Description | Mandatory
---|--|--|--
-Name | String | Name for the job | Yes
-ProjectId | String | Identifier of the Project under which the job should execute | Yes
-ClusterId | String | Cluster Id where the job should execute | Yes
-MapperLocation | String | S3 location of the map function or the name of the Hadoop streaming command to run | Yes
-ReducerLocation | String | S3 location of the reduce function or the name of the Hadoop streaming command to run | Yes
-InputLocation | String | S3 location where the dataset resides | Yes
-OutputLocation | String | S3 location where the results are written | Yes
-Arguments | String | Any arguments that the script requires | No
-ActionOnFailure | String | CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER | Yes
-InstanceTypes | String[] | The instance types to be launched | Yes
-
-
-**Success Response**
-
-```
-{
-   Id: "W-XXXXX",
-   Name: "HadoopStreaming Job",
-   Runs: 1,
-   IsScheduled: "False",
-   IsExecuting: "True | False",
-   Engine: "MapReduce"
-}   
-```
----
-
-#### HadoopCustom App
-
-**Request Header**
-
-```
-{
-  "Name": “Hadoop Job”,
-  "ProjectId": “P-XXXXX”,
-  "ClusterId": “j-XXXXX”,
-  "JarLocation": “s3://BUCKET_NAME/PATH_TO_JAR”,
-  "Arguments": “arg1 arg2 arg3”
-  "ActionOnFailure": “CONTINUE”
-  "InstanceTypes": ["c4.large", "m3.large"]
-}
-```
-
-
-Field Name | Data Type | Description | Mandatory
---|--|--|--
-Name | String | Name for the job | Yes
-ProjectId | String | Identifier of the Project under which the job should execute | Yes
-ClusterId | String | Cluster Id where the job should execute | Yes
-JarLocation | String | A path into S3 or a fully qualified java class in the classpath | Yes
-Arguments | String | Any arguments that the script requires | No
-ActionOnFailure | String | CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER | Yes
-InstanceTypes | String | The instance types to be launched | Yes
-
-
-**Success Response**
-
-```
-{
-   Id: "W-XXXXX",
-   Name: "Hadoop Job",
-   Runs: 1,
-   IsScheduled: "False",
-   IsExecuting: "True | False",
-   Engine: "MapReduce"
-}   
 ```
 ---

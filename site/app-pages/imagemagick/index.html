@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <title>Create IAM Access - Batchly Support</title>
+    <title>ImageMagick - Batchly Support</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -76,7 +76,7 @@
                         
                             
 <li >
-    <a href="../../about/whybatchly/">Why Batchly</a>
+    <a href="../../whybatchly/">Why Batchly</a>
 </li>
 
                         
@@ -101,51 +101,42 @@
 </li>
 
                         
+                            
+<li >
+    <a href="../../user-guide/iam-access/">Create IAM Access</a>
+</li>
+
+                        
                         </ul>
                     </li>
                 
                 
                 
                     <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">IAM Access <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li class="active">
-    <a href="./">Create IAM Access</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apps <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../jmeter/jmeter/">JMeter</a>
+    <a href="../spark/">Big Data Apps</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../ffmpeg/ffmpeg/">FFmpeg</a>
+    <a href="../jmeter/">JMeter</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../imagemagick/imagemagick/">ImageMagick</a>
+    <a href="../ffmpeg/">FFmpeg</a>
 </li>
 
                         
                             
-<li >
-    <a href="../../bigdata/spark/">Big Data Apps</a>
+<li class="active">
+    <a href="./">ImageMagick</a>
 </li>
 
                         
@@ -191,12 +182,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../../user-guide/user-management/">
+                        <a rel="next" href="../ffmpeg/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../../jmeter/jmeter/">
+                        <a rel="prev" href="../../api/overview/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -212,72 +203,36 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#steps-to-create-iam-access">Steps to create IAM Access</a></li>
+        <li class="first-level active"><a href="#lets-get-started-with-imagemagick">Let's get started with ImageMagick</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="steps-to-create-iam-access">Steps to create IAM Access</h3>
-<p>Batchly provides an easy way to add your AWS account. All it needs is for you to provide your AWS Master Key and Access Key, and Batchly automatically creates a separate IAM access with privileges to launch EC2 instances (Spot and On-demand), as well as monitor them.</p>
-<p>However, if for some reason you don’t want to provide your AWS keys, you can create an IAM user for Batchly by following the steps given below:</p>
-<ol>
-<li>
-<p>Go to AWS IAM dashboard</p>
-</li>
-<li>
-<p>In the left hand pane, click on user.</p>
-</li>
-<li>
-<p>Give the user a name, then select Generate to give an access key to each user and click Create.</p>
-</li>
-</ol>
-<p><img alt="IAM" src="../../img/iam-01.png" /></p>
-<p>Download the credentials. At the bottom right corner, there’s a download credentials button.</p>
-<p><img alt="IAM" src="../../img/iam-02.png" /></p>
-<p>In the Users listing, click on the user and in the next screen at the bottom, click on Inline Policies.</p>
-<p><img alt="IAM" src="../../img/iam-03.png" /></p>
-<p><img alt="IAM" src="../../img/iam-04.png" /></p>
-<p>Select Custom Policy and it opens up a policy editor. Give the policy a name, such as  Batchly-Policy, and add the policy below.</p>
-<p><img alt="IAM" src="../../img/iam-05.png" /></p>
-<p><img alt="IAM" src="../../img/iam-06.png" /></p>
-<pre><code>{
-    &quot;Version&quot;: &quot;2012-10-17&quot;,
-    &quot;Statement&quot;: [
-        {
-            &quot;Sid&quot;: &quot;Stmt1455011811000&quot;,
-            &quot;Effect&quot;: &quot;Allow&quot;,
-            &quot;Action&quot;: [
-                &quot;iam:GetUser&quot;,
-                &quot;iam:AddRoleToInstanceProfile&quot;,
-                &quot;iam:CreateInstanceProfile&quot;,
-                &quot;iam:CreateRole&quot;,
-                &quot;iam:GetRole&quot;,
-                &quot;iam:ListInstanceProfiles&quot;,
-                &quot;iam:ListRoles&quot;,
-                &quot;iam:PutRolePolicy&quot;,
-                &quot;iam:RemoveRoleFromInstanceProfile&quot;,
-                &quot;iam:UpdateAssumeRolePolicy&quot;,
-                &quot;iam:PassRole&quot;,
-                &quot;iam:GetInstanceProfile&quot;
-            ],
-            &quot;Resource&quot;: [
-        &quot;arn:aws:iam::XXXXXXXXXXXXX:role/batchly/&quot;
-                &quot;arn:aws:iam::XXXXXXXXXXXXX:role/batchly/batchly-trusted-role&quot;,
-        &quot;arn:aws:iam::XXXXXXXXXXXXX:instance-profile/*&quot;
-        &quot;arn:aws:iam::XXXXXXXXXXXXX:policy/batchly-access-policy&quot;,
-        &quot;arn:aws:iam::XXXXXXXXXXXXX:user/USERNAME&quot;
-            ]
-        }
-    ]
-}
-</code></pre>
-
-<p><strong>Note:</strong> In the JSON, replace the XXXXXXXXXXXXX with the account number of the account in which you are creating the user. Replace the USERNAME with the username in the above policy statement.</p>
-<p>Next, apply the policy and use the credentials to add the AWS account in Batchly.</p>
-<p>Please execute the above steps and share the credential information with us. This would enable us to add the role. The permission list clearly specifies the permission expected for adding the new role.</p>
-<p>Once the account is added in Batchly, you can safely remove the user. In addition, once the account is added, you can also validate the newly added role and its permission list.</p></div>
+<h3 id="lets-get-started-with-imagemagick">Let's get started with ImageMagick</h3>
+<p><strong>Step 1:</strong>  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.</p>
+<p><strong>Step 2:</strong> You will be redirected to Batchly Dashboard. Next, click on the <strong>App Store</strong> located in the header.</p>
+<p><img alt="image-magick" src="../../img/jmeter1.png" /></p>
+<p><strong>Step 3:</strong> You will be redirected to the App store which has the apps supported on Batchly. To run ImageMagick, click the <strong>Get Started</strong> button in the <strong>ImageMagick</strong> App.</p>
+<p><img alt="image-magick" src="../../img/imagemagick.png" /></p>
+<p><strong>Step 4:</strong> Now, to run ImageMagick job, fill all the required given text fields.</p>
+<p><strong>Job Name:</strong> You can give any desired name to your job.</p>
+<p><strong>Project:</strong> Select the associated project to run the job.</p>
+<p><img alt="image-magick" src="../../img/imagemagick1.png" /></p>
+<p><strong>Default AWS Region:</strong> Select the AWS region.</p>
+<p><strong>Source S3 Bucket Name:</strong> Give the Amazon S3 bucket Bucket name.</p>
+<p><strong>Folder Name:</strong> Give the folder name, if available.</p>
+<p><strong>Destination S3 Bucket Name:</strong> Give the Amazon S3 Bucket name.</p>
+<p><strong>Folder Name:</strong> Give the folder name, if available.</p>
+<p><img alt="image-magick" src="../../img/imagemagick2.png" /></p>
+<p><strong>Time Limit:</strong> Give the time limit to run a job in hours.</p>
+<p><strong>Default AWS Region:</strong> Select the AWS region.</p>
+<p><strong>RESIZE:</strong> Give any desired size for the output file.</p>
+<p><img alt="image-magick" src="../../img/imagemagick3.png" /></p>
+<p><strong>Step 5:</strong> Click on the ‘Add Job’ button once you are done with filling all the details. This action will save your job and is available to see later on the <strong>Jobs</strong> page.</p>
+<p><strong>Step 6:</strong> On successful job addition, you would get a popup where you can either start your job immediately (by clicking ‘Execute the Job’) or schedule your job to run later (by clicking on the button ‘Schedule the Job’).</p>
+<p><strong>Step 7:</strong> You can monitor the job progress using the Job Run Details page.</p></div>
         
     </div>
 

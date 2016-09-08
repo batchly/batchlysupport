@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <title>Why Batchly - Batchly Support</title>
+    <title>Create IAM Access - Batchly Support</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -70,13 +70,13 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Why Batchly</a>
+<li >
+    <a href="../../whybatchly/">Why Batchly</a>
 </li>
 
                         
@@ -85,34 +85,25 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../user-guide/getting-started/">Getting Started</a>
+    <a href="../getting-started/">Getting Started</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../user-guide/user-management/">User Management</a>
+    <a href="../user-management/">User Management</a>
 </li>
 
                         
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">IAM Access <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
                             
-<li >
-    <a href="../../iam-access/iam-access/">Create IAM Access</a>
+<li class="active">
+    <a href="./">Create IAM Access</a>
 </li>
 
                         
@@ -127,25 +118,25 @@
                         
                             
 <li >
-    <a href="../../jmeter/jmeter/">JMeter</a>
+    <a href="../../app-pages/spark/">Big Data Apps</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../ffmpeg/ffmpeg/">FFmpeg</a>
+    <a href="../../app-pages/jmeter/">JMeter</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../imagemagick/imagemagick/">ImageMagick</a>
+    <a href="../../app-pages/ffmpeg/">FFmpeg</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../bigdata/spark/">Big Data Apps</a>
+    <a href="../../app-pages/imagemagick/">ImageMagick</a>
 </li>
 
                         
@@ -191,12 +182,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../..">
+                        <a rel="next" href="../user-management/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../../user-guide/getting-started/">
+                        <a rel="prev" href="../../app-pages/spark/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -212,43 +203,72 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#why-batchly">Why Batchly?</a></li>
-        
-    
-        <li class="first-level "><a href="#why-batchly-benefits-you">Why Batchly Benefits You</a></li>
+        <li class="first-level active"><a href="#steps-to-create-iam-access">Steps to create IAM Access</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h4 id="why-batchly">Why Batchly?</h4>
-<p>Batchly is a solution that fully automates AWS cost management (using spot instances and instance rightsizing using autoscaling) in a way that makes the ROI impossible to ignore.</p>
-<p>AWS has 11 regions with 2 to 3 AZs in each region, 50 instance types, and many instance categories (like Spot, Reserved, and On-demand). Identifying the right infrastructure for your application(s) from these options is not a trivial activity. It is complex, costly, and most times suboptimal.</p>
-<p>Batchly takes out all the complexities associated with Cloud management by automating all the activities, resulting in up to 90% reduction in AWS costs.</p>
-<p><img alt="Complex Way" src="../../img/cmp-complexway.jpg" /></p>
-<p>Batchly takes out all the complexities associated with Cloud management by automating all the activities resulting in up to 90% reduction in AWS costs. </p>
-<p><img alt="Batchly Way" src="../../img/cmp-batchlyway.jpg" /></p>
-<h4 id="why-batchly-benefits-you">Why Batchly Benefits You</h4>
-<p>Batchly enables both internet and traditional enterprises to automatically benefit from AWS cost and usage savings by optimizing workloads with spot instances and EC2 smart sizing. No matter what you use AWS for, Batchly helps you to reduce your cost (by up to 90%) in a frictionless manner.</p>
-<p>Features that customers love:</p>
-<ul>
+<h3 id="steps-to-create-iam-access">Steps to create IAM Access</h3>
+<p>Batchly provides an easy way to add your AWS account. All it needs is for you to provide your AWS Master Key and Access Key, and Batchly automatically creates a separate IAM access with privileges to launch EC2 instances (Spot and On-demand), as well as monitor them.</p>
+<p>However, if for some reason you don’t want to provide your AWS keys, you can create an IAM user for Batchly by following the steps given below:</p>
+<ol>
 <li>
-<p>AWS spot bid optimization seamlessly deploys, moves, and manages workloads over high cost savings spot instances across any AWS region.</p>
+<p>Go to AWS IAM dashboard</p>
 </li>
 <li>
-<p>EC2 instance smart sizing realizes ultimate EC2 efficiencies with the automatic instance sizing for the right application / workload.</p>
+<p>In the left hand pane, click on user.</p>
 </li>
 <li>
-<p>Seamless integration easily works with pre-built apps for the most common enterprise applications (JMeter, Spark, Hive, PIG, Jenkins, Elastic BeanStalk, and more) and REST API support provides a smooth experience.</p>
+<p>Give the user a name, then select Generate to give an access key to each user and click Create.</p>
 </li>
-<li>
-<p>Fully managed benefit from cost and utilization optimizations from within your own AWS account while we do the heavy lifting.</p>
-</li>
-<li>
-<p>Secured with organic and strong AWS security controls.</p>
-</li>
-</ul></div>
+</ol>
+<p><img alt="IAM" src="../../img/iam-01.png" /></p>
+<p>Download the credentials. At the bottom right corner, there’s a download credentials button.</p>
+<p><img alt="IAM" src="../../img/iam-02.png" /></p>
+<p>In the Users listing, click on the user and in the next screen at the bottom, click on Inline Policies.</p>
+<p><img alt="IAM" src="../../img/iam-03.png" /></p>
+<p><img alt="IAM" src="../../img/iam-04.png" /></p>
+<p>Select Custom Policy and it opens up a policy editor. Give the policy a name, such as  Batchly-Policy, and add the policy below.</p>
+<p><img alt="IAM" src="../../img/iam-05.png" /></p>
+<p><img alt="IAM" src="../../img/iam-06.png" /></p>
+<pre><code>{
+    &quot;Version&quot;: &quot;2012-10-17&quot;,
+    &quot;Statement&quot;: [
+        {
+            &quot;Sid&quot;: &quot;Stmt1455011811000&quot;,
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: [
+                &quot;iam:GetUser&quot;,
+                &quot;iam:AddRoleToInstanceProfile&quot;,
+                &quot;iam:CreateInstanceProfile&quot;,
+                &quot;iam:CreateRole&quot;,
+                &quot;iam:GetRole&quot;,
+                &quot;iam:ListInstanceProfiles&quot;,
+                &quot;iam:ListRoles&quot;,
+                &quot;iam:PutRolePolicy&quot;,
+                &quot;iam:RemoveRoleFromInstanceProfile&quot;,
+                &quot;iam:UpdateAssumeRolePolicy&quot;,
+                &quot;iam:PassRole&quot;,
+                &quot;iam:GetInstanceProfile&quot;
+            ],
+            &quot;Resource&quot;: [
+        &quot;arn:aws:iam::XXXXXXXXXXXXX:role/batchly/&quot;
+                &quot;arn:aws:iam::XXXXXXXXXXXXX:role/batchly/batchly-trusted-role&quot;,
+        &quot;arn:aws:iam::XXXXXXXXXXXXX:instance-profile/*&quot;
+        &quot;arn:aws:iam::XXXXXXXXXXXXX:policy/batchly-access-policy&quot;,
+        &quot;arn:aws:iam::XXXXXXXXXXXXX:user/USERNAME&quot;
+            ]
+        }
+    ]
+}
+</code></pre>
+
+<p><strong>Note:</strong> In the JSON, replace the XXXXXXXXXXXXX with the account number of the account in which you are creating the user. Replace the USERNAME with the username in the above policy statement.</p>
+<p>Next, apply the policy and use the credentials to add the AWS account in Batchly.</p>
+<p>Please execute the above steps and share the credential information with us. This would enable us to add the role. The permission list clearly specifies the permission expected for adding the new role.</p>
+<p>Once the account is added in Batchly, you can safely remove the user. In addition, once the account is added, you can also validate the newly added role and its permission list.</p></div>
         
     </div>
 

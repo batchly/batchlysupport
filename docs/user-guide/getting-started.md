@@ -1,6 +1,6 @@
 ### Getting Started
 
-To get started with Batchly, go to the [Registration page](http://join.batchly.net) and **create a new Batchly Account**.
+To get started with Batchly, go to the [Registration page](https://join.batchly.net) and **create a new Batchly Account**.
 
 To Register for Batchly, enter the following details :
 
@@ -68,7 +68,7 @@ The projects section lets you add a project under an AWS account. The following 
 
 3. Select the Cloud region.
 
-3. Select the **Virtual Private Cloud**. (This is optional.)
+3. Select the **Virtual Private Cloud**. (This is optional)
 **Note:** If you wish to work on **JMeter** app then this VPC will be mandatory.
 
 4. Select the VPC information. (This needs to be done only if you have selected VPC)

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <title>ImageMagick - Batchly Support</title>
+    <title>JMeter - Batchly Support</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -76,7 +76,7 @@
                         
                             
 <li >
-    <a href="../../about/whybatchly/">Why Batchly</a>
+    <a href="../../whybatchly/">Why Batchly</a>
 </li>
 
                         
@@ -101,18 +101,9 @@
 </li>
 
                         
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">IAM Access <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
                             
 <li >
-    <a href="../../iam-access/iam-access/">Create IAM Access</a>
+    <a href="../../user-guide/iam-access/">Create IAM Access</a>
 </li>
 
                         
@@ -127,25 +118,25 @@
                         
                             
 <li >
-    <a href="../../jmeter/jmeter/">JMeter</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../ffmpeg/ffmpeg/">FFmpeg</a>
+    <a href="../spark/">Big Data Apps</a>
 </li>
 
                         
                             
 <li class="active">
-    <a href="./">ImageMagick</a>
+    <a href="./">JMeter</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../bigdata/spark/">Big Data Apps</a>
+    <a href="../ffmpeg/">FFmpeg</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../imagemagick/">ImageMagick</a>
 </li>
 
                         
@@ -191,12 +182,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../../ffmpeg/ffmpeg/">
+                        <a rel="next" href="../spark/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../../bigdata/spark/">
+                        <a rel="prev" href="../ffmpeg/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -212,36 +203,46 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#lets-get-started-with-imagemagick">Let's get started with ImageMagick</a></li>
+        <li class="first-level active"><a href="#lets-get-started-with-jmeter">Let's get started with JMeter</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="lets-get-started-with-imagemagick">Let's get started with ImageMagick</h3>
+<h3 id="lets-get-started-with-jmeter">Let's get started with JMeter</h3>
 <p><strong>Step 1:</strong>  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.</p>
 <p><strong>Step 2:</strong> You will be redirected to Batchly Dashboard. Next, click on the <strong>App Store</strong> located in the header.</p>
-<p><img alt="image-magick" src="../../img/jmeter1.png" /></p>
-<p><strong>Step 3:</strong> You will be redirected to the App store which has the apps supported on Batchly. To run ImageMagick, click the <strong>Get Started</strong> button in the <strong>ImageMagick</strong> App.</p>
-<p><img alt="image-magick" src="../../img/imagemagick.png" /></p>
-<p><strong>Step 4:</strong> Now, to run ImageMagick job, fill all the required given text fields.</p>
+<p><img alt="jmeter" src="../../img/jmeter1.png" /></p>
+<p><strong>Step 3:</strong> You will be redirected to the App store which has the apps supported on Batchly. To run JMeter, click the <strong>Get Started</strong> button in the JMeter App.</p>
+<p><img alt="jmeter" src="../../img/jmeter2.png" /></p>
+<p><strong>Step 4:</strong> Now, to run JMeter job, fill all the required given text fields. There are following text fields to be filled: </p>
+<ol>
+<li>
 <p><strong>Job Name:</strong> You can give any desired name to your job.</p>
-<p><strong>Project:</strong> Select the associated project to run the job.</p>
-<p><img alt="image-magick" src="../../img/imagemagick1.png" /></p>
-<p><strong>Default AWS Region:</strong> Select the AWS region.</p>
-<p><strong>Source S3 Bucket Name:</strong> Give the Amazon S3 bucket Bucket name.</p>
-<p><strong>Folder Name:</strong> Give the folder name, if available.</p>
-<p><strong>Destination S3 Bucket Name:</strong> Give the Amazon S3 Bucket name.</p>
-<p><strong>Folder Name:</strong> Give the folder name, if available.</p>
-<p><img alt="image-magick" src="../../img/imagemagick2.png" /></p>
-<p><strong>Time Limit:</strong> Give the time limit to run a job in hours.</p>
-<p><strong>Default AWS Region:</strong> Select the AWS region.</p>
-<p><strong>RESIZE:</strong> Give any desired size for the output file.</p>
-<p><img alt="image-magick" src="../../img/imagemagick3.png" /></p>
-<p><strong>Step 5:</strong> Click on the ‘Add Job’ button once you are done with filling all the details. This action will save your job and is available to see later on the <strong>Jobs</strong> page.</p>
+</li>
+<li>
+<p><strong>Project:</strong> Select the associated project to run the JMeter job.</p>
+</li>
+<li>
+<p><strong>Test Plan:</strong> Upload the JMeter test plan (JMX file) from your local system which you want to execute.</p>
+</li>
+<li>
+<p><strong>Output Location:</strong> Give the Amazon S3 bucket output location.</p>
+</li>
+<li>
+<p><strong>Instance Count:</strong> Give the number of instance on which you want to run your test job.</p>
+</li>
+<li>
+<p><strong>Instance Type:</strong> Select the Amazon EC2 instance type on which you want to run your test plan.</p>
+</li>
+</ol>
+<p><img alt="jmeter" src="../../img/jmeter3.png" /></p>
+<p><strong>Step 5:</strong> Click on the ‘Add Job’ button once you are done with filling all the details. This action will save your job and is available to see later on the ‘Jobs’ page.</p>
 <p><strong>Step 6:</strong> On successful job addition, you would get a popup where you can either start your job immediately (by clicking ‘Execute the Job’) or schedule your job to run later (by clicking on the button ‘Schedule the Job’).</p>
-<p><strong>Step 7:</strong> You can monitor the job progress using the Job Run Details page.</p></div>
+<p><img alt="jmeter" src="../../img/jmeter4.png" /></p>
+<p><strong>Step 7:</strong> You can monitor the job progress using the Job Run Details page.</p>
+<p><img alt="jmeter" src="../../img/jmeter5.png" /></p></div>
         
     </div>
 

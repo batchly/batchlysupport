@@ -2,17 +2,16 @@ site_name: Batchly Support
 pages: 
 - Home : 'index.md'
 - About : 
-    - 'Why Batchly' : 'about/whybatchly.md'
+    - 'Why Batchly' : 'whybatchly.md'
 - User Guide:
     - 'Getting Started': 'user-guide/getting-started.md'
     - 'User Management': 'user-guide/user-management.md'
-- IAM Access:
-    - 'Create IAM Access': 'iam-access/iam-access.md'
+    - 'Create IAM Access': 'user-guide/iam-access.md'
 - Apps:
-    - 'JMeter': 'jmeter/jmeter.md'
-    - 'FFmpeg': 'ffmpeg/ffmpeg.md'
-    - 'ImageMagick': 'imagemagick/imagemagick.md'
-    - 'Big Data Apps': 'bigdata/spark.md'
+    - 'Big Data Apps': 'app-pages/spark.md'
+    - 'JMeter': 'app-pages/jmeter.md'
+    - 'FFmpeg': 'app-pages/ffmpeg.md'
+    - 'ImageMagick': 'app-pages/imagemagick.md'
 - API:
     - 'API Overview': 'api/overview.md'
     - 'Definition': 'api/definition.md'

@@ -76,7 +76,7 @@
                         
                             
 <li >
-    <a href="../../about/whybatchly/">Why Batchly</a>
+    <a href="../../whybatchly/">Why Batchly</a>
 </li>
 
                         
@@ -101,18 +101,9 @@
 </li>
 
                         
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">IAM Access <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
                             
 <li >
-    <a href="../../iam-access/iam-access/">Create IAM Access</a>
+    <a href="../../user-guide/iam-access/">Create IAM Access</a>
 </li>
 
                         
@@ -127,25 +118,25 @@
                         
                             
 <li >
-    <a href="../../jmeter/jmeter/">JMeter</a>
+    <a href="../../app-pages/spark/">Big Data Apps</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../ffmpeg/ffmpeg/">FFmpeg</a>
+    <a href="../../app-pages/jmeter/">JMeter</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../imagemagick/imagemagick/">ImageMagick</a>
+    <a href="../../app-pages/ffmpeg/">FFmpeg</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../bigdata/spark/">Big Data Apps</a>
+    <a href="../../app-pages/imagemagick/">ImageMagick</a>
 </li>
 
                         
@@ -217,16 +208,13 @@
             <li class="second-level"><a href="#app-specific-request-headers">App Specific Request headers</a></li>
             
         
-            <li class="second-level"><a href="#ffmpeg-video-transcoding-app">FFMpeg - Video Transcoding App</a></li>
+            <li class="second-level"><a href="#spark-app">Spark App</a></li>
             
         
-            <li class="second-level"><a href="#imagemagick-image-processing-app">ImageMagick - Image processing App</a></li>
+            <li class="second-level"><a href="#hadoopstreaming-app">HadoopStreaming App</a></li>
             
         
-            <li class="second-level"><a href="#tesseract-optical-character-recognition-app">Tesseract - Optical Character Recognition App</a></li>
-            
-        
-            <li class="second-level"><a href="#jmeter-load-testing-app">JMeter - Load Testing App</a></li>
+            <li class="second-level"><a href="#hadoopcustom-app">HadoopCustom App</a></li>
             
         
             <li class="second-level"><a href="#hive-app">Hive App</a></li>
@@ -235,13 +223,16 @@
             <li class="second-level"><a href="#pig-app">Pig App</a></li>
             
         
-            <li class="second-level"><a href="#spark-app">Spark App</a></li>
+            <li class="second-level"><a href="#jmeter-load-testing-app">JMeter - Load Testing App</a></li>
             
         
-            <li class="second-level"><a href="#hadoopstreaming-app">HadoopStreaming App</a></li>
+            <li class="second-level"><a href="#ffmpeg-video-transcoding-app">FFMpeg - Video Transcoding App</a></li>
             
         
-            <li class="second-level"><a href="#hadoopcustom-app">HadoopCustom App</a></li>
+            <li class="second-level"><a href="#imagemagick-image-processing-app">ImageMagick - Image processing App</a></li>
+            
+        
+            <li class="second-level"><a href="#tesseract-optical-character-recognition-app">Tesseract - Optical Character Recognition App</a></li>
             
         
     
@@ -295,6 +286,543 @@
 </tbody>
 </table>
 <h4 id="app-specific-request-headers">App Specific Request headers</h4>
+<hr />
+<h4 id="spark-app">Spark App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: “Spark Job”,
+  &quot;ProjectId&quot;: “P-XXXXX”,
+  &quot;ClusterId&quot;: “j-XXXXX”,
+  &quot;DeployMode&quot;: “Cluster”,
+  &quot;SparkSubmitOptions&quot;: “opt1 opt2 opt3”,
+  &quot;ApplicationLocation&quot;: “s3://BUCKET_NAME/PATH_TO_SPARK_JAR”,
+  &quot;Arguments&quot;: “arg1 arg2 arg3”,
+  &quot;ActionOnFailure&quot;: “CONTINUE”,
+  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClusterId</td>
+<td>String</td>
+<td>Cluster Id where the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DeployMode</td>
+<td>Integer</td>
+<td>1 (for Cluster mode), 2 (for Client mode)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>SparkSubmitOptions</td>
+<td>String</td>
+<td>Specify other options for spark-submit</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ApplicationLocation</td>
+<td>String</td>
+<td>S3 location where the Spark jar resides</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Arguments</td>
+<td>String</td>
+<td>Any arguments that the script requires</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ActionOnFailure</td>
+<td>String</td>
+<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceTypes</td>
+<td>String[]</td>
+<td>The instance types to be launched</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+   Id: &quot;W-XXXXX&quot;,
+   Name: &quot;Spark Job&quot;,
+   Runs: 1,
+   IsScheduled: &quot;False&quot;,
+   IsExecuting: &quot;True | False&quot;,
+   Engine: &quot;MapReduce&quot;
+}   
+</code></pre>
+
+<hr />
+<h4 id="hadoopstreaming-app">HadoopStreaming App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: “HadoopStreaming Job”,
+  &quot;ProjectId&quot;: “P-XXXXX”,
+  &quot;ClusterId&quot;: “j-XXXXX”,
+  &quot;MapperLocation&quot;: “s3://BUCKET_NAME/PATH_TO_MAP_FUNCTION”,
+  &quot;ReducerLocation&quot;: “s3://BUCKET_NAME/PATH_TO_REDUCE_FUNCTION”,
+  &quot;InputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_DATASET”,
+  &quot;OutputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
+  &quot;Arguments&quot;: “arg1 arg2 arg3”,
+  &quot;ActionOnFailure&quot;: “CONTINUE”,
+  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClusterId</td>
+<td>String</td>
+<td>Cluster Id where the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>MapperLocation</td>
+<td>String</td>
+<td>S3 location of the map function or the name of the Hadoop streaming command to run</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ReducerLocation</td>
+<td>String</td>
+<td>S3 location of the reduce function or the name of the Hadoop streaming command to run</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InputLocation</td>
+<td>String</td>
+<td>S3 location where the dataset resides</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>OutputLocation</td>
+<td>String</td>
+<td>S3 location where the results are written</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Arguments</td>
+<td>String</td>
+<td>Any arguments that the script requires</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ActionOnFailure</td>
+<td>String</td>
+<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceTypes</td>
+<td>String[]</td>
+<td>The instance types to be launched</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+   Id: &quot;W-XXXXX&quot;,
+   Name: &quot;HadoopStreaming Job&quot;,
+   Runs: 1,
+   IsScheduled: &quot;False&quot;,
+   IsExecuting: &quot;True | False&quot;,
+   Engine: &quot;MapReduce&quot;
+}   
+</code></pre>
+
+<hr />
+<h4 id="hadoopcustom-app">HadoopCustom App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: “Hadoop Job”,
+  &quot;ProjectId&quot;: “P-XXXXX”,
+  &quot;ClusterId&quot;: “j-XXXXX”,
+  &quot;JarLocation&quot;: “s3://BUCKET_NAME/PATH_TO_JAR”,
+  &quot;Arguments&quot;: “arg1 arg2 arg3”,
+  &quot;ActionOnFailure&quot;: “CONTINUE”,
+  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClusterId</td>
+<td>String</td>
+<td>Cluster Id where the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>JarLocation</td>
+<td>String</td>
+<td>A path into S3 or a fully qualified java class in the classpath</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Arguments</td>
+<td>String</td>
+<td>Any arguments that the script requires</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ActionOnFailure</td>
+<td>String</td>
+<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceTypes</td>
+<td>String</td>
+<td>The instance types to be launched</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+   Id: &quot;W-XXXXX&quot;,
+   Name: &quot;Hadoop Job&quot;,
+   Runs: 1,
+   IsScheduled: &quot;False&quot;,
+   IsExecuting: &quot;True | False&quot;,
+   Engine: &quot;MapReduce&quot;
+}   
+</code></pre>
+
+<hr />
+<h4 id="hive-app">Hive App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: “Hive Job”,
+  &quot;ProjectId&quot;: “P-XXXXX”,
+  &quot;ClusterId&quot;: “j-XXXXX”,
+  &quot;ScriptLocation&quot;: “s3://BUCKET_NAME/PATH_TO_SCRIPT”,
+  &quot;InputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_DATASET”,
+  &quot;OutputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
+  &quot;Arguments&quot;: “arg1 arg2 arg3”,
+  &quot;ActionOnFailure&quot;: “CONTINUE”,
+  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
+}    
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClusterId</td>
+<td>String</td>
+<td>Cluster Id where the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ScriptLocation</td>
+<td>String</td>
+<td>S3 location where the script resides</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InputLocation</td>
+<td>String</td>
+<td>S3 location where the dataset resides</td>
+<td>No</td>
+</tr>
+<tr>
+<td>OutputLocation</td>
+<td>String</td>
+<td>S3 location where results are written</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Arguments</td>
+<td>String</td>
+<td>Any arguments that the script requires</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ActionOnFailure</td>
+<td>String</td>
+<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceTypes</td>
+<td>String[]</td>
+<td>The instance types to be launched</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+   Id: &quot;W-XXXXX&quot;,
+   Name: &quot;Hive Job&quot;,
+   Runs: 1,
+   IsScheduled: &quot;False&quot;,
+   IsExecuting: &quot;True | False&quot;,
+   Engine: &quot;MapReduce&quot;
+}   
+</code></pre>
+
+<hr />
+<h4 id="pig-app">Pig App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: “Pig Job”,
+  &quot;ProjectId&quot;: “P-XXXXX”,
+  &quot;ClusterId&quot;: “j-XXXXX”,
+  &quot;ScriptLocation&quot;: “s3://BUCKET_NAME/PATH_TO_SCRIPT”,
+  &quot;InputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_DATASET”,
+  &quot;OutputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
+  &quot;Arguments&quot;: “arg1 arg2 arg3”,
+  &quot;ActionOnFailure&quot;: “CONTINUE”,
+  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
+} 
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClusterId</td>
+<td>String</td>
+<td>Cluster Id where the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ScriptLocation</td>
+<td>String</td>
+<td>S3 location where the script resides</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InputLocation</td>
+<td>String</td>
+<td>S3 location where the dataset resides</td>
+<td>No</td>
+</tr>
+<tr>
+<td>OutputLocation</td>
+<td>String</td>
+<td>S3 location where results are written</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Arguments</td>
+<td>String</td>
+<td>Any arguments that the script requires</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ActionOnFailure</td>
+<td>String</td>
+<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceTypes</td>
+<td>String[]</td>
+<td>The instance types to be launched</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+   Id: &quot;W-XXXXX&quot;,
+   Name: &quot;Pig Job&quot;,
+   Runs: 1,
+   IsScheduled: &quot;False&quot;,
+   IsExecuting: &quot;True | False&quot;,
+   Engine: &quot;MapReduce&quot;
+}   
+</code></pre>
+
+<hr />
+<h4 id="jmeter-load-testing-app">JMeter - Load Testing App</h4>
+<p><strong>Request Header</strong></p>
+<pre><code>{
+  &quot;Name&quot;: &quot;string&quot;,
+  &quot;ProjectId&quot;: &quot;string&quot;,
+  &quot;DestinationLocation&quot;: &quot;string&quot;,
+  &quot;TestPlan&quot;: &quot;string&quot;,
+  &quot;InstanceType&quot;: &quot;string&quot;,
+  &quot;InstanceCount&quot;: 0
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name for the job</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td>String</td>
+<td>Identifier of the Project under which the job should execute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TestPlan</td>
+<td>Integer</td>
+<td>JMX test plan you want to execture</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DestinationLocation</td>
+<td>String</td>
+<td>Location where you want the output files to go to</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceType</td>
+<td>String</td>
+<td>Instance type you want Batchly to launch</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>InstanceCount</td>
+<td>Integer</td>
+<td>Number of instances of the InstanceType you want Batchly to launch and manage</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success Response</strong></p>
+<pre><code>{
+  &quot;RequestId&quot;: &quot;string&quot;,
+  &quot;Data&quot;: {
+    &quot;Runs&quot;: 0,
+    &quot;IsScheduled&quot;: true,
+    &quot;IsExecuting&quot;: true,
+    &quot;Engine&quot;: &quot;All&quot;,
+    &quot;AppName&quot;: &quot;string&quot;,
+    &quot;IsPrivateApp&quot;: true,
+    &quot;Id&quot;: &quot;string&quot;,
+    &quot;Name&quot;: &quot;string&quot;
+  },
+  &quot;Errors&quot;: {},
+  &quot;ContinuationToken&quot;: &quot;string&quot;
+}
+</code></pre>
+
 <hr />
 <h4 id="ffmpeg-video-transcoding-app">FFMpeg - Video Transcoding App</h4>
 <p><strong>Request Header</strong></p>
@@ -546,543 +1074,6 @@
   &quot;Id&quot;: &quot;string&quot;,
   &quot;Name&quot;: &quot;string&quot;
 }
-</code></pre>
-
-<hr />
-<h4 id="jmeter-load-testing-app">JMeter - Load Testing App</h4>
-<p><strong>Request Header</strong></p>
-<pre><code>{
-  &quot;Name&quot;: &quot;string&quot;,
-  &quot;ProjectId&quot;: &quot;string&quot;,
-  &quot;DestinationLocation&quot;: &quot;string&quot;,
-  &quot;TestPlan&quot;: &quot;string&quot;,
-  &quot;InstanceType&quot;: &quot;string&quot;,
-  &quot;InstanceCount&quot;: 0
-}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Data Type</th>
-<th>Description</th>
-<th>Mandatory</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td>String</td>
-<td>Name for the job</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ProjectId</td>
-<td>String</td>
-<td>Identifier of the Project under which the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>TestPlan</td>
-<td>Integer</td>
-<td>JMX test plan you want to execture</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>DestinationLocation</td>
-<td>String</td>
-<td>Location where you want the output files to go to</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>InstanceType</td>
-<td>String</td>
-<td>Instance type you want Batchly to launch</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>InstanceCount</td>
-<td>Integer</td>
-<td>Number of instances of the InstanceType you want Batchly to launch and manage</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Success Response</strong></p>
-<pre><code>{
-  &quot;RequestId&quot;: &quot;string&quot;,
-  &quot;Data&quot;: {
-    &quot;Runs&quot;: 0,
-    &quot;IsScheduled&quot;: true,
-    &quot;IsExecuting&quot;: true,
-    &quot;Engine&quot;: &quot;All&quot;,
-    &quot;AppName&quot;: &quot;string&quot;,
-    &quot;IsPrivateApp&quot;: true,
-    &quot;Id&quot;: &quot;string&quot;,
-    &quot;Name&quot;: &quot;string&quot;
-  },
-  &quot;Errors&quot;: {},
-  &quot;ContinuationToken&quot;: &quot;string&quot;
-}
-</code></pre>
-
-<hr />
-<h4 id="hive-app">Hive App</h4>
-<p><strong>Request Header</strong></p>
-<pre><code>{
-  &quot;Name&quot;: “Hive Job”,
-  &quot;ProjectId&quot;: “P-XXXXX”,
-  &quot;ClusterId&quot;: “j-XXXXX”,
-  &quot;ScriptLocation&quot;: “s3://BUCKET_NAME/PATH_TO_SCRIPT”,
-  &quot;InputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_DATASET”,
-  &quot;OutputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
-  &quot;Arguments&quot;: “arg1 arg2 arg3”
-  &quot;ActionOnFailure&quot;: “CONTINUE”
-  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
-}    
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Data Type</th>
-<th>Description</th>
-<th>Mandatory</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td>String</td>
-<td>Name for the job</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ProjectId</td>
-<td>String</td>
-<td>Identifier of the Project under which the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ClusterId</td>
-<td>String</td>
-<td>Cluster Id where the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ScriptLocation</td>
-<td>String</td>
-<td>S3 location where the script resides</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>InputLocation</td>
-<td>String</td>
-<td>S3 location where the dataset resides</td>
-<td>No</td>
-</tr>
-<tr>
-<td>OutputLocation</td>
-<td>String</td>
-<td>S3 location where results are written</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Arguments</td>
-<td>String</td>
-<td>Any arguments that the script requires</td>
-<td>No</td>
-</tr>
-<tr>
-<td>ActionOnFailure</td>
-<td>String</td>
-<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>InstanceTypes</td>
-<td>String[]</td>
-<td>The instance types to be launched</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Success Response</strong></p>
-<pre><code>{
-   Id: &quot;W-XXXXX&quot;,
-   Name: &quot;Hive Job&quot;,
-   Runs: 1,
-   IsScheduled: &quot;False&quot;,
-   IsExecuting: &quot;True | False&quot;,
-   Engine: &quot;MapReduce&quot;
-}   
-</code></pre>
-
-<hr />
-<h4 id="pig-app">Pig App</h4>
-<p><strong>Request Header</strong></p>
-<pre><code>{
-  &quot;Name&quot;: “Pig Job”,
-  &quot;ProjectId&quot;: “P-XXXXX”,
-  &quot;ClusterId&quot;: “j-XXXXX”,
-  &quot;ScriptLocation&quot;: “s3://BUCKET_NAME/PATH_TO_SCRIPT”,
-  &quot;InputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_DATASET”,
-  &quot;OutputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
-  &quot;Arguments&quot;: “arg1 arg2 arg3”
-  &quot;ActionOnFailure&quot;: “CONTINUE”
-  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
-} 
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Data Type</th>
-<th>Description</th>
-<th>Mandatory</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td>String</td>
-<td>Name for the job</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ProjectId</td>
-<td>String</td>
-<td>Identifier of the Project under which the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ClusterId</td>
-<td>String</td>
-<td>Cluster Id where the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ScriptLocation</td>
-<td>String</td>
-<td>S3 location where the script resides</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>InputLocation</td>
-<td>String</td>
-<td>S3 location where the dataset resides</td>
-<td>No</td>
-</tr>
-<tr>
-<td>OutputLocation</td>
-<td>String</td>
-<td>S3 location where results are written</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Arguments</td>
-<td>String</td>
-<td>Any arguments that the script requires</td>
-<td>No</td>
-</tr>
-<tr>
-<td>ActionOnFailure</td>
-<td>String</td>
-<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>InstanceTypes</td>
-<td>String[]</td>
-<td>The instance types to be launched</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Success Response</strong></p>
-<pre><code>{
-   Id: &quot;W-XXXXX&quot;,
-   Name: &quot;Pig Job&quot;,
-   Runs: 1,
-   IsScheduled: &quot;False&quot;,
-   IsExecuting: &quot;True | False&quot;,
-   Engine: &quot;MapReduce&quot;
-}   
-</code></pre>
-
-<hr />
-<h4 id="spark-app">Spark App</h4>
-<p><strong>Request Header</strong></p>
-<pre><code>{
-  &quot;Name&quot;: “Spark Job”,
-  &quot;ProjectId&quot;: “P-XXXXX”,
-  &quot;ClusterId&quot;: “j-XXXXX”,
-  &quot;DeployMode&quot;: “Cluster”,
-  &quot;SparkSubmitOptions&quot;: “opt1 opt2 opt3”,
-  &quot;ApplicationLocation&quot;: “s3://BUCKET_NAME/PATH_TO_SPARK_JAR”,
-  &quot;Arguments&quot;: “arg1 arg2 arg3”
-  &quot;ActionOnFailure&quot;: “CONTINUE”
-  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
-}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Data Type</th>
-<th>Description</th>
-<th>Mandatory</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td>String</td>
-<td>Name for the job</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ProjectId</td>
-<td>String</td>
-<td>Identifier of the Project under which the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ClusterId</td>
-<td>String</td>
-<td>Cluster Id where the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>DeployMode</td>
-<td>Integer</td>
-<td>1 (for Cluster mode), 2 (for Client mode)</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>SparkSubmitOptions</td>
-<td>String</td>
-<td>Specify other options for spark-submit</td>
-<td>No</td>
-</tr>
-<tr>
-<td>ApplicationLocation</td>
-<td>String</td>
-<td>S3 location where the Spark jar resides</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Arguments</td>
-<td>String</td>
-<td>Any arguments that the script requires</td>
-<td>No</td>
-</tr>
-<tr>
-<td>ActionOnFailure</td>
-<td>String</td>
-<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>InstanceTypes</td>
-<td>String[]</td>
-<td>The instance types to be launched</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Success Response</strong></p>
-<pre><code>{
-   Id: &quot;W-XXXXX&quot;,
-   Name: &quot;Spark Job&quot;,
-   Runs: 1,
-   IsScheduled: &quot;False&quot;,
-   IsExecuting: &quot;True | False&quot;,
-   Engine: &quot;MapReduce&quot;
-}   
-</code></pre>
-
-<hr />
-<h4 id="hadoopstreaming-app">HadoopStreaming App</h4>
-<p><strong>Request Header</strong></p>
-<pre><code>{
-  &quot;Name&quot;: “HadoopStreaming Job”,
-  &quot;ProjectId&quot;: “P-XXXXX”,
-  &quot;ClusterId&quot;: “j-XXXXX”,
-  &quot;MapperLocation&quot;: “s3://BUCKET_NAME/PATH_TO_MAP_FUNCTION”,
-  &quot;ReducerLocation&quot;: “s3://BUCKET_NAME/PATH_TO_REDUCE_FUNCTION”,
-  &quot;InputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_DATASET”,
-  &quot;OutputLocation&quot;: “s3://BUCKET_NAME/PATH_TO_OUTPUT_LOCATION”,
-  &quot;Arguments&quot;: “arg1 arg2 arg3”
-  &quot;ActionOnFailure&quot;: “CONTINUE”
-  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
-}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Data Type</th>
-<th>Description</th>
-<th>Mandatory</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td>String</td>
-<td>Name for the job</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ProjectId</td>
-<td>String</td>
-<td>Identifier of the Project under which the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ClusterId</td>
-<td>String</td>
-<td>Cluster Id where the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>MapperLocation</td>
-<td>String</td>
-<td>S3 location of the map function or the name of the Hadoop streaming command to run</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ReducerLocation</td>
-<td>String</td>
-<td>S3 location of the reduce function or the name of the Hadoop streaming command to run</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>InputLocation</td>
-<td>String</td>
-<td>S3 location where the dataset resides</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>OutputLocation</td>
-<td>String</td>
-<td>S3 location where the results are written</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Arguments</td>
-<td>String</td>
-<td>Any arguments that the script requires</td>
-<td>No</td>
-</tr>
-<tr>
-<td>ActionOnFailure</td>
-<td>String</td>
-<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>InstanceTypes</td>
-<td>String[]</td>
-<td>The instance types to be launched</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Success Response</strong></p>
-<pre><code>{
-   Id: &quot;W-XXXXX&quot;,
-   Name: &quot;HadoopStreaming Job&quot;,
-   Runs: 1,
-   IsScheduled: &quot;False&quot;,
-   IsExecuting: &quot;True | False&quot;,
-   Engine: &quot;MapReduce&quot;
-}   
-</code></pre>
-
-<hr />
-<h4 id="hadoopcustom-app">HadoopCustom App</h4>
-<p><strong>Request Header</strong></p>
-<pre><code>{
-  &quot;Name&quot;: “Hadoop Job”,
-  &quot;ProjectId&quot;: “P-XXXXX”,
-  &quot;ClusterId&quot;: “j-XXXXX”,
-  &quot;JarLocation&quot;: “s3://BUCKET_NAME/PATH_TO_JAR”,
-  &quot;Arguments&quot;: “arg1 arg2 arg3”
-  &quot;ActionOnFailure&quot;: “CONTINUE”
-  &quot;InstanceTypes&quot;: [&quot;c4.large&quot;, &quot;m3.large&quot;]
-}
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Data Type</th>
-<th>Description</th>
-<th>Mandatory</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td>String</td>
-<td>Name for the job</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ProjectId</td>
-<td>String</td>
-<td>Identifier of the Project under which the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>ClusterId</td>
-<td>String</td>
-<td>Cluster Id where the job should execute</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>JarLocation</td>
-<td>String</td>
-<td>A path into S3 or a fully qualified java class in the classpath</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Arguments</td>
-<td>String</td>
-<td>Any arguments that the script requires</td>
-<td>No</td>
-</tr>
-<tr>
-<td>ActionOnFailure</td>
-<td>String</td>
-<td>CONTINUE, CANCEL_AND_WAIT, TERMINATE_CLUSTER</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>InstanceTypes</td>
-<td>String</td>
-<td>The instance types to be launched</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Success Response</strong></p>
-<pre><code>{
-   Id: &quot;W-XXXXX&quot;,
-   Name: &quot;Hadoop Job&quot;,
-   Runs: 1,
-   IsScheduled: &quot;False&quot;,
-   IsExecuting: &quot;True | False&quot;,
-   Engine: &quot;MapReduce&quot;
-}   
 </code></pre>
 
 <hr /></div>
