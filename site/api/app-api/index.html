@@ -171,6 +171,33 @@
                     </li>
                 
                 
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media API <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../media-api/media-definition/">Media API Definition</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../media-api/media-operations/">Media Operations</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../media-api/media-codes/">Media Status Codes</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
                 </ul>
             
 
@@ -186,8 +213,8 @@
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../../media-api/media-definition/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -255,32 +282,32 @@
 <tbody>
 <tr>
 <td>POST</td>
-<td>api/apps/APP_NAME/{id}/Execute</td>
+<td>api/apps/{APP_NAME}/{id}/Execute</td>
 <td>Execute the job</td>
 </tr>
 <tr>
 <td>POST</td>
-<td>api/apps/APP_NAME</td>
+<td>api/apps/{APP_NAME}</td>
 <td>Create a new job</td>
 </tr>
 <tr>
 <td>PUT</td>
-<td>api/apps/APP_NAME/{id}</td>
+<td>api/apps/{APP_NAME}/{id}</td>
 <td>Edit a job with updated information.</td>
 </tr>
 <tr>
 <td>GET</td>
-<td>api/apps/APP_NAME/{id}</td>
+<td>api/apps/{APP_NAME}/{id}</td>
 <td>Get details for a job</td>
 </tr>
 <tr>
 <td>DELETE</td>
-<td>api/apps/APP_NAME/{id}</td>
+<td>api/apps/{APP_NAME}/{id}</td>
 <td>Delete a job</td>
 </tr>
 <tr>
 <td>GET</td>
-<td>api/apps/APP_NAME/jobs</td>
+<td>api/apps/{APP_NAME}/jobs</td>
 <td>Lists all jobs</td>
 </tr>
 </tbody>
@@ -288,6 +315,7 @@
 <h4 id="app-specific-request-headers">App Specific Request headers</h4>
 <hr />
 <h4 id="spark-app">Spark App</h4>
+<p>APP_NAME : Spark</p>
 <p><strong>Request Header</strong></p>
 <pre><code>{
   &quot;Name&quot;: “Spark Job”,
@@ -381,6 +409,7 @@
 
 <hr />
 <h4 id="hadoopstreaming-app">HadoopStreaming App</h4>
+<p>APP_NAME: HadoopStreaming</p>
 <p><strong>Request Header</strong></p>
 <pre><code>{
   &quot;Name&quot;: “HadoopStreaming Job”,
@@ -481,6 +510,7 @@
 
 <hr />
 <h4 id="hadoopcustom-app">HadoopCustom App</h4>
+<p>APP_NAME: Hadoop</p>
 <p><strong>Request Header</strong></p>
 <pre><code>{
   &quot;Name&quot;: “Hadoop Job”,
@@ -560,6 +590,7 @@
 
 <hr />
 <h4 id="hive-app">Hive App</h4>
+<p>APP_NAME: Hive</p>
 <p><strong>Request Header</strong></p>
 <pre><code>{
   &quot;Name&quot;: “Hive Job”,
@@ -653,6 +684,7 @@
 
 <hr />
 <h4 id="pig-app">Pig App</h4>
+<p>APP_NAME: PIG</p>
 <p><strong>Request Header</strong></p>
 <pre><code>{
   &quot;Name&quot;: “Pig Job”,
@@ -746,6 +778,7 @@
 
 <hr />
 <h4 id="jmeter-load-testing-app">JMeter - Load Testing App</h4>
+<p>APP_NAME: JMeter</p>
 <p><strong>Request Header</strong></p>
 <pre><code>{
   &quot;Name&quot;: &quot;string&quot;,
@@ -825,6 +858,7 @@
 
 <hr />
 <h4 id="ffmpeg-video-transcoding-app">FFMpeg - Video Transcoding App</h4>
+<p>APP_NAME: FFMpeg</p>
 <p><strong>Request Header</strong></p>
 <pre><code>{
   &quot;Name&quot;: &quot;string&quot;,
@@ -918,6 +952,7 @@
 
 <hr />
 <h4 id="imagemagick-image-processing-app">ImageMagick - Image processing App</h4>
+<p>APP_NAME: ImageMagick</p>
 <p><strong>Request Header</strong></p>
 <pre><code>{
   &quot;Name&quot;: &quot;string&quot;,
@@ -1004,6 +1039,7 @@
 
 <hr />
 <h4 id="tesseract-optical-character-recognition-app">Tesseract - Optical Character Recognition App</h4>
+<p>APP_NAME: Tesseract</p>
 <p><strong>Request Header</strong></p>
 <pre><code>{
   &quot;Name&quot;: &quot;string&quot;,

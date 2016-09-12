@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Media Operations - Batchly Support</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Batchly Support</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../whybatchly/">Why Batchly</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../user-guide/getting-started/">Getting Started</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../user-guide/user-management/">User Management</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../user-guide/iam-access/">Create IAM Access</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apps <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../app-pages/spark/">Big Data Apps</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../app-pages/jmeter/">JMeter</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../app-pages/ffmpeg/">FFmpeg</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../app-pages/imagemagick/">ImageMagick</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../api/overview/">API Overview</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../api/definition/">Definition</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../api/app-api/">App Specific APIs</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media API <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../media-definition/">Media API Definition</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Media Operations</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../media-codes/">Media Status Codes</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../media-definition/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../media-codes/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#media-operations-supported">Media Operations Supported</a></li>
+        
+            <li class="second-level"><a href="#operations">Operations</a></li>
+            
+        
+    
+        <li class="first-level "><a href="#profile-settings">Profile Settings</a></li>
+        
+            <li class="second-level"><a href="#transcode-and-hls-settings">Transcode and Hls Settings</a></li>
+            
+        
+            <li class="second-level"><a href="#thumbnail-settings">Thumbnail Settings</a></li>
+            
+        
+    
+        <li class="first-level "><a href="#models">Models</a></li>
+        
+            <li class="second-level"><a href="#profile">Profile</a></li>
+            
+        
+            <li class="second-level"><a href="#job">Job</a></li>
+            
+        
+            <li class="second-level"><a href="#callbacks">Callbacks</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h3 id="media-operations-supported">Media Operations Supported</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>api/Profiles</td>
+<td>Returns all the profiles available in batch.ly</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>api/Profiles/{id}</td>
+<td>Returns parameters of a particular profile</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>api/Profiles</td>
+<td>Create a new private profile for your usage.</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>api/Profiles/{id}</td>
+<td>Edit a given private profile with updated information</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>api/Profiles/{id}</td>
+<td>Removes a private profile.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>api/Jobs</td>
+<td>Creates a new transcoding job with the formats specified in the JSON request</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>api/Jobs/{id}</td>
+<td>Get the status of a specific job</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>api/Jobs/{id}?profile={profileName}</td>
+<td>Get the status of a specific transcoding within a media job</td>
+</tr>
+</tbody>
+</table>
+<h4 id="operations">Operations</h4>
+<p>The following Operations are supported as part of the Create Job call.  The rules associated with entities are described below.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Sources</th>
+<th>Profiles</th>
+<th>Destinations</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transcode</td>
+<td>One Path</td>
+<td>One or More Profiles</td>
+<td>One Destination</td>
+<td>The source file is transcoded to the given profiles.  The destination file name is appended with profile name when creating output</td>
+</tr>
+<tr>
+<td>Stitch</td>
+<td>At Least Two Paths</td>
+<td>None</td>
+<td>One Destination</td>
+<td>Operation combines the input files to create the destination output</td>
+</tr>
+<tr>
+<td>Hls</td>
+<td>One Path</td>
+<td>At Least Two Profiles</td>
+<td>One Destination</td>
+<td>The source is converted into many profiles and a destination .m3u8 file created with the appropriate references</td>
+</tr>
+<tr>
+<td>GetMetadata</td>
+<td>One or more Paths</td>
+<td>NA</td>
+<td>NA</td>
+<td>Individual source path meta data is sent back as webhooks to the given callback url</td>
+</tr>
+<tr>
+<td>GenerateThumbnails</td>
+<td>One Path</td>
+<td>One or More Profiles</td>
+<td>One Destination</td>
+<td>Source file is used to snapshot to create thumbnails based on profiles.  Destination file format is used and appended with index of images.</td>
+</tr>
+</tbody>
+</table>
+<p>Support for additional operations are currently in development and the document will be updated to reflect the same in near future.</p>
+<h3 id="profile-settings">Profile Settings</h3>
+<h4 id="transcode-and-hls-settings">Transcode and Hls Settings</h4>
+<p>Batchly has in-built profiles for most of the common MP4 and HLS output formats. However, you have flexibility to add or modify the values.</p>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Allowed Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>format</td>
+<td>mp4, hls</td>
+</tr>
+<tr>
+<td>video_codec</td>
+<td>libx264</td>
+</tr>
+<tr>
+<td>video_bitrate</td>
+<td>Integer e.g represent 100k as 100000</td>
+</tr>
+<tr>
+<td>minrate</td>
+<td>Integer e.g represent 100k as 100000</td>
+</tr>
+<tr>
+<td>maxrate</td>
+<td>Integer e.g represent 100k as 100000</td>
+</tr>
+<tr>
+<td>bufsize</td>
+<td>Integer e.g represent 100k as 100000</td>
+</tr>
+<tr>
+<td>video_width</td>
+<td>Integer e.g 1084</td>
+</tr>
+<tr>
+<td>video_height</td>
+<td>Integer e.g 720</td>
+</tr>
+<tr>
+<td>framerate</td>
+<td>Integer e.g. 15, 30</td>
+</tr>
+<tr>
+<td>group_of_pictures</td>
+<td>Integer. Typically, double the framerate</td>
+</tr>
+<tr>
+<td>video_preset</td>
+<td>fast, medium, slow, slower, veryslow, placebo. Default - Medium</td>
+</tr>
+<tr>
+<td>profile</td>
+<td>high, main, baseline</td>
+</tr>
+<tr>
+<td>level</td>
+<td>3.0, 3.1, 4.0, 4.1, 4.2</td>
+</tr>
+<tr>
+<td>video_disable</td>
+<td>yes, no</td>
+</tr>
+<tr>
+<td>video_disable_subtitle</td>
+<td>yes,no</td>
+</tr>
+<tr>
+<td>audio_codec</td>
+<td>aac,ac3</td>
+</tr>
+<tr>
+<td>audio_channels</td>
+<td>e.g 2</td>
+</tr>
+<tr>
+<td>audio_bitrate</td>
+<td>Integer e.g represent 100k as 100000</td>
+</tr>
+<tr>
+<td>audio_samplerate</td>
+<td>E.g 44100, 48000</td>
+</tr>
+<tr>
+<td>x264opts</td>
+<td>H.264 specific options</td>
+</tr>
+<tr>
+<td>movflags</td>
+<td>faststart moves the video info to header</td>
+</tr>
+<tr>
+<td>hls_time</td>
+<td>segment length. Recommended value 9</td>
+</tr>
+<tr>
+<td>hls_list_size</td>
+<td>Set to 0 for all VOD playlist entries</td>
+</tr>
+<tr>
+<td>hls_flags</td>
+<td>If set to 'single_file', all segments will be stored in 1 ts file</td>
+</tr>
+</tbody>
+</table>
+<h4 id="thumbnail-settings">Thumbnail Settings</h4>
+<p>You can create custom thumbnail profiles by using the following field values.</p>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Allowed Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>thumbnail_time</td>
+<td>In seconds. E.g.: 10 for generating thumbnail every 10 seconds</td>
+</tr>
+<tr>
+<td>thumbnail_width</td>
+<td>In pixels. E.g.: 50 for generating a thumbnail of width 50px</td>
+</tr>
+<tr>
+<td>thumbnail_height</td>
+<td>In pixels E.g.: 50 for generating a thumbnail of height 50px</td>
+</tr>
+</tbody>
+</table>
+<h3 id="models">Models</h3>
+<h4 id="profile">Profile</h4>
+<p>For both profile create and update, the following json needs to be sent. </p>
+<ul>
+<li>For create, perform a HTTP POST request to /api/Profiles </li>
+<li>For Update perform a HTTP PUT request to /api/Profiles/{id} endpoint</li>
+</ul>
+<pre><code>{
+  &quot;Name&quot;: &quot;unique_profile_name_with_no_spaces&quot;,
+  &quot;Type&quot;: &quot;Transcode | Hls | GenerateThumbnails&quot;,
+  &quot;Parameters&quot;: {
+    &quot;key&quot;: &quot;value&quot;,
+    &quot;key2&quot;: &quot;value2&quot;
+  }
+}
+</code></pre>
+
+<h4 id="job">Job</h4>
+<pre><code>{
+  &quot;Name&quot;: &quot;Name&quot;,
+  &quot;Sla&quot;: 2,
+  &quot;Notification&quot;: {
+      &quot;SuccessCallback&quot;: &quot;internal url&quot;,
+      &quot;ErrorCallback&quot;: &quot;internal url&quot;
+    },
+  &quot;Operations&quot;: [
+    {
+      &quot;Type&quot;: &quot;Stitch&quot;,
+      &quot;Profiles&quot;: [],
+      &quot;Sources&quot;: [
+        {
+          &quot;Type&quot;: &quot;S3&quot;,
+          &quot;Path&quot;: &quot;https://input1&quot;
+        },
+        {
+          &quot;Type&quot;: &quot;S3&quot;,
+          &quot;Path&quot;: &quot;https://input2&quot;
+        }
+      ],
+      &quot;Destinations&quot;: [
+        {
+          &quot;Type&quot;: &quot;S3&quot;,
+          &quot;Path&quot;: &quot;https://output&quot;
+        }
+      ]
+    },
+    {
+      &quot;Type&quot;: &quot;Transcode&quot;,
+      &quot;Profiles&quot;: [&quot;generic-hls-144p&quot;],
+      &quot;Sources&quot;: [
+        {
+          &quot;Type&quot;: &quot;S3&quot;,
+          &quot;Path&quot;: &quot;https://input&quot;
+        }
+      ],
+      &quot;Destinations&quot;: [
+        {
+          &quot;Type&quot;: &quot;S3&quot;,
+          &quot;Path&quot;: &quot;https://output&quot;
+        }
+      ], 
+      &quot;Metadata&quot;: {
+          &quot;Probe&quot;: true,
+          &quot;Callback&quot;: &quot;callback url&quot;
+        } 
+    },
+    {
+      &quot;Type&quot;: &quot;Hls&quot;,
+      &quot;Profiles&quot;: [&quot;generic-hls-240p&quot;, &quot;my-custom-480p&quot;],
+      &quot;Sources&quot;: [
+        {
+          &quot;Type&quot;: &quot;S3&quot;,
+          &quot;Path&quot;: &quot;https://input&quot;
+        }
+      ],
+      &quot;Destinations&quot;: [
+        {
+          &quot;Type&quot;: &quot;S3&quot;,
+          &quot;Path&quot;: &quot;https://output&quot;,
+          &quot;Acl&quot;: &quot;private|public-read|public-read-write|authenticated-read|bucket-owner-read|bucket-owner-full-control&quot;,
+        },
+      {
+      &quot;Type&quot;: &quot;GenerateThumbnails&quot;,
+      &quot;Profiles&quot;: [&quot;thumb_10_50_50&quot;],
+      &quot;Sources&quot;: [
+        {
+          &quot;Type&quot;: &quot;S3&quot;,
+          &quot;Path&quot;: &quot;https://input&quot;
+        }
+      ],
+      &quot;Destinations&quot;: [
+        {
+          &quot;Type&quot;: &quot;S3&quot;,
+          &quot;Path&quot;: &quot;https://output/thumb.jpg&quot;
+        }
+      ]
+    }
+  ]
+}
+
+</code></pre>
+
+<h4 id="callbacks">Callbacks</h4>
+<p><strong>Success</strong></p>
+<pre><code>{
+  &quot;ProcessId&quot;: &quot;string&quot;,
+  &quot;StartedOn&quot;: &quot;start date time in universal time format&quot;,
+  &quot;CompletedOn&quot;: &quot;completion date time in universal time format&quot;
+}
+</code></pre>
+
+<p><strong>Status Callbacks</strong></p>
+<p>There are 2 types of status callbacks, one for the overall progress and the other for individual progresses for each of the profiles selected.</p>
+<ul>
+<li>Consolidated Callback</li>
+</ul>
+<pre><code>https://media.batchly.net/api/jobs/{id}
+</code></pre>
+
+<p>The response would be</p>
+<pre><code>&quot;ProcessID&quot;: &quot;string&quot;
+&quot;StartedOn&quot;:&quot;start date time in universal time format&quot;,
+&quot;CompletedOn&quot;:&quot;completion date time in universal time format&quot;,
+&quot;Progress&quot;: &quot;percentage&quot;
+&quot;StatusCode&quot;:&quot;overall job status&quot;,|2|3|4|
+&quot;Status&quot;:&quot;status message&quot; |Started|Success|Error|
+</code></pre>
+
+<ul>
+<li>Individual profile status syntax</li>
+</ul>
+<pre><code>https://media.batchly.net/api/jobs/{id}?profile={profileName}
+</code></pre>
+
+<p>The response for each profile would be:</p>
+<pre><code>&quot;ProcessID&quot;: &quot;string&quot;
+&quot;StartedOn&quot;:&quot;start date time in universal time format&quot;,
+&quot;CompletedOn&quot;:&quot;completion date time in universal time format&quot;,
+&quot;Progress&quot;:&quot;in percentage&quot;,
+&quot;Status&quot;:&quot;status message&quot;,   
+&quot;SubStatus&quot;:&quot;substatus message&quot;,
+&quot;FileName&quot;: &quot;output filename&quot;
+</code></pre>
+
+<p><strong>Error</strong></p>
+<pre><code>{
+  &quot;ProcessId&quot;: &quot;string&quot;,
+  &quot;StartedOn&quot;: &quot;start date time in universal time format&quot;,
+  &quot;CompletedOn&quot;: &quot;completion date time in universal time format&quot;,
+  &quot;ErrorCode&quot;: &quot;system error code&quot;,
+  &quot;ErrorMessage&quot;: &quot;failure reason&quot;
+}
+</code></pre>
+
+<p><strong>Metadata</strong></p>
+<pre><code>{
+  &quot;ProcessId&quot;: &quot;string&quot;,
+  &quot;Source&quot;: &quot;file path&quot;,
+  &quot;Metadata&quot;: &quot;probe result in json string&quot;
+}
+</code></pre>
+
+<p>Proceed to <a href="../media-codes/">Media Status Codes</a> or back to <a href="../media-definition/">Media Overview</a></p></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

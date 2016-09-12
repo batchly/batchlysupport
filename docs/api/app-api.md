@@ -8,18 +8,20 @@ Nevertheless, each app has its own set of APIs to perform the basic operations. 
 
 HTTP Method | Endpoint | Description
 --|--|--
-POST | api/apps/APP_NAME/{id}/Execute | Execute the job
-POST | api/apps/APP_NAME | Create a new job
-PUT | api/apps/APP_NAME/{id} | Edit a job with updated information. 
-GET | api/apps/APP_NAME/{id} | Get details for a job
-DELETE | api/apps/APP_NAME/{id} | Delete a job
-GET | api/apps/APP_NAME/jobs | Lists all jobs
+POST | api/apps/{APP_NAME}/{id}/Execute | Execute the job
+POST | api/apps/{APP_NAME} | Create a new job
+PUT | api/apps/{APP_NAME}/{id} | Edit a job with updated information. 
+GET | api/apps/{APP_NAME}/{id} | Get details for a job
+DELETE | api/apps/{APP_NAME}/{id} | Delete a job
+GET | api/apps/{APP_NAME}/jobs | Lists all jobs
 
 #### App Specific Request headers 
 
 ---
 
 #### Spark App
+
+APP_NAME : Spark
 
 **Request Header**
 
@@ -67,6 +69,8 @@ InstanceTypes | String[] | The instance types to be launched | Yes
 ---
 
 #### HadoopStreaming App
+
+APP_NAME: HadoopStreaming
 
 **Request Header**
 
@@ -116,6 +120,8 @@ InstanceTypes | String[] | The instance types to be launched | Yes
 
 #### HadoopCustom App
 
+APP_NAME: Hadoop
+
 **Request Header**
 
 ```
@@ -158,6 +164,8 @@ InstanceTypes | String | The instance types to be launched | Yes
 ---
 
 #### Hive App
+
+APP_NAME: Hive
 
 **Request Header**
 
@@ -205,6 +213,8 @@ InstanceTypes | String[] | The instance types to be launched | Yes
 
 #### Pig App
 
+APP_NAME: PIG
+
 **Request Header**
 
 ```
@@ -251,6 +261,8 @@ InstanceTypes | String[] | The instance types to be launched | Yes
 
 #### JMeter - Load Testing App
 
+APP_NAME: JMeter
+
 **Request Header**
 
 ```
@@ -295,6 +307,8 @@ InstanceCount | Integer | Number of instances of the InstanceType you want Batch
 ---
 
 #### FFMpeg - Video Transcoding App
+
+APP_NAME: FFMpeg
 
 **Request Header**
 
@@ -345,6 +359,8 @@ DestinationLocation | String | Location where you want the output files to go to
 
 #### ImageMagick - Image processing App
 
+APP_NAME: ImageMagick
+
 **Request Header**
 
 ```
@@ -392,6 +408,8 @@ DestinationLocation | String | Location where you want the output files to go to
 ---
 
 #### Tesseract - Optical Character Recognition App
+
+APP_NAME: Tesseract
 
 **Request Header**
 

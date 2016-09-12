@@ -16,4 +16,8 @@ pages:
     - 'API Overview': 'api/overview.md'
     - 'Definition': 'api/definition.md'
     - 'App Specific APIs': 'api/app-api.md'
+- Media API:
+    - 'Media API Definition': 'media-api/media-definition.md'
+    - 'Media Operations': 'media-api/media-operations.md'
+    - 'Media Status Codes': 'media-api/media-codes.md'
 theme: cinder
