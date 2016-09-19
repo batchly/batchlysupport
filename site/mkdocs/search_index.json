@@ -67,7 +67,7 @@
         }, 
         {
             "location": "/user-guide/user-management/", 
-            "text": "Change Password\n\n\nYou can change your Batchly password at anytime.\n\n\n\n\n\n\nSign in to your Bacthly account.\n\n\n\n\n\n\nClick on the name given on the top-right corner.\n\n\n\n\n\n\nSelect \nChange Password\n.\n\n\n\n\n\n\n\n\nEdit Profile Settings\n\n\nYou can change your profile settings ( \nEmail\n, \nName\n, \nRole\n ) at any time.\n\n\n\n\n\n\nYou can click on the name given on the top-right corner from the header.\n\n\n\n\n\n\nSelect \nEdit Password\n.\n\n\n\n\n\n\n\n\nSettings\n\n\nFrom the settings, you can generate \nAPI Keys\n. Also, you can \nrevoke\n those keys when not required.\n\n\n\n\n\n\nYou can click on the name given on the top-right corner from the header.\n\n\n\n\n\n\nSelect \nSettings\n.", 
+            "text": "Change Password\n\n\nYou can change your Batchly password at anytime.\n\n\n\n\n\n\nSign in to your Bacthly account.\n\n\n\n\n\n\nClick on the name given on the top-right corner.\n\n\n\n\n\n\nSelect \nChange Password\n.\n\n\n\n\n\n\n\n\nEdit Profile Settings\n\n\nYou can change your profile settings ( \nEmail\n, \nName\n, \nRole\n ) at any time.\n\n\n\n\n\n\nYou can click on the name given on the top-right corner from the header.\n\n\n\n\n\n\nSelect \nEdit Password\n.\n\n\n\n\n\n\n\n\nSettings\n\n\nFrom the settings, you can generate \nAPI Keys\n. Also, you can \nrevoke\n those keys when not required.\n\n\n\n\n\n\nYou can click on the name given on the top-right corner from the header.\n\n\n\n\n\n\nSelect \nSettings\n.\n\n\n\n\n\n\n\n\nUsers \n(For Administrator Account Only)\n\n\nAs Administrator in Batchly, you have permissions to add and delete your colleagues. He/She can also restrict or permit access to specific apps in Batchly.\n\n\nNote:\n By default, all users have access to all apps in Batchly.\n\n\nTo remove app permissions for a specific user, follow the below steps:\n\n\n\n\nGo to Users screen, from the Profile link in the top header.\n\n\n\n\n\n\n\n\nIn the Users screen, click \"Add User\" button.\n\n\n\n\n\n\n\n\nIn the \"Add User\" screen, go to \"App Permissions\" section, check the Apps you want to give access to and click \"Add User\".\n\n\n\n\n\n\nThis will create a new user, with access to specific apps.", 
             "title": "User Management"
         }, 
         {
@@ -84,6 +84,11 @@
             "location": "/user-guide/user-management/#settings", 
             "text": "From the settings, you can generate  API Keys . Also, you can  revoke  those keys when not required.    You can click on the name given on the top-right corner from the header.    Select  Settings .", 
             "title": "Settings"
+        }, 
+        {
+            "location": "/user-guide/user-management/#users-for-administrator-account-only", 
+            "text": "As Administrator in Batchly, you have permissions to add and delete your colleagues. He/She can also restrict or permit access to specific apps in Batchly.  Note:  By default, all users have access to all apps in Batchly.  To remove app permissions for a specific user, follow the below steps:   Go to Users screen, from the Profile link in the top header.     In the Users screen, click \"Add User\" button.     In the \"Add User\" screen, go to \"App Permissions\" section, check the Apps you want to give access to and click \"Add User\".    This will create a new user, with access to specific apps.", 
+            "title": "Users (For Administrator Account Only)"
         }, 
         {
             "location": "/user-guide/iam-access/", 
