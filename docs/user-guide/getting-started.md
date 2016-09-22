@@ -2,7 +2,7 @@
 
 To get started with Batchly, go to the [Registration page](https://join.batchly.net) and **create a new Batchly Account**.
 
-To Register for Batchly, enter the following details :
+To Register for Batchly, enter the following details:
 
 1. Enter your **Full Name**
 
@@ -36,23 +36,52 @@ When you sign up for the very first time from your customized domain (for exampl
 
 ![Wizard](../img/wizard.png)
 
-#### Add AWS Account
+### Add AWS Account
 
-Click the **Add AWS Account** and you will be redirected to another page where following details needs to be given to add an account.
+**Important:** 
 
-1. Enter Account Name.
+1. To create an Account, Batchly requires your role *AWS Role ARN*. 
 
-2. Select the Region.
+2. In case *AWS Role ARN* already exists then you might not be able to create new *AWS Role ARN*.(You may use the same Role ARN or create a new one)
 
-3. Enter your Access Key.
+To use Batchly Apps, Account creation is mandatory. For that, click the **Add AWS Account** and you will be redirected to another page where following details needs to be given to add an account.
 
-4. Enter your Secret Key.
+**Step 1:** Click on **Launch Stack** to launch the CloudFormation template.
+It will redirect you to the AWS website. (Please Log in to your AWS account if you're not logged in. )
+
+![Account](../img/Account.png)
+
+**Step 2:** After login into AWS account, you will be redirected to the CloudFormation page.Click on the **Next** Button in the *Select Template* screen.
+
+![Account](../img/Account1.png)
+
+**Step 3:** Click on the **Next** Button in the *Specify Details* screen. 
+
+![Account](../img/Account2.png)
+
+**Step 4:** Click on the **Next** Button in the *Options* screen.
+
+![Account](../img/Account3.png)
+
+**Step 5:** Select both the checkboxes in the **Review** screen (it would give this CloudFormation template access to create IAM Resources) and Click the **Create** button. A stack gets created.
+
+![Account](../img/Account4.png)
+
+**Step 6:** Once the stack gets created, Go to **Outputs** tab and copy the Role ARN value and paste it in **AWS Role ARN** field in the Batchly's Account screen.
+
+![Account](../img/Account5.png)
+
+**Step 7:** Enter Account Name.
+
+**Step 8:** Select the Region.
+
+![Account](../img/Account6.png)
+
+**Step 9:** Cick on the button **Add Account** button.
 
 **Note:** Before adding an account, the customer needs to have their own AWS account.
 
-![Account](../img/createaccounts.png)
-
-#### Add Project
+### Add Project
 
 **Important:** 
 
