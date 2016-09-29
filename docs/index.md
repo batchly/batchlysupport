@@ -11,6 +11,7 @@ The navigation will take you through each component of Batchly. Click on a navig
     - [Getting Started with Batchly](user-guide/getting-started.md)
     - [User Management in Batchly](user-guide/user-management.md)
     - [Create IAM access in your AWS account for Batchly](user-guide/iam-access.md)
+    - [Security Policy](user-guide/security-policy.md)
 6. App Specific Support Pages
     - [Big Data Apps - Spark, Hadoop, Hive, Pig](app-pages/spark.md)
     - [JMeter - Load Testing Framework](app-pages/jmeter.md)
