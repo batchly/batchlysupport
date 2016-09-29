@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "OVERVIEW\n\n\nWelcome to the documentation for Batchly - the automated AWS cost-reduction platform. This website aims to document every feature of Batchly from top to bottom, covering as much detail as possible. If you are just getting started with Batchly, it is highly recommended that you begin with the \nGetting Started\n guide first and then return to this page.\n\n\nThe navigation will take you through each component of Batchly. Click on a navigation item to get started, or read more about why developers, executives, and operators choose Batchly for their needs.\n\n\nTable of Contents\n\n\n\n\nOverview\n\n\nWhy Batchly\n\n\nBatchly User Guide\n\n\nGetting Started with Batchly\n\n\nUser Management in Batchly\n\n\nCreate IAM access in your AWS account for Batchly\n\n\n\n\n\n\nApp Specific Support Pages\n\n\nBig Data Apps - Spark, Hadoop, Hive, Pig\n\n\nJMeter - Load Testing Framework\n\n\nFFMpeg - Video Transcoding Application\n\n\nImageMagick - Image Processing Application\n\n\nAuto Scaling\n \n\n\nElastic Load Balancer\n\n\n\n\n\n\nBatchly API Guide\n\n\nBatchly REST API Overview\n\n\nAPI Definitions for common tasks\n\n\nApp Specific API Definitions", 
+            "text": "OVERVIEW\n\n\nWelcome to the documentation for Batchly - the automated AWS cost-reduction platform. This website aims to document every feature of Batchly from top to bottom, covering as much detail as possible. If you are just getting started with Batchly, it is highly recommended that you begin with the \nGetting Started\n guide first and then return to this page.\n\n\nThe navigation will take you through each component of Batchly. Click on a navigation item to get started, or read more about why developers, executives, and operators choose Batchly for their needs.\n\n\nTable of Contents\n\n\n\n\nOverview\n\n\nWhy Batchly\n\n\nBatchly User Guide\n\n\nGetting Started with Batchly\n\n\nUser Management in Batchly\n\n\nCreate IAM access in your AWS account for Batchly\n\n\nSecurity Policy\n\n\n\n\n\n\nApp Specific Support Pages\n\n\nBig Data Apps - Spark, Hadoop, Hive, Pig\n\n\nJMeter - Load Testing Framework\n\n\nFFMpeg - Video Transcoding Application\n\n\nImageMagick - Image Processing Application\n\n\nAuto Scaling\n \n\n\nElastic Load Balancer\n\n\n\n\n\n\nBatchly API Guide\n\n\nBatchly REST API Overview\n\n\nAPI Definitions for common tasks\n\n\nApp Specific API Definitions", 
             "title": "Home"
         }, 
         {
@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/#table-of-contents", 
-            "text": "Overview  Why Batchly  Batchly User Guide  Getting Started with Batchly  User Management in Batchly  Create IAM access in your AWS account for Batchly    App Specific Support Pages  Big Data Apps - Spark, Hadoop, Hive, Pig  JMeter - Load Testing Framework  FFMpeg - Video Transcoding Application  ImageMagick - Image Processing Application  Auto Scaling    Elastic Load Balancer    Batchly API Guide  Batchly REST API Overview  API Definitions for common tasks  App Specific API Definitions", 
+            "text": "Overview  Why Batchly  Batchly User Guide  Getting Started with Batchly  User Management in Batchly  Create IAM access in your AWS account for Batchly  Security Policy    App Specific Support Pages  Big Data Apps - Spark, Hadoop, Hive, Pig  JMeter - Load Testing Framework  FFMpeg - Video Transcoding Application  ImageMagick - Image Processing Application  Auto Scaling    Elastic Load Balancer    Batchly API Guide  Batchly REST API Overview  API Definitions for common tasks  App Specific API Definitions", 
             "title": "Table of Contents"
         }, 
         {
@@ -99,6 +99,86 @@
             "location": "/user-guide/iam-access/#steps-to-create-iam-access", 
             "text": "Batchly provides an easy way to add your AWS account. All it needs is for you to provide your AWS Master Key and Access Key, and Batchly automatically creates a separate IAM access with privileges to launch EC2 instances (Spot and On-demand), as well as monitor them.  However, if for some reason you don\u2019t want to provide your AWS keys, you can create an IAM user for Batchly by following the steps given below:    Go to AWS IAM dashboard    In the left hand pane, click on user.    Give the user a name, then select Generate to give an access key to each user and click Create.     Download the credentials. At the bottom right corner, there\u2019s a download credentials button.   In the Users listing, click on the user and in the next screen at the bottom, click on Inline Policies.    Select Custom Policy and it opens up a policy editor. Give the policy a name, such as  Batchly-Policy, and add the policy below.    {\n     Version :  2012-10-17 ,\n     Statement : [\n        {\n             Sid :  Stmt1455011811000 ,\n             Effect :  Allow ,\n             Action : [\n                 iam:GetUser ,\n                 iam:AddRoleToInstanceProfile ,\n                 iam:CreateInstanceProfile ,\n                 iam:CreateRole ,\n                 iam:GetRole ,\n                 iam:ListInstanceProfiles ,\n                 iam:ListRoles ,\n                 iam:PutRolePolicy ,\n                 iam:RemoveRoleFromInstanceProfile ,\n                 iam:UpdateAssumeRolePolicy ,\n                 iam:PassRole ,\n                 iam:GetInstanceProfile \n            ],\n             Resource : [\n         arn:aws:iam::XXXXXXXXXXXXX:role/batchly/ \n                 arn:aws:iam::XXXXXXXXXXXXX:role/batchly/batchly-trusted-role ,\n         arn:aws:iam::XXXXXXXXXXXXX:instance-profile/* \n         arn:aws:iam::XXXXXXXXXXXXX:policy/batchly-access-policy ,\n         arn:aws:iam::XXXXXXXXXXXXX:user/USERNAME \n            ]\n        }\n    ]\n}  Note:  In the JSON, replace the XXXXXXXXXXXXX with the account number of the account in which you are creating the user. Replace the USERNAME with the username in the above policy statement.  Next, apply the policy and use the credentials to add the AWS account in Batchly.  Please execute the above steps and share the credential information with us. This would enable us to add the role. The permission list clearly specifies the permission expected for adding the new role.  Once the account is added in Batchly, you can safely remove the user. In addition, once the account is added, you can also validate the newly added role and its permission list.", 
             "title": "Steps to create IAM Access"
+        }, 
+        {
+            "location": "/user-guide/security-policy/", 
+            "text": "Batchly Security Policy\n\n\nAs a \u201cCloud First\u201d company, we at Batchly take security very seriously and it has always been at the heart of our decisions \n workflows from day one.\n\n\nAWS Account Security\n\n\nBatchly runs within your secure AWS account. It uses IAM Roles and a set of permissions associated with it to access \n manage AWS infrastructure. We DO NOT store your AWS Access and Secret keys. \n\n\nIAM Role and Permissions:\n\n\nWe adhere to AWS recommended best practices for assuming a role within your AWS account.\n(Refer: http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.htm)\n\n\nTo start using Batchly you are required to create a role that Batchly can assume within your AWS account. We have published an exhaustive list of permissions that Batchly requires to manage your AWS environment in the most cost effective manner. We DO NOT require * (All) permissions and only take fine grained permissions for different AWS services.\n\n\nThe following are the permissions that are required across services:\n\n\nAWS:EC2\n\n\nec2:CreateSecurityGroup\nec2:CreateSpotDatafeedSubscription\nec2:CancelSpotInstanceRequests \nec2:CreateTags \nec2:DeleteTags\nec2:CreateVolume \nec2:attach* \nec2:Describe* \nec2:RequestSpotInstances \nec2:RunInstances \nec2:GetConsoleOutput\nec2:AuthorizeSecurityGroup*\n\n**On Resources Created by Batchly**\n\nec2:StartInstances\nec2:StopInstances\nec2:TerminateInstances\nec2:DeleteVolume        \nec2:DeleteSecurityGroup\n\n\n\n\nAWS:S3\n\n\ns3:AbortMultipartUpload\ns3:Get*\ns3:List*\ns3:Put*\ns3:RestoreObject\ns3:CreateBucket\n\n\n\n\nAWS:SQS\n\n\nsqs:CreateQueue\nsqs:GetQueueAttributes\nsqs:GetQueueUrl\nsqs:ListQueues\nsqs:SetQueueAttributes\n\n\n\n\nAWS:CloudWatch\n\n\ncloudwatch:DescribeAlarmHistory\ncloudwatch:DescribeAlarms\ncloudwatch:DescribeAlarmsForMetric\ncloudwatch:DisableAlarmActions\ncloudwatch:EnableAlarmActions\ncloudwatch:GetMetricData\ncloudwatch:GetMetricStatistics\ncloudwatch:ListMetrics\ncloudwatch:PutMetricAlarm\ncloudwatch:PutMetricData\ncloudwatch:SetAlarmState\n\n\n\n\nAWS:Autoscaling\n\n\nautoscaling:Describe*\nautoscaling:AttachLoadBalancers\nautoscaling:CreateOrUpdateTags\nautoscaling:DetachLoadBalancers\nautoscaling:AttachInstances\nautoscaling:DetachInstances\nautoscaling:SetDesiredCapacity\nautoscaling:TerminateInstanceInAutoScalingGroup\nautoscaling:UpdateAutoScalingGroup\n\n\n\n\nAWS:EMR\n\n\nelasticmapreduce:AddTags        \nelasticmapreduce:AddJobFlowSteps        \nelasticmapreduce:DescribeJobFlows       \nelasticmapreduce:DescribeCluster        \nelasticmapreduce:DescribeStep           \nelasticmapreduce:ListBootstrapActions   \nelasticmapreduce:ListClusters       \nelasticmapreduce:ListInstanceGroups     \nelasticmapreduce:ListInstances      \nelasticmapreduce:ListSteps\nelasticmapreduce:ModifyInstanceGroups   \nelasticmapreduce:RunJobFlow\n\n**On Resources Created by Batchly**\n\nelasticmapreduce:RemoveTags\nelasticmapreduce:SetTerminationProtection\nelasticmapreduce:SetVisibleToAllUsers   \nelasticmapreduce:TerminateJobFlows\n\n\n\n\nAWS:ElasticBeanstalk\n\n\nelasticbeanstalk:Describe*\nelasticbeanstalk:RequestEnvironmentInfo\nelasticbeanstalk:RetrieveEnvironmentInfo\nelasticbeanstalk:ValidateConfigurationSettings\nelasticbeanstalk:RestartAppServer\n\n\n\n\nOthers\n\n\necs:Describe*\necs:List*\necs:DeregisterContainerInstance\necs:RegisterTaskDefinition\nelasticloadbalancing:ConfigureHealthCheck\nelasticloadbalancing:DeregisterInstancesFromLoadBalancer\nelasticloadbalancing:Describe*\nelasticloadbalancing:RegisterInstancesWithLoadBalancer\niam:ListRoles\niam:ListInstanceProfiles\niam:ListInstanceProfilesForRole\niam:PassRole\nsts:AssumeRole\nlogs:CreateLogGroup\nlogs:PutRetentionPolicy\n\n\n\n\nResources Key / Password Management\n\n\nWe have a strict Time-bound key rotation policy for managing resource passwords and keys that are used internally. In practice these are rotated at regular intervals to contain damages due to any extremely rare incident of a data breach.\n\n\nBatchly Account Security\n\n\nAs a customer you are provided with your own Batchly account. We provide the following ways for you to interface with Batchly:\n\n\n\n\nBatchly Console\n\n\nBatchly API/SDKs\n\n\n\n\nBatchly API / SDKs:\n\n\nBatchly API backend only processes authenticated and signed requests from the user. Batchly uses HMAC-SHA1 authentication. All responses are signed to ensure that the origin of the response is indeed Batchly and no one else. \n\n\nBatchly SDKs use APIs internally and take care of signing and authentication for you.\n\n\nBatchly Internal Infrastructure\n\n\nWe have a High Availability (HA) setup for our backend infrastructure and hence is tolerant to failures across Availability Zones and Regions.\n\n\nThe Batchly infrastructure works within its own Virtual Private cloud (VPC) and therefore is isolated from the public internet. Access to any resources within the VPC from the public internet is carefully modulated using appropriate Security Groups and Access Control Lists (ACLs).\n\n\nWe have separate Environments (Dev QA and Production) each serving a specific purpose in the product\u2019s Development Life Cycle. Exhaustive testing and Quality assurances are undertaken in the QA environment before any feature is moved live.", 
+            "title": "Security Policy"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#batchly-security-policy", 
+            "text": "As a \u201cCloud First\u201d company, we at Batchly take security very seriously and it has always been at the heart of our decisions   workflows from day one.", 
+            "title": "Batchly Security Policy"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#aws-account-security", 
+            "text": "Batchly runs within your secure AWS account. It uses IAM Roles and a set of permissions associated with it to access   manage AWS infrastructure. We DO NOT store your AWS Access and Secret keys.", 
+            "title": "AWS Account Security"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#iam-role-and-permissions", 
+            "text": "We adhere to AWS recommended best practices for assuming a role within your AWS account.\n(Refer: http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.htm)  To start using Batchly you are required to create a role that Batchly can assume within your AWS account. We have published an exhaustive list of permissions that Batchly requires to manage your AWS environment in the most cost effective manner. We DO NOT require * (All) permissions and only take fine grained permissions for different AWS services.  The following are the permissions that are required across services:", 
+            "title": "IAM Role and Permissions:"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#awsec2", 
+            "text": "ec2:CreateSecurityGroup\nec2:CreateSpotDatafeedSubscription\nec2:CancelSpotInstanceRequests \nec2:CreateTags \nec2:DeleteTags\nec2:CreateVolume \nec2:attach* \nec2:Describe* \nec2:RequestSpotInstances \nec2:RunInstances \nec2:GetConsoleOutput\nec2:AuthorizeSecurityGroup*\n\n**On Resources Created by Batchly**\n\nec2:StartInstances\nec2:StopInstances\nec2:TerminateInstances\nec2:DeleteVolume        \nec2:DeleteSecurityGroup", 
+            "title": "AWS:EC2"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#awss3", 
+            "text": "s3:AbortMultipartUpload\ns3:Get*\ns3:List*\ns3:Put*\ns3:RestoreObject\ns3:CreateBucket", 
+            "title": "AWS:S3"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#awssqs", 
+            "text": "sqs:CreateQueue\nsqs:GetQueueAttributes\nsqs:GetQueueUrl\nsqs:ListQueues\nsqs:SetQueueAttributes", 
+            "title": "AWS:SQS"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#awscloudwatch", 
+            "text": "cloudwatch:DescribeAlarmHistory\ncloudwatch:DescribeAlarms\ncloudwatch:DescribeAlarmsForMetric\ncloudwatch:DisableAlarmActions\ncloudwatch:EnableAlarmActions\ncloudwatch:GetMetricData\ncloudwatch:GetMetricStatistics\ncloudwatch:ListMetrics\ncloudwatch:PutMetricAlarm\ncloudwatch:PutMetricData\ncloudwatch:SetAlarmState", 
+            "title": "AWS:CloudWatch"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#awsautoscaling", 
+            "text": "autoscaling:Describe*\nautoscaling:AttachLoadBalancers\nautoscaling:CreateOrUpdateTags\nautoscaling:DetachLoadBalancers\nautoscaling:AttachInstances\nautoscaling:DetachInstances\nautoscaling:SetDesiredCapacity\nautoscaling:TerminateInstanceInAutoScalingGroup\nautoscaling:UpdateAutoScalingGroup", 
+            "title": "AWS:Autoscaling"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#awsemr", 
+            "text": "elasticmapreduce:AddTags        \nelasticmapreduce:AddJobFlowSteps        \nelasticmapreduce:DescribeJobFlows       \nelasticmapreduce:DescribeCluster        \nelasticmapreduce:DescribeStep           \nelasticmapreduce:ListBootstrapActions   \nelasticmapreduce:ListClusters       \nelasticmapreduce:ListInstanceGroups     \nelasticmapreduce:ListInstances      \nelasticmapreduce:ListSteps\nelasticmapreduce:ModifyInstanceGroups   \nelasticmapreduce:RunJobFlow\n\n**On Resources Created by Batchly**\n\nelasticmapreduce:RemoveTags\nelasticmapreduce:SetTerminationProtection\nelasticmapreduce:SetVisibleToAllUsers   \nelasticmapreduce:TerminateJobFlows", 
+            "title": "AWS:EMR"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#awselasticbeanstalk", 
+            "text": "elasticbeanstalk:Describe*\nelasticbeanstalk:RequestEnvironmentInfo\nelasticbeanstalk:RetrieveEnvironmentInfo\nelasticbeanstalk:ValidateConfigurationSettings\nelasticbeanstalk:RestartAppServer", 
+            "title": "AWS:ElasticBeanstalk"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#others", 
+            "text": "ecs:Describe*\necs:List*\necs:DeregisterContainerInstance\necs:RegisterTaskDefinition\nelasticloadbalancing:ConfigureHealthCheck\nelasticloadbalancing:DeregisterInstancesFromLoadBalancer\nelasticloadbalancing:Describe*\nelasticloadbalancing:RegisterInstancesWithLoadBalancer\niam:ListRoles\niam:ListInstanceProfiles\niam:ListInstanceProfilesForRole\niam:PassRole\nsts:AssumeRole\nlogs:CreateLogGroup\nlogs:PutRetentionPolicy", 
+            "title": "Others"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#resources-key-password-management", 
+            "text": "We have a strict Time-bound key rotation policy for managing resource passwords and keys that are used internally. In practice these are rotated at regular intervals to contain damages due to any extremely rare incident of a data breach.", 
+            "title": "Resources Key / Password Management"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#batchly-account-security", 
+            "text": "As a customer you are provided with your own Batchly account. We provide the following ways for you to interface with Batchly:   Batchly Console  Batchly API/SDKs", 
+            "title": "Batchly Account Security"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#batchly-api-sdks", 
+            "text": "Batchly API backend only processes authenticated and signed requests from the user. Batchly uses HMAC-SHA1 authentication. All responses are signed to ensure that the origin of the response is indeed Batchly and no one else.   Batchly SDKs use APIs internally and take care of signing and authentication for you.", 
+            "title": "Batchly API / SDKs:"
+        }, 
+        {
+            "location": "/user-guide/security-policy/#batchly-internal-infrastructure", 
+            "text": "We have a High Availability (HA) setup for our backend infrastructure and hence is tolerant to failures across Availability Zones and Regions.  The Batchly infrastructure works within its own Virtual Private cloud (VPC) and therefore is isolated from the public internet. Access to any resources within the VPC from the public internet is carefully modulated using appropriate Security Groups and Access Control Lists (ACLs).  We have separate Environments (Dev QA and Production) each serving a specific purpose in the product\u2019s Development Life Cycle. Exhaustive testing and Quality assurances are undertaken in the QA environment before any feature is moved live.", 
+            "title": "Batchly Internal Infrastructure"
         }, 
         {
             "location": "/app-pages/spark/", 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <title>JMeter - Batchly Support</title>
+    <title>Security Policy - Batchly Support</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -85,31 +85,31 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../user-guide/getting-started/">Getting Started</a>
+    <a href="../getting-started/">Getting Started</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../user-guide/user-management/">User Management</a>
+    <a href="../user-management/">User Management</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../user-guide/iam-access/">Create IAM Access</a>
+    <a href="../iam-access/">Create IAM Access</a>
 </li>
 
                         
                             
-<li >
-    <a href="../../user-guide/security-policy/">Security Policy</a>
+<li class="active">
+    <a href="./">Security Policy</a>
 </li>
 
                         
@@ -118,43 +118,43 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apps <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../spark/">Big Data Apps</a>
-</li>
-
-                        
-                            
-<li class="active">
-    <a href="./">JMeter</a>
+    <a href="../../app-pages/spark/">Big Data Apps</a>
 </li>
 
                         
                             
 <li >
-    <a href="../ffmpeg/">FFmpeg</a>
+    <a href="../../app-pages/jmeter/">JMeter</a>
 </li>
 
                         
                             
 <li >
-    <a href="../imagemagick/">ImageMagick</a>
+    <a href="../../app-pages/ffmpeg/">FFmpeg</a>
 </li>
 
                         
                             
 <li >
-    <a href="../autoscaling/">Auto Scaling</a>
+    <a href="../../app-pages/imagemagick/">ImageMagick</a>
 </li>
 
                         
                             
 <li >
-    <a href="../elasticloadbalancer/">Elastic Load Balancer</a>
+    <a href="../../app-pages/autoscaling/">Auto Scaling</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../app-pages/elasticloadbalancer/">Elastic Load Balancer</a>
 </li>
 
                         
@@ -227,12 +227,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../spark/">
+                        <a rel="next" href="../iam-access/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../ffmpeg/">
+                        <a rel="prev" href="../../app-pages/spark/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -248,46 +248,193 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#lets-get-started-with-jmeter">Let's get started with JMeter</a></li>
+        <li class="first-level active"><a href="#batchly-security-policy">Batchly Security Policy</a></li>
+        
+            <li class="second-level"><a href="#aws-account-security">AWS Account Security</a></li>
+            
+        
+            <li class="second-level"><a href="#iam-role-and-permissions">IAM Role and Permissions:</a></li>
+            
+        
+            <li class="second-level"><a href="#awsec2">AWS:EC2</a></li>
+            
+        
+            <li class="second-level"><a href="#awss3">AWS:S3</a></li>
+            
+        
+            <li class="second-level"><a href="#awssqs">AWS:SQS</a></li>
+            
+        
+            <li class="second-level"><a href="#awscloudwatch">AWS:CloudWatch</a></li>
+            
+        
+            <li class="second-level"><a href="#awsautoscaling">AWS:Autoscaling</a></li>
+            
+        
+            <li class="second-level"><a href="#awsemr">AWS:EMR</a></li>
+            
+        
+            <li class="second-level"><a href="#awselasticbeanstalk">AWS:ElasticBeanstalk</a></li>
+            
+        
+            <li class="second-level"><a href="#others">Others</a></li>
+            
+        
+    
+        <li class="first-level "><a href="#resources-key-password-management">Resources Key / Password Management</a></li>
+        
+    
+        <li class="first-level "><a href="#batchly-account-security">Batchly Account Security</a></li>
+        
+    
+        <li class="first-level "><a href="#batchly-api-sdks">Batchly API / SDKs:</a></li>
+        
+    
+        <li class="first-level "><a href="#batchly-internal-infrastructure">Batchly Internal Infrastructure</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="lets-get-started-with-jmeter">Let's get started with JMeter</h3>
-<p><strong>Step 1:</strong>  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.</p>
-<p><strong>Step 2:</strong> You will be redirected to Batchly Dashboard. Next, click on the <strong>App Store</strong> located in the header.</p>
-<p><img alt="jmeter" src="../../img/jmeter1.png" /></p>
-<p><strong>Step 3:</strong> You will be redirected to the App store which has the apps supported on Batchly. To run JMeter, click the <strong>Get Started</strong> button in the JMeter App.</p>
-<p><img alt="jmeter" src="../../img/jmeter2.png" /></p>
-<p><strong>Step 4:</strong> Now, to run JMeter job, fill all the required given text fields. There are following text fields to be filled: </p>
-<ol>
-<li>
-<p><strong>Job Name:</strong> You can give any desired name to your job.</p>
-</li>
-<li>
-<p><strong>Project:</strong> Select the associated project to run the JMeter job.</p>
-</li>
-<li>
-<p><strong>Test Plan:</strong> Upload the JMeter test plan (JMX file) from your local system which you want to execute.</p>
-</li>
-<li>
-<p><strong>Output Location:</strong> Give the Amazon S3 bucket output location.</p>
-</li>
-<li>
-<p><strong>Instance Count:</strong> Give the number of instance on which you want to run your test job.</p>
-</li>
-<li>
-<p><strong>Instance Type:</strong> Select the Amazon EC2 instance type on which you want to run your test plan.</p>
-</li>
-</ol>
-<p><img alt="jmeter" src="../../img/jmeter3.png" /></p>
-<p><strong>Step 5:</strong> Click on the ‘Add Job’ button once you are done with filling all the details. This action will save your job and is available to see later on the ‘Jobs’ page.</p>
-<p><strong>Step 6:</strong> On successful job addition, you would get a popup where you can either start your job immediately (by clicking ‘Execute the Job’) or schedule your job to run later (by clicking on the button ‘Schedule the Job’).</p>
-<p><img alt="jmeter" src="../../img/jmeter4.png" /></p>
-<p><strong>Step 7:</strong> You can monitor the job progress using the Job Run Details page.</p>
-<p><img alt="jmeter" src="../../img/jmeter5.png" /></p></div>
+<h3 id="batchly-security-policy">Batchly Security Policy</h3>
+<p>As a “Cloud First” company, we at Batchly take security very seriously and it has always been at the heart of our decisions &amp; workflows from day one.</p>
+<h4 id="aws-account-security">AWS Account Security</h4>
+<p>Batchly runs within your secure AWS account. It uses IAM Roles and a set of permissions associated with it to access &amp; manage AWS infrastructure. We DO NOT store your AWS Access and Secret keys. </p>
+<h4 id="iam-role-and-permissions">IAM Role and Permissions:</h4>
+<p>We adhere to AWS recommended best practices for assuming a role within your AWS account.
+(Refer: http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.htm)</p>
+<p>To start using Batchly you are required to create a role that Batchly can assume within your AWS account. We have published an exhaustive list of permissions that Batchly requires to manage your AWS environment in the most cost effective manner. We DO NOT require * (All) permissions and only take fine grained permissions for different AWS services.</p>
+<p>The following are the permissions that are required across services:</p>
+<h4 id="awsec2">AWS:EC2</h4>
+<pre><code>ec2:CreateSecurityGroup
+ec2:CreateSpotDatafeedSubscription
+ec2:CancelSpotInstanceRequests 
+ec2:CreateTags 
+ec2:DeleteTags
+ec2:CreateVolume 
+ec2:attach* 
+ec2:Describe* 
+ec2:RequestSpotInstances 
+ec2:RunInstances 
+ec2:GetConsoleOutput
+ec2:AuthorizeSecurityGroup*
+
+**On Resources Created by Batchly**
+
+ec2:StartInstances
+ec2:StopInstances
+ec2:TerminateInstances
+ec2:DeleteVolume        
+ec2:DeleteSecurityGroup
+</code></pre>
+
+<h4 id="awss3">AWS:S3</h4>
+<pre><code>s3:AbortMultipartUpload
+s3:Get*
+s3:List*
+s3:Put*
+s3:RestoreObject
+s3:CreateBucket
+</code></pre>
+
+<h4 id="awssqs">AWS:SQS</h4>
+<pre><code>sqs:CreateQueue
+sqs:GetQueueAttributes
+sqs:GetQueueUrl
+sqs:ListQueues
+sqs:SetQueueAttributes
+</code></pre>
+
+<h4 id="awscloudwatch">AWS:CloudWatch</h4>
+<pre><code>cloudwatch:DescribeAlarmHistory
+cloudwatch:DescribeAlarms
+cloudwatch:DescribeAlarmsForMetric
+cloudwatch:DisableAlarmActions
+cloudwatch:EnableAlarmActions
+cloudwatch:GetMetricData
+cloudwatch:GetMetricStatistics
+cloudwatch:ListMetrics
+cloudwatch:PutMetricAlarm
+cloudwatch:PutMetricData
+cloudwatch:SetAlarmState
+</code></pre>
+
+<h4 id="awsautoscaling">AWS:Autoscaling</h4>
+<pre><code>autoscaling:Describe*
+autoscaling:AttachLoadBalancers
+autoscaling:CreateOrUpdateTags
+autoscaling:DetachLoadBalancers
+autoscaling:AttachInstances
+autoscaling:DetachInstances
+autoscaling:SetDesiredCapacity
+autoscaling:TerminateInstanceInAutoScalingGroup
+autoscaling:UpdateAutoScalingGroup
+</code></pre>
+
+<h4 id="awsemr">AWS:EMR</h4>
+<pre><code>elasticmapreduce:AddTags        
+elasticmapreduce:AddJobFlowSteps        
+elasticmapreduce:DescribeJobFlows       
+elasticmapreduce:DescribeCluster        
+elasticmapreduce:DescribeStep           
+elasticmapreduce:ListBootstrapActions   
+elasticmapreduce:ListClusters       
+elasticmapreduce:ListInstanceGroups     
+elasticmapreduce:ListInstances      
+elasticmapreduce:ListSteps
+elasticmapreduce:ModifyInstanceGroups   
+elasticmapreduce:RunJobFlow
+
+**On Resources Created by Batchly**
+
+elasticmapreduce:RemoveTags
+elasticmapreduce:SetTerminationProtection
+elasticmapreduce:SetVisibleToAllUsers   
+elasticmapreduce:TerminateJobFlows
+</code></pre>
+
+<h4 id="awselasticbeanstalk">AWS:ElasticBeanstalk</h4>
+<pre><code>elasticbeanstalk:Describe*
+elasticbeanstalk:RequestEnvironmentInfo
+elasticbeanstalk:RetrieveEnvironmentInfo
+elasticbeanstalk:ValidateConfigurationSettings
+elasticbeanstalk:RestartAppServer
+</code></pre>
+
+<h4 id="others">Others</h4>
+<pre><code>ecs:Describe*
+ecs:List*
+ecs:DeregisterContainerInstance
+ecs:RegisterTaskDefinition
+elasticloadbalancing:ConfigureHealthCheck
+elasticloadbalancing:DeregisterInstancesFromLoadBalancer
+elasticloadbalancing:Describe*
+elasticloadbalancing:RegisterInstancesWithLoadBalancer
+iam:ListRoles
+iam:ListInstanceProfiles
+iam:ListInstanceProfilesForRole
+iam:PassRole
+sts:AssumeRole
+logs:CreateLogGroup
+logs:PutRetentionPolicy
+</code></pre>
+
+<h3 id="resources-key-password-management">Resources Key / Password Management</h3>
+<p>We have a strict Time-bound key rotation policy for managing resource passwords and keys that are used internally. In practice these are rotated at regular intervals to contain damages due to any extremely rare incident of a data breach.</p>
+<h3 id="batchly-account-security">Batchly Account Security</h3>
+<p>As a customer you are provided with your own Batchly account. We provide the following ways for you to interface with Batchly:</p>
+<ul>
+<li>Batchly Console</li>
+<li>Batchly API/SDKs</li>
+</ul>
+<h3 id="batchly-api-sdks">Batchly API / SDKs:</h3>
+<p>Batchly API backend only processes authenticated and signed requests from the user. Batchly uses HMAC-SHA1 authentication. All responses are signed to ensure that the origin of the response is indeed Batchly and no one else. </p>
+<p>Batchly SDKs use APIs internally and take care of signing and authentication for you.</p>
+<h3 id="batchly-internal-infrastructure">Batchly Internal Infrastructure</h3>
+<p>We have a High Availability (HA) setup for our backend infrastructure and hence is tolerant to failures across Availability Zones and Regions.</p>
+<p>The Batchly infrastructure works within its own Virtual Private cloud (VPC) and therefore is isolated from the public internet. Access to any resources within the VPC from the public internet is carefully modulated using appropriate Security Groups and Access Control Lists (ACLs).</p>
+<p>We have separate Environments (Dev QA and Production) each serving a specific purpose in the product’s Development Life Cycle. Exhaustive testing and Quality assurances are undertaken in the QA environment before any feature is moved live.</p></div>
         
     </div>
 
