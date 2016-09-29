@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <title>Definition - Batchly Support</title>
+    <title>Auto Scaling - Batchly Support</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -112,43 +112,43 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apps <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../app-pages/spark/">Big Data Apps</a>
+    <a href="../spark/">Big Data Apps</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../app-pages/jmeter/">JMeter</a>
+    <a href="../jmeter/">JMeter</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../app-pages/ffmpeg/">FFmpeg</a>
+    <a href="../ffmpeg/">FFmpeg</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../app-pages/imagemagick/">ImageMagick</a>
+    <a href="../imagemagick/">ImageMagick</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Auto Scaling</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../app-pages/autoscaling/">Auto Scaling</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../app-pages/elasticloadbalancer/">Elastic Load Balancer</a>
+    <a href="../elasticloadbalancer/">Elastic Load Balancer</a>
 </li>
 
                         
@@ -157,25 +157,25 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../overview/">API Overview</a>
-</li>
-
-                        
-                            
-<li class="active">
-    <a href="./">Definition</a>
+    <a href="../../api/overview/">API Overview</a>
 </li>
 
                         
                             
 <li >
-    <a href="../app-api/">App Specific APIs</a>
+    <a href="../../api/definition/">Definition</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../api/app-api/">App Specific APIs</a>
 </li>
 
                         
@@ -221,12 +221,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../overview/">
+                        <a rel="next" href="../imagemagick/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../app-api/">
+                        <a rel="prev" href="../elasticloadbalancer/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -242,157 +242,31 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#jobs-api">Jobs API</a></li>
-        
-    
-        <li class="first-level "><a href="#runs-api">Runs API</a></li>
-        
-    
-        <li class="first-level "><a href="#projects-api">Projects API</a></li>
-        
-    
-        <li class="first-level "><a href="#accounts-api">Accounts API</a></li>
+        <li class="first-level active"><a href="#lets-get-started-with-batchly-autoscaling">Let's get started with Batchly Autoscaling</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>Batchly API supports the following entities:</p>
-<ul>
-<li>Jobs</li>
-<li>Runs</li>
-<li>Projects</li>
-<li>Accounts</li>
-</ul>
-<h4 id="jobs-api">Jobs API</h4>
-<p>Jobs are calls to perform various operations on the actual dataset. This call varies from one app to another. Though it is app-specific, each job requires jobname, Project, SLA, input location and output location to be mentioned.</p>
-<p>Batchly responds immediately with a job ID so your application can track the progress of the job.</p>
-<p><strong>Actions Supported</strong></p>
-<table>
-<thead>
-<tr>
-<th>HTTP Method</th>
-<th>Endpoint</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td>api/Jobs</td>
-<td>Returns all the jobs associated with your Batchly account</td>
-</tr>
-</tbody>
-</table>
-<p>To run individual jobs, call the API associated with the respective app. <a href="../app-api/">App API Documentation</a></p>
-<h4 id="runs-api">Runs API</h4>
-<p>Runs are individual instances of the job in Batchly. Runs API allows you to list and delete the runs in your Batchly account.</p>
-<table>
-<thead>
-<tr>
-<th>HTTP Method</th>
-<th>Endpoint</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td>/api/Runs</td>
-<td>Get all the runs associated with your batchly account</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/api/Runs/{id}</td>
-<td>Get the details of the run for the given id</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/api/Runs/{id}</td>
-<td>Delete the run details from your account</td>
-</tr>
-</tbody>
-</table>
-<h4 id="projects-api">Projects API</h4>
-<p>Projects define the boundary for your jobs to run in. Projects creates a sandbox environment associated with an AWS account, a cloud region within that AWS account and (optionally) associate a virtual private cloud with it.</p>
-<p>Projects’ calls allow you to create, edit or view projects associated with your Batchly account.</p>
-<p><strong>Actions Supported</strong></p>
-<table>
-<thead>
-<tr>
-<th>HTTP Method</th>
-<th>Endpoint</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>DELETE</td>
-<td>/api/Projects/{id}</td>
-<td>Delete the project with the given id</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/api/Projects/{id}</td>
-<td>Get the details of the project for the given id</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>/api/Projects/{id}</td>
-<td>Update the project details for the given id</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>/api/Projects/Add</td>
-<td>Create a new project</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/api/Projects</td>
-<td>Get all the projects associated with your batchly account</td>
-</tr>
-</tbody>
-</table>
-<h4 id="accounts-api">Accounts API</h4>
-<p>Attach your AWS account to batchly using the accounts API. Accounts calls allow you to create, edit or view AWS accounts associated with your Batchly account.</p>
-<p><strong>Actions Supported</strong></p>
-<table>
-<thead>
-<tr>
-<th>HTTP Method</th>
-<th>Endpoint</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td>/api/Accounts/AWS</td>
-<td>Add new AWS account to your batchly account</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/api/Accounts/{id}</td>
-<td>Delete the AWS account associated with this id</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/api/Accounts/{id}</td>
-<td>Get the AWS account details related to this id</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>/api/Accounts/{id}</td>
-<td>Update the details for this id</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/api/Accounts</td>
-<td>Get all the AWS accounts associated with your batchly account</td>
-</tr>
-</tbody>
-</table></div>
+<h3 id="lets-get-started-with-batchly-autoscaling">Let's get started with Batchly Autoscaling</h3>
+<p><strong>Step 1:</strong>  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.</p>
+<p><strong>Step 2:</strong> You will be redirected to Batchly Dashboard. Next, click on the App Store located in the header.</p>
+<p><img alt="Autoscaling" src="../../img/jmeter1.png" /></p>
+<p><strong>Step 3:</strong> You will be redirected to the <strong>App store</strong> which has the apps supported on Batchly. To run Elastic Load Balancer app, click the Get Started button.</p>
+<p><img alt="Autoscaling" src="../../img/autoscaling1.png" /></p>
+<p><strong>Step 4:</strong> Now, to run Autoscaling job, fill all the required given text fields. There are following text fields to be filled:</p>
+<p><strong>Job Name:</strong> You can give any desired name to your job.</p>
+<p><strong>Project:</strong> Select the associated project to run the job. The project is associated with VPC and Region in which the job has to run.</p>
+<p><strong>Autoscaling Group name:</strong> Select the AWS autoscaling group from the drop down.</p>
+<p><strong>Min OnDemand instances:</strong> Specify the AMI ID to be used to launch instancesSpecify the minimum number of ondemand instances that should run as part of the autoscaling group.</p>
+<p><strong>Max Instance Count:</strong> Specify the maximum number of instances that should run as part of the autoscaling group.</p>
+<p><strong>Desired Count:</strong> Specify the desired number of instances. Auto Scaling ensures that your group has this many instances.</p>
+<p><img alt="Autoscaling" src="../../img/autoscaling2.png" /></p>
+<p><strong>Step 5:</strong> Click on the <strong>Add Job</strong> button once you are done with filling all the details. This action will save your job and is available to see later on the ‘Jobs’ page.</p>
+<p><strong>Step 6:</strong> On successful job addition, you would get a popup where you can either start your job immediately (by clicking ‘Execute the Job’) or schedule your job to run later (by clicking on the button ‘Schedule the Job’).</p>
+<p><img alt="Autoscaling" src="../../img/popup.png" /></p>
+<p><strong>Step 7:</strong> You can monitor the job progress using the Job Run Details page.</p></div>
         
     </div>
 

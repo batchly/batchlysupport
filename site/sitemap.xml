@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>None/whybatchly/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,19 +23,19 @@
         
     <url>
      <loc>None/user-guide/getting-started/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/user-guide/user-management/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/user-guide/iam-access/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -45,25 +45,37 @@
         
     <url>
      <loc>None/app-pages/spark/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/app-pages/jmeter/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/app-pages/ffmpeg/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/app-pages/imagemagick/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/app-pages/autoscaling/</loc>
+     <lastmod>2016-09-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/app-pages/elasticloadbalancer/</loc>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -73,19 +85,19 @@
         
     <url>
      <loc>None/api/overview/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/api/definition/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/api/app-api/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -95,19 +107,19 @@
         
     <url>
      <loc>None/media-api/media-definition/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/media-api/media-operations/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/media-api/media-codes/</loc>
-     <lastmod>2016-09-23</lastmod>
+     <lastmod>2016-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
