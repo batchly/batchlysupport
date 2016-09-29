@@ -12,6 +12,8 @@ pages:
     - 'JMeter': 'app-pages/jmeter.md'
     - 'FFmpeg': 'app-pages/ffmpeg.md'
     - 'ImageMagick': 'app-pages/imagemagick.md'
+    - 'Auto Scaling': 'app-pages/autoscaling.md'
+    - 'Elastic Bean Stalk': 'app-pages/beanstalk.md'
 - API:
     - 'API Overview': 'api/overview.md'
     - 'Definition': 'api/definition.md'

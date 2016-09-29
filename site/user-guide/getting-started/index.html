@@ -238,11 +238,11 @@
     
         <li class="first-level "><a href="#sign-in-process-wizard">Sign in Process - Wizard</a></li>
         
-            <li class="second-level"><a href="#add-aws-account">Add AWS Account</a></li>
-            
+    
+        <li class="first-level "><a href="#add-aws-account">Add AWS Account</a></li>
         
-            <li class="second-level"><a href="#add-project">Add Project</a></li>
-            
+    
+        <li class="first-level "><a href="#add-project">Add Project</a></li>
         
     
         <li class="first-level "><a href="#select-app">Select App</a></li>
@@ -254,7 +254,7 @@
 
 <h3 id="getting-started">Getting Started</h3>
 <p>To get started with Batchly, go to the <a href="https://join.batchly.net">Registration page</a> and <strong>create a new Batchly Account</strong>.</p>
-<p>To Register for Batchly, enter the following details :</p>
+<p>To Register for Batchly, enter the following details:</p>
 <ol>
 <li>
 <p>Enter your <strong>Full Name</strong></p>
@@ -287,25 +287,36 @@
 <p><strong>Step 2:</strong> Create a project.</p>
 <p><strong>Step 3:</strong> Select any app.</p>
 <p><img alt="Wizard" src="../../img/wizard.png" /></p>
-<h4 id="add-aws-account">Add AWS Account</h4>
-<p>Click the <strong>Add AWS Account</strong> and you will be redirected to another page where following details needs to be given to add an account.</p>
+<h3 id="add-aws-account">Add AWS Account</h3>
+<p><strong>Important:</strong> </p>
 <ol>
 <li>
-<p>Enter Account Name.</p>
+<p>To create an Account, Batchly requires your role <em>AWS Role ARN</em>. </p>
 </li>
 <li>
-<p>Select the Region.</p>
-</li>
-<li>
-<p>Enter your Access Key.</p>
-</li>
-<li>
-<p>Enter your Secret Key.</p>
+<p>In case <em>AWS Role ARN</em> already exists then you might not be able to create new <em>AWS Role ARN</em>.(You may use the same Role ARN or create a new one)</p>
 </li>
 </ol>
+<p>To use Batchly Apps, Account creation is mandatory. For that, click the <strong>Add AWS Account</strong> and you will be redirected to another page where following details needs to be given to add an account.</p>
+<p><strong>Step 1:</strong> Click on <strong>Launch Stack</strong> to launch the CloudFormation template.
+It will redirect you to the AWS website. (Please Log in to your AWS account if you're not logged in. )</p>
+<p><img alt="Account" src="../../img/Account.png" /></p>
+<p><strong>Step 2:</strong> After login into AWS account, you will be redirected to the CloudFormation page.Click on the <strong>Next</strong> Button in the <em>Select Template</em> screen.</p>
+<p><img alt="Account" src="../../img/Account1.png" /></p>
+<p><strong>Step 3:</strong> Click on the <strong>Next</strong> Button in the <em>Specify Details</em> screen. </p>
+<p><img alt="Account" src="../../img/Account2.png" /></p>
+<p><strong>Step 4:</strong> Click on the <strong>Next</strong> Button in the <em>Options</em> screen.</p>
+<p><img alt="Account" src="../../img/Account3.png" /></p>
+<p><strong>Step 5:</strong> Select both the checkboxes in the <strong>Review</strong> screen (it would give this CloudFormation template access to create IAM Resources) and Click the <strong>Create</strong> button. A stack gets created.</p>
+<p><img alt="Account" src="../../img/Account4.png" /></p>
+<p><strong>Step 6:</strong> Once the stack gets created, Go to <strong>Outputs</strong> tab and copy the Role ARN value and paste it in <strong>AWS Role ARN</strong> field in the Batchly's Account screen.</p>
+<p><img alt="Account" src="../../img/Account5.png" /></p>
+<p><strong>Step 7:</strong> Enter Account Name.</p>
+<p><strong>Step 8:</strong> Select the Region.</p>
+<p><img alt="Account" src="../../img/Account6.png" /></p>
+<p><strong>Step 9:</strong> Cick on the button <strong>Add Account</strong> button.</p>
 <p><strong>Note:</strong> Before adding an account, the customer needs to have their own AWS account.</p>
-<p><img alt="Account" src="../../img/createaccounts.png" /></p>
-<h4 id="add-project">Add Project</h4>
+<h3 id="add-project">Add Project</h3>
 <p><strong>Important:</strong> </p>
 <ol>
 <li>
