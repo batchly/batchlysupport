@@ -2,7 +2,7 @@
 
 **Step 1:**  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.
 
-**Step 2:** YYou will be redirected to Batchly Dashboard. Next, click on the App Store located in the header.
+**Step 2:** You will be redirected to Batchly Dashboard. Next, click on the App Store located in the header.
 
 ![ELB](../img/jmeter1.png)
 
