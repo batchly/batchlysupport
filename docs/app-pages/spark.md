@@ -1,4 +1,4 @@
-### Let's get started with Big Data Apps
+### Getting started with Big Data Apps
 
 Big Data has following apps which are almost similar to each other in term of using it (or information required to run these apps): 
 *Hive*, *Pig*, *Spark*, *Hadoop*

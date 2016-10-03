@@ -1,4 +1,4 @@
-### Let's get started with Batchly Elastic Load Balancer
+### Getting started with Batchly Elastic Load Balancer
 
 **Step 1:**  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.
 

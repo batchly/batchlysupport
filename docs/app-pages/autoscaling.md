@@ -1,4 +1,6 @@
-### Let's get started with Batchly Autoscaling
+### Getting started with AWS Auto Scaling using Batchly
+
+AWS Auto Scaling helps you maintain application availability and allows you to scale your Amazon EC2 capacity up or down automatically according to conditions you define. With Batchly App for Auto Scaling, you can now run your AWS Auto Scaling groups through Batchly and bring down your EC2 costs significantly with the usage of right spot instances without compromising on your application availability. 
 
 **Step 1:**  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.
 
@@ -10,17 +12,17 @@
 
 ![Autoscaling](../img/autoscaling1.png)
 
-**Step 4:** Now, to run Autoscaling job, fill all the required given text fields. There are following text fields to be filled:
+**Step 4:** Now, to run Auto Scaling job, fill all the required given text fields. There are following text fields to be filled:
 
 **Job Name:** You can give any desired name to your job.
 
 **Project:** Select the associated project to run the job. The project is associated with VPC and Region in which the job has to run.
 
-**Autoscaling Group name:** Select the AWS autoscaling group from the drop down.
+**Auto Scaling Group name:** Select the AWS Auto Scaling group from the drop down.
 
-**Min OnDemand instances:** Specify the AMI ID to be used to launch instancesSpecify the minimum number of ondemand instances that should run as part of the autoscaling group.
+**Min OnDemand instances:** Specify the AMI ID to be used to launch instancesSpecify the minimum number of ondemand instances that should run as part of the Auto Scaling group.
 
-**Max Instance Count:** Specify the maximum number of instances that should run as part of the autoscaling group.
+**Max Instance Count:** Specify the maximum number of instances that should run as part of the Auto Scaling group.
 
 **Desired Count:** Specify the desired number of instances. Auto Scaling ensures that your group has this many instances.
 
