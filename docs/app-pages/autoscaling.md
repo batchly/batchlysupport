@@ -8,7 +8,7 @@ AWS Auto Scaling helps you maintain application availability and allows you to s
 
 ![Autoscaling](../img/jmeter1.png)
 
-**Step 3:** You will be redirected to the **App store** which has the apps supported on Batchly. To run Elastic Load Balancer app, click the Get Started button.
+**Step 3:** You will be redirected to the **App store** which has the apps supported on Batchly. To run Auto Scaling app, click the Get Started button.
 
 ![Autoscaling](../img/autoscaling1.png)
 

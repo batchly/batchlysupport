@@ -19,6 +19,7 @@ The navigation will take you through each component of Batchly. Click on a navig
     - [ImageMagick - Image Processing Application](app-pages/imagemagick.md)
     - [Auto Scaling](app-pages/autoscaling.md) 
     - [Elastic Load Balancer](app-pages/elasticloadbalancer.md)
+    - [Elastic Beanstalk](app-pages/elasticbeanstalk.md)
 * Batchly API Guide
     - [Batchly REST API Overview](api/overview.md)
     - [API Definitions for common tasks](api/definition.md)

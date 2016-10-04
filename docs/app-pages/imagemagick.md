@@ -1,4 +1,4 @@
-### Let's get started with ImageMagick
+### Getting started with Batchly ImageMagick
 
 **Step 1:**  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.
 
