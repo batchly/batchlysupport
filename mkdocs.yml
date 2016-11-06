@@ -16,6 +16,7 @@ pages:
     - 'Auto Scaling': 'app-pages/autoscaling.md'
     - 'Elastic Load Balancer': 'app-pages/elasticloadbalancer.md'
     - 'Elastic Beanstalk': 'app-pages/elasticbeanstalk.md'
+    - 'Custom AMI': 'app-pages/customami.md'
 - API:
     - 'API Overview': 'api/overview.md'
     - 'Definition': 'api/definition.md'

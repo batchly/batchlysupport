@@ -164,6 +164,12 @@
 </li>
 
                         
+                            
+<li >
+    <a href="../customami/">Custom AMI</a>
+</li>
+
+                        
                         </ul>
                     </li>
                 
@@ -265,17 +271,22 @@
 <p><strong>Step 1:</strong>  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.</p>
 <p><strong>Step 2:</strong> You will be redirected to Batchly Dashboard. Next, click on the App Store located in the header.</p>
 <p><img alt="ELB" src="../../img/jmeter1.png" /></p>
-<p><strong>Step 3:</strong> You will be redirected to the <strong>App store</strong> which has the apps supported on Batchly. To run Elastic Load Balancer app, click the Get Started button.</p>
+<p><strong>Step 3:</strong> You will be redirected to the <strong>App store</strong> which has the apps supported on Batchly. To run Elastic Load Balancer app, click the <strong>Get Started</strong> button.</p>
 <p><img alt="ELB" src="../../img/elb1.png" /></p>
 <p><strong>Step 4:</strong> Now, to run Elastic Load Balancer job, fill all the required given text fields. There are following text fields to be filled:</p>
 <p><strong>Job Name:</strong> You can give any desired name to your job.</p>
-<p><strong>Project:</strong> Select the associated project to run the job. The project is associated with VPC and Region in which the job has to run.</p>
+<p><strong>Account:</strong> Select your AWS Account where you want to run the job.</p>
+<p><strong>Cloud Region:</strong>  The Cloud region will be selected automatically. </p>
+<p><strong>VPC Information:</strong> If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired VPC.</p>
+<p><strong>Subnet Information:</strong> If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
+<em>Note:</em> By-default, all the subnet will be taken.</p>
 <p><strong>Elastic Load Balancer:</strong> Select the Elastic Load Balancer from the drop down.</p>
 <p><strong>AMI ID:</strong> Specify the AMI ID to be used to launch instances.</p>
 <p><strong>Security Group:</strong> Specify the security group to be associated with instances.</p>
 <p><strong>Launch script:</strong> Specify the user data script to be used while launching the instances.</p>
 <p><strong>Instance Type:</strong> Specify the instance type to be used to launch instances.</p>
-<p><strong>Max Instance Count:</strong> Specify the maximum number of instances that should run as part of the autoscaling group.</p>
+<p><strong>Min On-demand Instance Count:</strong>  Specify the minimum number of on-demand instances that should run as part of the Auto Scaling group.</p>
+<p><strong>Max Instance Count:</strong> Specify the maximum number of instances that should run as part of the Auto Scaling group.</p>
 <p><strong>Desired Count:</strong> Specify the desired number of instances.</p>
 <p><strong> Scaling Rules:</strong> Specify the metric on which the to scale, upper threshold , lower threshold and scale down factors. </p>
 <p><img alt="ELB" src="../../img/elb2.png" /></p>

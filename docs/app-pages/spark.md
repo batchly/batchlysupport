@@ -19,7 +19,14 @@ This demonstration will show on how to use Spark app.You may select any other Bi
 
 **Job Name:** You can give any desired name to your job. 
 
-**Project:** Select the associated project to run the job.
+**Account:** Select your AWS Account where you want to run the job.
+
+**Cloud Region:**  The Cloud region will be selected automatically. 
+
+**VPC Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired VPC.
+
+**Subnet Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
+*Note:* By-default, all the subnet will be taken.
 
 **Cluster Name:** Select the cluster name. 
 

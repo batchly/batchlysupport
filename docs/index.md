@@ -20,6 +20,7 @@ The navigation will take you through each component of Batchly. Click on a navig
     - [Auto Scaling](app-pages/autoscaling.md) 
     - [Elastic Load Balancer](app-pages/elasticloadbalancer.md)
     - [Elastic Beanstalk](app-pages/elasticbeanstalk.md)
+    - [Custom AMI](app-pages/customami.md)
 * Batchly API Guide
     - [Batchly REST API Overview](api/overview.md)
     - [API Definitions for common tasks](api/definition.md)

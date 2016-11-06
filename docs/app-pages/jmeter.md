@@ -12,17 +12,24 @@
 
 **Step 4:** Now, to run JMeter job, fill all the required given text fields. There are following text fields to be filled: 
 
-1. **Job Name:** You can give any desired name to your job.
+**Job Name:** You can give any desired name to your job.
 
-2. **Project:** Select the associated project to run the JMeter job.
+**Account:** Select your AWS Account where you want to run the job.
 
-3. **Test Plan:** Upload the JMeter test plan (JMX file) from your local system which you want to execute.
+**Cloud Region:**  The Cloud region will be selected automatically. 
 
-4. **Output Location:** Give the Amazon S3 bucket output location.
+**VPC Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired VPC.
 
-5. **Instance Count:** Give the number of instance on which you want to run your test job.
+**Subnet Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
+*Note:* By-default, all the subnet will be taken.
 
-6. **Instance Type:** Select the Amazon EC2 instance type on which you want to run your test plan.
+**Test Plan:** Upload the JMeter test plan (JMX file) from your local system which you want to execute.
+
+**Output Location:** Select the Amazon S3 bucket output location.
+
+**Instance Count:** Give the number of instance on which you want to run your test job.
+
+**Instance Type:** Select the Amazon EC2 instance type on which you want to run your test plan.
 
 ![jmeter](../img/jmeter3.png)
 

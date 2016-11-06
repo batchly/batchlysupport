@@ -164,6 +164,12 @@
 </li>
 
                         
+                            
+<li >
+    <a href="../customami/">Custom AMI</a>
+</li>
+
+                        
                         </ul>
                     </li>
                 
@@ -266,11 +272,15 @@
 <p><strong>Step 1:</strong>  Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.</p>
 <p><strong>Step 2:</strong> You will be redirected to Batchly Dashboard. Next, click on the App Store located in the header.</p>
 <p><img alt="Autoscaling" src="../../img/jmeter1.png" /></p>
-<p><strong>Step 3:</strong> You will be redirected to the <strong>App store</strong> which has the apps supported on Batchly. To run Auto Scaling app, click the Get Started button.</p>
+<p><strong>Step 3:</strong> You will be redirected to the <strong>App store</strong> which has the apps supported on Batchly. To run Auto Scaling app, click the <strong>Get Started</strong> button.</p>
 <p><img alt="Autoscaling" src="../../img/autoscaling1.png" /></p>
 <p><strong>Step 4:</strong> Now, to run Auto Scaling job, fill all the required given text fields. There are following text fields to be filled:</p>
 <p><strong>Job Name:</strong> You can give any desired name to your job.</p>
-<p><strong>Project:</strong> Select the associated project to run the job. The project is associated with VPC and Region in which the job has to run.</p>
+<p><strong>Account:</strong> Select your AWS Account where you want to run the job.</p>
+<p><strong>Cloud Region:</strong>  The Cloud region will be selected automatically. </p>
+<p><strong>VPC Information:</strong> If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired VPC.</p>
+<p><strong>Subnet Information:</strong> If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
+<em>Note:</em> By-default, all the subnet will be taken.</p>
 <p><strong>Auto Scaling Group name:</strong> Select the AWS Auto Scaling group from the drop down.</p>
 <p><strong>Min OnDemand instances:</strong> Specify the AMI ID to be used to launch instancesSpecify the minimum number of ondemand instances that should run as part of the Auto Scaling group.</p>
 <p><strong>Max Instance Count:</strong> Specify the maximum number of instances that should run as part of the Auto Scaling group.</p>

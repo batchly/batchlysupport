@@ -14,29 +14,28 @@
 
 **Job Name:** You can give any desired name to your job.
 
-**Project:** Select the associated project to run the job.
+**Account:** Select your AWS Account where you want to run the job.
 
-![image-magick](../img/imagemagick1.png)
+**Cloud Region:**  The Cloud region will be selected automatically. 
 
-**Default AWS Region:** Select the AWS region.
+**VPC Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired VPC.
 
-**Source S3 Bucket Name:** Give the Amazon S3 bucket Bucket name.
-
-**Folder Name:** Give the folder name, if available.
-
-**Destination S3 Bucket Name:** Give the Amazon S3 Bucket name.
-
-**Folder Name:** Give the folder name, if available.
-
-![image-magick](../img/imagemagick2.png)
+**Subnet Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
+*Note:* By-default, all the subnet will be taken.
 
 **Time Limit:** Give the time limit to run a job in hours.
 
-**Default AWS Region:** Select the AWS region.
-
 **RESIZE:** Give any desired size for the output file.
 
-![image-magick](../img/imagemagick3.png)
+![image-magick](../img/imagemagick1.png)
+
+**Source S3 Bucket Name:** Select the source S3 bucket Bucket name.
+
+**Folder Name:** Give the folder name, if available.
+
+**Destination S3 Bucket Name:** Select the destination S3 Bucket name.
+
+**Folder Name:** Give the folder name, if available.
 
 **Step 5:** Click on the ‘Add Job’ button once you are done with filling all the details. This action will save your job and is available to see later on the **Jobs** page.
 

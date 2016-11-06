@@ -14,9 +14,14 @@
 
 **Job Name:** You can give any desired name to your job.
 
-**Project:** Select the associated project to run the job.
+**Account:** Select your AWS Account where you want to run the job.
 
-**Default AWS Region:** Select the AWS region.
+**Cloud Region:**  The Cloud region will be selected automatically. 
+
+**VPC Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired VPC.
+
+**Subnet Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
+*Note:* By-default, all the subnet will be taken.
 
 **Time Limit:** Give the time limit to run a job in hours.
 
@@ -24,11 +29,11 @@
 
 **Filename Suffix:** Give any desired suffix to differentiate input file from the output file.
 
-**Source S3 Bucket Name:** Give the Amazon S3 bucket Bucket name.
+**Source S3 Bucket Name:** Select the source S3 bucket Bucket name.
 
 **Folder Name:** Give the folder name, if available.
 
-**Destination S3 Bucket Name:** Give the Amazon S3 Bucket name.
+**Destination S3 Bucket Name:** Select the destination S3 Bucket name.
 
 **Folder Name:** Give the folder name, if available.
 

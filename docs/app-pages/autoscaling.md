@@ -8,7 +8,7 @@ AWS Auto Scaling helps you maintain application availability and allows you to s
 
 ![Autoscaling](../img/jmeter1.png)
 
-**Step 3:** You will be redirected to the **App store** which has the apps supported on Batchly. To run Auto Scaling app, click the Get Started button.
+**Step 3:** You will be redirected to the **App store** which has the apps supported on Batchly. To run Auto Scaling app, click the **Get Started** button.
 
 ![Autoscaling](../img/autoscaling1.png)
 
@@ -16,7 +16,14 @@ AWS Auto Scaling helps you maintain application availability and allows you to s
 
 **Job Name:** You can give any desired name to your job.
 
-**Project:** Select the associated project to run the job. The project is associated with VPC and Region in which the job has to run.
+**Account:** Select your AWS Account where you want to run the job.
+
+**Cloud Region:**  The Cloud region will be selected automatically. 
+
+**VPC Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired VPC.
+
+**Subnet Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
+*Note:* By-default, all the subnet will be taken.
 
 **Auto Scaling Group name:** Select the AWS Auto Scaling group from the drop down.
 

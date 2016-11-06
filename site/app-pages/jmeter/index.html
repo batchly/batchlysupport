@@ -164,6 +164,12 @@
 </li>
 
                         
+                            
+<li >
+    <a href="../customami/">Custom AMI</a>
+</li>
+
+                        
                         </ul>
                     </li>
                 
@@ -268,26 +274,16 @@
 <p><strong>Step 3:</strong> You will be redirected to the App store which has the apps supported on Batchly. To run JMeter, click the <strong>Get Started</strong> button in the JMeter App.</p>
 <p><img alt="jmeter" src="../../img/jmeter2.png" /></p>
 <p><strong>Step 4:</strong> Now, to run JMeter job, fill all the required given text fields. There are following text fields to be filled: </p>
-<ol>
-<li>
 <p><strong>Job Name:</strong> You can give any desired name to your job.</p>
-</li>
-<li>
-<p><strong>Project:</strong> Select the associated project to run the JMeter job.</p>
-</li>
-<li>
+<p><strong>Account:</strong> Select your AWS Account where you want to run the job.</p>
+<p><strong>Cloud Region:</strong>  The Cloud region will be selected automatically. </p>
+<p><strong>VPC Information:</strong> If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired VPC.</p>
+<p><strong>Subnet Information:</strong> If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
+<em>Note:</em> By-default, all the subnet will be taken.</p>
 <p><strong>Test Plan:</strong> Upload the JMeter test plan (JMX file) from your local system which you want to execute.</p>
-</li>
-<li>
-<p><strong>Output Location:</strong> Give the Amazon S3 bucket output location.</p>
-</li>
-<li>
+<p><strong>Output Location:</strong> Select the Amazon S3 bucket output location.</p>
 <p><strong>Instance Count:</strong> Give the number of instance on which you want to run your test job.</p>
-</li>
-<li>
 <p><strong>Instance Type:</strong> Select the Amazon EC2 instance type on which you want to run your test plan.</p>
-</li>
-</ol>
 <p><img alt="jmeter" src="../../img/jmeter3.png" /></p>
 <p><strong>Step 5:</strong> Click on the ‘Add Job’ button once you are done with filling all the details. This action will save your job and is available to see later on the ‘Jobs’ page.</p>
 <p><strong>Step 6:</strong> On successful job addition, you would get a popup where you can either start your job immediately (by clicking ‘Execute the Job’) or schedule your job to run later (by clicking on the button ‘Schedule the Job’).</p>

@@ -1,4 +1,4 @@
-### Getting started with AWS Elastic Beanstalk using Batchly
+### Getting started with AWS Custom AMI using Batchly
 
 **Step 1:** Login to your Batchly Console Application (your-domain.batchly.net) using registered Email Id and Password.
 
@@ -6,11 +6,11 @@
 
 ![EB](../img/jmeter1.png)
 
-**Step 3:** You will be redirected to the **App store** which has the apps supported on Batchly. To run Elastic Beanstalk app, click the **Get Started** button.
+**Step 3:** You will be redirected to the **App store** which has the apps supported on Batchly. To run Custom AMI app, click the **Get Started** button.
 
-![EB](../img/beanstalk1.png)
+![EB](../img/ami1.png)
 
-**Step 4:** Now, to run Elastic Beanstalk job, fill all the required given text fields. There are following text fields to be filled:
+**Step 4:** Now, to run Custom AMI job, fill all the required given text fields. There are following text fields to be filled:
 
 **Job Name:** You can give any desired name to your job.
 
@@ -23,17 +23,30 @@
 **Subnet Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
 *Note:* By-default, all the subnet will be taken.
 
-**Elastic Beanstalk Applications:**  Select the AWS Elastic Beanstalk group from the drop down.
+**AMI ID:** Specify the AMI ID to be used to launch instances.
 
-**Elastic Beanstalk Environment:** Specify the minimum number of on-demand instances that should run as part of the Elastic Beanstalk environment.
+**Security Group:** Specify the security group to be associated with instances.
 
-**Min On-demand Instance Count:**  Specify the minimum number of on-demand instances that should run as part of the Auto Scaling group.
+**Launch script:** Specify the user data script to be used while launching the instances.
 
-**Max Instance Count:** Specify the maximum number of instances that should run as part of the Auto Scaling group.
+**Min On-demand Instance Count:**  Specify the minimum number of on-demand instances that should run as part of the Custom AMI environment.
+
+**Max Instance Count:** Specify the maximum number of instances that should run as part of the Custom AMI environment.
 
 **Desired Count:** Specify the desired number of instances. Auto Scaling ensures that your group has this many instances.
 
-![EB](../img/beanstalk2.png)
+**Elastic Load Balancer:** Select the ELB, if you want to include it.
+
+**HealthCheck Grace Period:** Specify the grace period. (It will be taken in seconds, *For Example:* 30)
+
+**Instance Profile:** Select the Instance Profile type.
+
+**Key Pair:** Select the Key Pair.
+
+**Scaling Rule:** Specify the metric on which the to scale, upper threshold , lower threshold and scale down factors.
+
+![EB](../img/ami2.png)
+
 
 **Step 5:** Click on the **Add Job** button once you are done with filling all the details. This action will save your job and is available to see later on the ‘Jobs’ page.
 

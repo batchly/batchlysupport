@@ -164,6 +164,12 @@
 </li>
 
                         
+                            
+<li >
+    <a href="../customami/">Custom AMI</a>
+</li>
+
+                        
                         </ul>
                     </li>
                 
@@ -269,14 +275,17 @@
 <p><img alt="ffmpeg" src="../../img/ffmpeg1.png" /></p>
 <p><strong>Step 4:</strong> Now, to run FFmpeg job, fill all the required given text fields. There are following text fields to be filled:</p>
 <p><strong>Job Name:</strong> You can give any desired name to your job.</p>
-<p><strong>Project:</strong> Select the associated project to run the job.</p>
-<p><strong>Default AWS Region:</strong> Select the AWS region.</p>
+<p><strong>Account:</strong> Select your AWS Account where you want to run the job.</p>
+<p><strong>Cloud Region:</strong>  The Cloud region will be selected automatically. </p>
+<p><strong>VPC Information:</strong> If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired VPC.</p>
+<p><strong>Subnet Information:</strong> If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
+<em>Note:</em> By-default, all the subnet will be taken.</p>
 <p><strong>Time Limit:</strong> Give the time limit to run a job in hours.</p>
 <p><strong>Profile:</strong> Select the profile type in which you want to transcode.</p>
 <p><strong>Filename Suffix:</strong> Give any desired suffix to differentiate input file from the output file.</p>
-<p><strong>Source S3 Bucket Name:</strong> Give the Amazon S3 bucket Bucket name.</p>
+<p><strong>Source S3 Bucket Name:</strong> Select the source S3 bucket Bucket name.</p>
 <p><strong>Folder Name:</strong> Give the folder name, if available.</p>
-<p><strong>Destination S3 Bucket Name:</strong> Give the Amazon S3 Bucket name.</p>
+<p><strong>Destination S3 Bucket Name:</strong> Select the destination S3 Bucket name.</p>
 <p><strong>Folder Name:</strong> Give the folder name, if available.</p>
 <p><img alt="ffmpeg" src="../../img/ffmpeg2.png" /></p>
 <p><strong>Step 5:</strong> Click on the ‘Add Job’ button once you are done with filling all the details. This action will save your job and is available to see later on the ‘Jobs’ page.</p>

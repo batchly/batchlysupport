@@ -6,7 +6,7 @@
 
 ![ELB](../img/jmeter1.png)
 
-**Step 3:** You will be redirected to the **App store** which has the apps supported on Batchly. To run Elastic Load Balancer app, click the Get Started button.
+**Step 3:** You will be redirected to the **App store** which has the apps supported on Batchly. To run Elastic Load Balancer app, click the **Get Started** button.
 
 ![ELB](../img/elb1.png)
 
@@ -14,7 +14,14 @@
 
 **Job Name:** You can give any desired name to your job.
 
-**Project:** Select the associated project to run the job. The project is associated with VPC and Region in which the job has to run.
+**Account:** Select your AWS Account where you want to run the job.
+
+**Cloud Region:**  The Cloud region will be selected automatically. 
+
+**VPC Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired VPC.
+
+**Subnet Information:** If the Account has VPC associated with it, then it will get selected automatically.You can also select the desired number of subnet out of all. 
+*Note:* By-default, all the subnet will be taken.
 
 **Elastic Load Balancer:** Select the Elastic Load Balancer from the drop down.
 
@@ -26,7 +33,9 @@
 
 **Instance Type:** Specify the instance type to be used to launch instances.
 
-**Max Instance Count:** Specify the maximum number of instances that should run as part of the autoscaling group.
+**Min On-demand Instance Count:**  Specify the minimum number of on-demand instances that should run as part of the Auto Scaling group.
+
+**Max Instance Count:** Specify the maximum number of instances that should run as part of the Auto Scaling group.
 
 **Desired Count:** Specify the desired number of instances.
 
