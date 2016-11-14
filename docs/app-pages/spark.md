@@ -46,21 +46,11 @@ This demonstration will show on how to use Spark app.You may select any other Bi
 
 **Step 5:** Click on the **Add Job** button once you are done with filling all the details. This action will save your job and is available to see later on the **Jobs** page.
 
-**Step 6:** On successful job addition, you would get a popup where you can either start your job immediately (by clicking **Execute the Job**) or schedule your job to run later (by clicking on the button **Schedule the Job**).
+**Step 6:** On successful job addition, you would get a popup from where you can start your job immediately (by clicking ‘Execute the Job’).
 
-![bigdata](../img/ffmpeg3.png)
+![bigdata](../img/popup.png)
 
 **Step 7:** You can monitor the job progress using the **Job Run Details** page.
 
 ![bigdata](../img/sparkdetail.png)
-
-
-
-
-
-
-
-
-
-
 
