@@ -2,7 +2,6 @@ Batchly API supports the following entities:
 
 * Jobs
 * Runs
-* Projects
 * Accounts
 
 #### Jobs API
@@ -29,24 +28,6 @@ HTTP Method | Endpoint | Description
 GET         | /api/Runs | Get all the runs associated with your batchly account
 GET         | /api/Runs/{id} | Get the details of the run for the given id
 DELETE | /api/Runs/{id} | Delete the run details from your account
-
-
-#### Projects API
-
-Projects define the boundary for your jobs to run in. Projects creates a sandbox environment associated with an AWS account, a cloud region within that AWS account and (optionally) associate a virtual private cloud with it.
- 
-Projects’ calls allow you to create, edit or view projects associated with your Batchly account.
-
-**Actions Supported**
-
-
-HTTP Method | Endpoint | Description
--- | -- | --
-DELETE | /api/Projects/{id} | Delete the project with the given id
-GET | /api/Projects/{id} | Get the details of the project for the given id
-PUT | /api/Projects/{id} | Update the project details for the given id
-POST | /api/Projects/Add | Create a new project
-GET | /api/Projects | Get all the projects associated with your batchly account
 
 #### Accounts API
 

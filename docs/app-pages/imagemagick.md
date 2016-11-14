@@ -42,14 +42,3 @@
 **Step 6:** On successful job addition, you would get a popup where you can either start your job immediately (by clicking ‘Execute the Job’) or schedule your job to run later (by clicking on the button ‘Schedule the Job’).
 
 **Step 7:** You can monitor the job progress using the Job Run Details page.
-
-
-
-
-
-
-
-
-
-
-

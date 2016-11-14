@@ -9,14 +9,14 @@ pages:
     - 'Create IAM Access': 'user-guide/iam-access.md'
     - 'Security Policy': 'user-guide/security-policy.md'
 - Apps:
-    - 'Big Data Apps': 'app-pages/spark.md'
-    - 'JMeter': 'app-pages/jmeter.md'
-    - 'FFmpeg': 'app-pages/ffmpeg.md'
-    - 'ImageMagick': 'app-pages/imagemagick.md'
     - 'Auto Scaling': 'app-pages/autoscaling.md'
     - 'Elastic Load Balancer': 'app-pages/elasticloadbalancer.md'
     - 'Elastic Beanstalk': 'app-pages/elasticbeanstalk.md'
     - 'Custom AMI': 'app-pages/customami.md'
+    - 'Big Data Apps': 'app-pages/spark.md'
+    - 'JMeter': 'app-pages/jmeter.md'
+    - 'FFmpeg': 'app-pages/ffmpeg.md'
+    - 'ImageMagick': 'app-pages/imagemagick.md'    
 - API:
     - 'API Overview': 'api/overview.md'
     - 'Definition': 'api/definition.md'

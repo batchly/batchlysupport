@@ -13,14 +13,14 @@ The navigation will take you through each component of Batchly. Click on a navig
     - [Create IAM access in your AWS account for Batchly](user-guide/iam-access.md)
     - [Security Policy](user-guide/security-policy.md)
 6. App Specific Support Pages
-    - [Big Data Apps - Spark, Hadoop, Hive, Pig](app-pages/spark.md)
-    - [JMeter - Load Testing Framework](app-pages/jmeter.md)
-    - [FFMpeg - Video Transcoding Application](app-pages/ffmpeg.md)
-    - [ImageMagick - Image Processing Application](app-pages/imagemagick.md)
     - [Auto Scaling](app-pages/autoscaling.md) 
     - [Elastic Load Balancer](app-pages/elasticloadbalancer.md)
     - [Elastic Beanstalk](app-pages/elasticbeanstalk.md)
     - [Custom AMI](app-pages/customami.md)
+    - [Big Data Apps - Spark, Hadoop, Hive, Pig](app-pages/spark.md)
+    - [JMeter - Load Testing Framework](app-pages/jmeter.md)
+    - [FFMpeg - Video Transcoding Application](app-pages/ffmpeg.md)
+    - [ImageMagick - Image Processing Application](app-pages/imagemagick.md)  
 * Batchly API Guide
     - [Batchly REST API Overview](api/overview.md)
     - [API Definitions for common tasks](api/definition.md)
